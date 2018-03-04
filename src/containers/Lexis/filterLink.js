@@ -7,10 +7,16 @@ import { connect } from 'react-redux';
 // Component for filter buttons
 class FilterLink extends React.Component { 
 
+
+
     state = {}
     
     handleOnClick = (e, data) => {
         this.props.onClick(this.props.filter, this.props.title)
+
+        console.log(this.props.lexisFilter)
+        console.log(this.props.filter)
+        
    
         this.setState( () => {
             return { 
@@ -21,12 +27,14 @@ class FilterLink extends React.Component {
     }
     
     render() {
-  
+        const selectedClass =  this.props.lexisFilter.includes(this.props.filter) ? 'selected' : '';
+        console.log('classCheck: ', selectedClass)
         return (
-      
-        <Button size="small" onClick={ this.handleOnClick } className="sm" >
+    
+        <Button className={` ${selectedClass}  `} size="small" onClick={ this.handleOnClick  }  >
         <span className="nfo">{this.props.title}</span>
         </Button>
+     
 
 
 

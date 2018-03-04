@@ -59,7 +59,7 @@ class Lexis extends Component {
         return (
 
             <div>
-            <FilterGroup/>
+            <FilterGroup lexisFilter={this.props.lexisFilter}/>
 
             <ContactsWrapper
 

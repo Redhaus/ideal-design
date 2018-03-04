@@ -52,7 +52,15 @@ export default class ContactList extends Component {
     const activeClass = (seectedId === lex.id) ? 'active' : '';
 
     //set selected class if state shows item was clicked
-    const selectedClass = this.state[id] ? 'selected' : '';
+    // const selectedClass = this.state[id] ? 'selected' : '';
+    // const selectedClass = this.state.selected.includes(id) ? 'selected' : '';
+
+    // if lexis select contains the object add selected
+    const selectedClass =  lexisSelect.includes(lex) ? 'selected' : '';
+    
+
+    
+     
 
     //function from prop changes the info display content
     const onChange = () => {
@@ -62,35 +70,51 @@ export default class ContactList extends Component {
     // if word is clicked add to redux store and save highlight to state
     const lexisClick = (data) => {
       saveSelection(data)
-      trackSelects(data) 
+      // trackSelects(data) 
+      // testSelects(data, lexisSelect) 
+      // console.log(this.state)
+      
     }
+
+
+    // const testSelects = (data, lexisSelect) => {
+    //   const selects = lexisSelect.map( (item) => { return item.id })
+    //   this.setState(() => {
+    //     return {
+    //       selected: selects
+    //     }
+    //   })
+
+
+
+    // }
 
 
     // track Selection and highlight them by saving them to state
-    const trackSelects = (data) => {
+    // const trackSelects = (data) => {
 
-          const id = data.id
+    //       const id = data.id
       
-          // if id not in state add it to state
-          if (!(id in this.state)) {
-            this.setState({ [id]: true });
-            return true
-          }
+    //       // if id not in state add it to state
+    //       if (!(id in this.state)) {
+    //         this.setState({ [id]: true });
+    //         return true
+    //       }
           
-          // if id exists toggle its value to the opposite
-          if(this.state[id] || !(this.state[id]) ){
-            this.setState( () => { 
-              return { 
-                [id]: !this.state[id]
-              }
-          })
+    //       // if id exists toggle its value to the opposite
+    //       if(this.state[id] || !(this.state[id]) ){
+    //         this.setState( () => { 
+    //           return { 
+    //             [id]: !this.state[id]
+    //           }
+    //       })
             
-            return this.state[id]
+    //         return this.state[id]
 
           
-          }
+    //       }
 
-    }
+    // }
 
 
     

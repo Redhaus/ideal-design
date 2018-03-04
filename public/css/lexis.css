@@ -27,3 +27,7 @@
           background-color: #f1f3f6;
 
         }
+
+        .ant-btn.selected{
+          background-color: red !important;
+        }
