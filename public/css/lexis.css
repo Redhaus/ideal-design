@@ -1,5 +1,8 @@
 
 
+/* Lexis Styles */
+        
+        /* quote */
         blockquote {
           background: #f9f9f9;
           border-left: 10px solid #ccc;
@@ -7,6 +10,7 @@
           padding: 1.5em 30px;
           quotes: "\201C""\201D""\2018""\2019";
         }
+
         blockquote:before {
           color: #ccc;
           content: open-quote;
@@ -15,6 +19,7 @@
           margin-right: 0.25em;
           vertical-align: -0.4em;
         }
+
         blockquote p {
           display: inline;
         }
@@ -23,11 +28,71 @@
           text-align: right;
         }
 
-        .selected{
-          background-color: #f1f3f6;
 
-        }
+
+        /* filter styles */
 
         .ant-btn.selected{
-          background-color: red !important;
+          background-color: #2E3545 !important;
+          color: white
         }
+
+        .ant-btn.selected > span,  .ant-btn.selected > i{
+         
+          color: white
+        }
+
+        .ant-btn{
+          padding: 0px 10px;
+          margin: 2px 2px;
+        }
+
+        .filter-container{
+          text-align: center;
+          padding-top: 20px;
+        }
+
+        .filter-title{
+          padding-right: 20px;
+        }
+
+
+        /* word and icons */
+
+        .selected{
+          background-color: #f1f3f6;
+        }
+
+        .iso-word-container{
+          width: 100%;
+        }
+
+        .iso-word-container h3{
+          display: inline-block;
+          margin-bottom: 0px;
+        }
+
+        .icon-container {
+          float: right
+        }
+
+        .icon-style{
+          padding: 0px 10px 0px 10px;
+        }
+
+        .active-icon{
+          padding: 0px 10px 0px 10px;
+          color: green
+        }
+
+
+        .isoContactList .isoSingleContact {
+    
+          padding-right: 5px !important;
+        
+      }
+
+      .missing-content{
+        text-align: center;
+        padding: 40px;
+      }

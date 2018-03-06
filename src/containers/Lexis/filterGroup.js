@@ -118,19 +118,21 @@ class FilterGroup extends Component {
 // <Icon size='large' name="remove"/> 
 
 
+
+
     render() {
         return (
 
-            <div className="ed">
-                <span>Filters:</span>
-                <FilterLink  on={this.state.all} lexisFilter={this.props.lexisFilter} icon='list ul' filter='SHOW_ALL' title='all' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.person} lexisFilter={this.props.lexisFilter}  icon='user outline circle' filter='SHOW_PERSON' title='person' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.common} lexisFilter={this.props.lexisFilter}  icon='copyright' filter='SHOW_COMMON' title='common' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.device} lexisFilter={this.props.lexisFilter}  icon='low vision' filter='SHOW_DEVICE' title='device' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.essential} lexisFilter={this.props.lexisFilter}  icon='key' filter='SHOW_ESSENTIAL' title='essential' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.concept} lexisFilter={this.props.lexisFilter}  icon='lightbulb' filter='SHOW_CONCEPT' title='concept' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.event} lexisFilter={this.props.lexisFilter}  icon='calendar outline' filter='SHOW_EVENT' title='event' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.reset} lexisFilter={this.props.lexisFilter}  icon='remove' filter='SHOW_RESET' title='reset' onClick={this.handleReset} />
+            <div className="filter-container">
+              
+                <FilterLink  on={this.state.all} lexisFilter={this.props.lexisFilter} icon='bars' filter='SHOW_ALL' title='all' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.person} lexisFilter={this.props.lexisFilter}  icon='user' filter='SHOW_PERSON' title='person' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.common} lexisFilter={this.props.lexisFilter}  icon='global' filter='SHOW_COMMON' title='common' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.device} lexisFilter={this.props.lexisFilter}  icon='hourglass' filter='SHOW_DEVICE' title='device' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.essential} lexisFilter={this.props.lexisFilter}  icon='compass' filter='SHOW_ESSENTIAL' title='essential' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.concept} lexisFilter={this.props.lexisFilter}  icon='bulb' filter='SHOW_CONCEPT' title='concept' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.event} lexisFilter={this.props.lexisFilter}  icon='calendar' filter='SHOW_EVENT' title='event' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.reset} lexisFilter={this.props.lexisFilter}  icon='close' filter='SHOW_RESET' title='reset' onClick={this.handleReset} />
     
             </div>
 

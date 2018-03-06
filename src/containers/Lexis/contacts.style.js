@@ -4,16 +4,16 @@ import { transition, borderRadius } from '../../config/style-util';
 import WithDirection from '../../config/withDirection';
 
 const WDContactsWrapper = styled.div`
-  padding: 50px 35px;
+  padding: 30px 35px;
   display: flex;
   ${'' /* max-height: calc(100vh - 130px); */} @media only screen and (max-width: 767px) {
-    padding: 50px 20px;
+    padding: 30px 20px;
     flex-direction: column;
     height: auto;
   }
 
   @media only screen and (min-width: 767px) and (max-width: 990px) {
-    padding: 40px 30px;
+    padding: 20px 30px;
   }
 
   .isoContactListBar {

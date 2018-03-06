@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Layout, Icon } from 'antd';
+import { Layout } from 'antd';
 import ContactList from '../../components/contacts/contactList';
 import { connect } from 'react-redux';
-import Button from '../../components/uielements/button';
 import Scrollbar from '../../components/utility/customScrollBar.js';
 import SingleContactView from '../../components/contacts/singleView';
 import { ContactsWrapper } from './contacts.style';
@@ -13,12 +12,7 @@ import FilterGroup from './filterGroup';
 import _ from 'lodash';
 
 
-
-
-
-
 const { Content } = Layout;
-
 
 class Lexis extends Component {
 
@@ -30,17 +24,9 @@ class Lexis extends Component {
     }
 
     renderDefinition(id){
-
-        const lex = _.find(this.props.lexis, function(item) { return item.id == id })
-        const markup = (
-            <div>
-            {lex ? <p>{lex.word}</p> : <p>Rollover New Selection</p>}
-            {lex ? <p>{lex.etymology}</p> : '' }
-            
-            </div>
-            
-        )
-        // console.log(lex)
+        
+        // based on which one is selected your passing the definition to SingleView for Render layout
+        const lex = _.find(this.props.lexis, function(item) { return item.id === id })
         return lex
 
     }
@@ -48,13 +34,7 @@ class Lexis extends Component {
 
     render() {
 
-        const { lexis, seectedId } = this.props;
-
-        // const selectedItem = seectedId
-        // ? lexis.filter(contact => lexis.id === seectedId)[0]
-        // : null;
-
-
+       
 
         return (
 
@@ -62,13 +42,8 @@ class Lexis extends Component {
             <FilterGroup lexisFilter={this.props.lexisFilter}/>
 
             <ContactsWrapper
-
-           
-
-            className="isomorphicContacts"
-            style={{ background: 'none' }}>
-
-            
+                className="isomorphicContacts"
+                style={{ background: 'none' }}>
 
          
                 <div className="isoContactListBar">
@@ -87,17 +62,17 @@ class Lexis extends Component {
                 <Layout className="isoContactBoxWrapper">
        
             <Content className="isoContactBox">
-              <div className="isoContactControl">
+              
 
-                
-              </div>
+            {/* this adds padding to top of definition */}
+            <div className="isoContactControl"></div>
 
-              <Scrollbar className="contactBoxScrollbar">
-              <SingleContactView
+            <Scrollbar className="contactBoxScrollbar">
+                <SingleContactView
                     lex={this.renderDefinition(this.props.seectedId)}
-                  />
+                />
                    
-              </Scrollbar>
+            </Scrollbar>
             </Content>
         
         </Layout>
@@ -117,7 +92,6 @@ function mapStateToProps(state) {
    
     return {
       lexis: getVisibility(state.lexis, state.lexisFilterReducer, state.lexisSelectedReducer),
-    //   lexis: state.lexis,
       seectedId: state.seectedId,
       filters: state.lexisSelectedReducer,
       lexisSelect: state.lexisSelect,
@@ -128,9 +102,6 @@ function mapStateToProps(state) {
   export default connect(mapStateToProps, {
     changeContact,
     saveSelection
-    // addContact,
-    // editContact,
-    // deleteContact,
-    // viewChange,
+
   })(Lexis);
 

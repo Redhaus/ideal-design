@@ -7,6 +7,8 @@ import lexisSelect from './lexis/lexisSelectResult';
 import lexisFilterReducer from './lexis/lexisFilterReducer';
 import lexisSelectedReducer from './lexis/lexisSelectedFilters';
 import selectedIDReducer from './lexis/selectedIDReducer';
+import primarySelect from './selects/primarySelectResult';
+
 
 
 
@@ -18,6 +20,8 @@ export default {
   lexisSelect: lexisSelect, // these are selected items for results
   lexisFilterReducer: lexisFilterReducer, // SHOW ALL
   lexisSelectedReducer: lexisSelectedReducer, //all,
-  seectedId: selectedIDReducer //selected lexis item
+  seectedId: selectedIDReducer, //selected lexis item
+  primarySelect: primarySelect //selected primary reading
+  
   
 };

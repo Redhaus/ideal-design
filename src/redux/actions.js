@@ -8,6 +8,8 @@ export const saveSelection = (select) => {
 
 // Primary Reading Action
 export const savePrimary = (select) => {
+
+    // console.log('select: ',  select)
     return {
         type: 'PRIMARY',
         payload: select
