@@ -8,6 +8,8 @@ import lexisFilterReducer from './lexis/lexisFilterReducer';
 import lexisSelectedReducer from './lexis/lexisSelectedFilters';
 import selectedIDReducer from './lexis/selectedIDReducer';
 import primarySelect from './selects/primarySelectResult';
+import poemSelect from './selects/poemSelectResult';
+
 
 
 
@@ -21,7 +23,9 @@ export default {
   lexisFilterReducer: lexisFilterReducer, // SHOW ALL
   lexisSelectedReducer: lexisSelectedReducer, //all,
   seectedId: selectedIDReducer, //selected lexis item
-  primarySelect: primarySelect //selected primary reading
+  primarySelect: primarySelect, //selected primary reading
+  poemSelect: poemSelect //selected poem reading
+  
   
   
 };

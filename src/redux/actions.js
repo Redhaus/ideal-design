@@ -17,9 +17,33 @@ export const savePrimary = (select) => {
 }
 
 // Further Reading Action
-export const saveFurther = (select) => {
+// export const saveFurther = (select) => {
+//     return {
+//         type: 'FURTHER',
+//         payload: select
+//     }
+// }
+
+// Further Reading Action
+export const savePoems = (select) => {
     return {
-        type: 'FURTHER',
+        type: 'POEMS',
+        payload: select
+    }
+}
+
+// Further Reading Action
+export const saveEssays = (select) => {
+    return {
+        type: 'ESSAYS',
+        payload: select
+    }
+}
+
+// Further Reading Action
+export const saveMovies = (select) => {
+    return {
+        type: 'MOVIES',
         payload: select
     }
 }
@@ -70,9 +94,8 @@ export const clearSelectedLexis = () => {
     }
 }
 
-    // sets filters
+// sets filters
 export const setFilter = (addFilter, addTitle) => {
-
     return {
         type: 'VISIBILITY_FILTER',
         filter: addFilter,
@@ -80,7 +103,7 @@ export const setFilter = (addFilter, addTitle) => {
         }
     }
 
-    // responsible for selectedID Reducer
+// responsible for selectedID Reducer
 export const changeContact = (id) => {
     return{
     type: 'CHANGE_LEXIS',
@@ -88,4 +111,10 @@ export const changeContact = (id) => {
     }
   }
 
-
+// responsible for selectedID Reducer
+export const changeReadings = (catData) => {
+    return{
+    type: 'CHANGE_READINGS',
+    payload: catData
+    }
+  }

@@ -130,6 +130,17 @@ class Sidebar extends Component {
               </Link>
             </Menu.Item>
 
+          <Menu.Item key="furtherreadings">
+            <Link to={`${url}/furtherreadings`}>
+              <span className="isoMenuHolder" style={submenuColor}>
+                <i className="ion-document" />
+                <span className="nav-text">
+                  <IntlMessages id="sidebar.furtherReadings" />
+                </span>
+              </span>
+            </Link>
+          </Menu.Item>
+
 
 
             </Menu>

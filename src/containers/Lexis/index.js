@@ -20,7 +20,6 @@ class Lexis extends Component {
         super(props)
 
         this.renderDefinition = this.renderDefinition.bind(this)
-
     }
 
     renderDefinition(id){

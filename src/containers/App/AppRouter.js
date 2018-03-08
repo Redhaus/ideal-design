@@ -22,7 +22,13 @@ class AppRouter extends React.Component {
         exact
         path={`${url}/lexis`}
         component={asyncComponent(() => import('../Lexis/index'))}
-      />
+        />
+
+        <Route
+        exact
+        path={`${url}/furtherreadings`}
+        component={asyncComponent(() => import('../FurtherReadings/index'))}
+        />
       </Switch>
     );
   }
