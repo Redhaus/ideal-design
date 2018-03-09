@@ -10,7 +10,7 @@ class AppRouter extends React.Component {
         <Route
           exact
           path={`${url}/`}
-          component={asyncComponent(() => import('../dashboard'))}
+          component={asyncComponent(() => import('../Dashboard/dashboard'))}
         />
         <Route
           exact
@@ -28,6 +28,12 @@ class AppRouter extends React.Component {
         exact
         path={`${url}/furtherreadings`}
         component={asyncComponent(() => import('../FurtherReadings/index'))}
+        />
+
+        <Route
+        exact
+        path={`${url}/performance`}
+        component={asyncComponent(() => import('../Performance/index'))}
         />
       </Switch>
     );

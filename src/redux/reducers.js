@@ -9,6 +9,11 @@ import lexisSelectedReducer from './lexis/lexisSelectedFilters';
 import selectedIDReducer from './lexis/selectedIDReducer';
 import primarySelect from './selects/primarySelectResult';
 import poemSelect from './selects/poemSelectResult';
+import essaySelect from './selects/essaySelectResult';
+import movieSelect from './selects/movieSelectResult';
+import performanceSelect from './selects/performanceSelectResult';
+
+
 
 
 
@@ -24,7 +29,12 @@ export default {
   lexisSelectedReducer: lexisSelectedReducer, //all,
   seectedId: selectedIDReducer, //selected lexis item
   primarySelect: primarySelect, //selected primary reading
-  poemSelect: poemSelect //selected poem reading
+  poemSelect: poemSelect, //selected poem reading
+  essaySelect: essaySelect, //selected essay reading
+  movieSelect: movieSelect, //selected movie reading
+  performanceSelect: performanceSelect, //selected performance
+  
+  
   
   
   

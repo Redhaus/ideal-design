@@ -23,6 +23,55 @@ const WDContactCardWrapper = styled.div`
     flex-direction: column;
   }
 
+
+  .isoSearchBar {
+    .ant-input {
+      width: 100%;
+      font-size: 14px;
+      font-weight: 400;
+      color: ${palette('text', 0)};
+      line-height: inherit;
+      height: 69px;
+      padding: 0 20px;
+      padding-left: ${props =>
+        props['data-rtl'] === 'rtl' ? 'inherit' : '35px'};
+      padding-right: ${props =>
+        props['data-rtl'] === 'rtl' ? '35px' : 'inherit'};
+      border: 0;
+      border-bottom: 1px solid ${palette('border', 0)};
+      outline: 0 !important;
+      overflow: hidden;
+      background-color: #ffffff;
+      ${boxShadow('none')};
+      ${borderRadius()};
+      ${transition()};
+
+      @media only screen and (max-width: 767px) {
+        height: 50px;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: ${palette('border', 0)} !important;
+      }
+
+      &::-webkit-input-placeholder {
+        color: ${palette('grayscale', 0)};
+      }
+
+      &:-moz-placeholder {
+        color: ${palette('grayscale', 0)};
+      }
+
+      &::-moz-placeholder {
+        color: ${palette('grayscale', 0)};
+      }
+      &:-ms-input-placeholder {
+        color: ${palette('grayscale', 0)};
+      }
+    }
+  }
+
   .isoContactCardHead {
     display: flex;
     flex-direction: column;

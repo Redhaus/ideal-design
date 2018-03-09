@@ -56,13 +56,22 @@ class FurtherReading extends Component {
        
                     <Content className="isoContactBox">
                         {/* this adds padding to top of definition */}
-                        <div className="isoContactControl"></div>
+                       
 
                         <Scrollbar className="contactBoxScrollbar">
                             <SingleContactView 
-                                readings={categories.poems} 
+                                poems={categories.poems}
+                                essays={categories.essays} 
+                                movies={categories.movies} 
+                                
                                 savePoems={this.props.savePoems} 
+                                saveEssays={this.props.saveEssays} 
+                                saveMovies={this.props.saveMovies} 
+                                
                                 poemSelect={this.props.poemSelect}
+                                essaySelect={this.props.essaySelect}
+                                movieSelect={this.props.movieSelect}
+                                
                             />     
                         </Scrollbar>
                     </Content>
@@ -84,7 +93,10 @@ function mapStateToProps(state) {
     //   filters: state.lexisSelectedReducer,
     //   lexisSelect: state.lexisSelect,
     //   lexisFilter: state.lexisFilterReducer
-      poemSelect: state.poemSelect
+      poemSelect: state.poemSelect,
+      essaySelect: state.essaySelect,
+      movieSelect: state.movieSelect
+      
     };
   }
 
