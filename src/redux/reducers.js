@@ -13,6 +13,8 @@ import essaySelect from './selects/essaySelectResult';
 import movieSelect from './selects/movieSelectResult';
 import performanceSelect from './selects/performanceSelectResult';
 import questionSelect from './selects/questionSelectResult';
+import extensionSelect from './selects/extensionSelectResult';
+
 
 
 
@@ -35,7 +37,8 @@ export default {
   essaySelect: essaySelect, //selected essay reading
   movieSelect: movieSelect, //selected movie reading
   performanceSelect: performanceSelect, //selected performance
-  questionSelect: questionSelect //selected questions
+  questionSelect: questionSelect, //selected questions
+  extensionSelect: extensionSelect //selected questions
   
   
   

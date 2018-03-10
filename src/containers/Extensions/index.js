@@ -5,14 +5,14 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout } from 'antd';
 
-import {keyQuestions} from './performanceData';
-import KeyQuestions from './KeyQuestions';
-import { saveQuestions, deleteQuestions } from '../../redux/actions';
+import {extensions} from './extensionsData';
+import Extensions from './Extensions';
+import { saveExtensions, deleteQuestions } from '../../redux/actions';
 import { connect } from 'react-redux';
 
 import { ContactsWrapper } from './contacts.style';
 
-class KeyQuestionsContainer extends Component {
+class ExtensionsContainer extends Component {
   render() {
     return (
 
@@ -23,11 +23,10 @@ class KeyQuestionsContainer extends Component {
      
 
      
-        <KeyQuestions
-            questionSelect={this.props.questionSelect}
-            saveQuestions={this.props.saveQuestions} 
-            deleteQuestions={this.props.deleteQuestions}
-            questions={keyQuestions}/>
+        <Extensions
+            extensionSelect={this.props.extensionSelect}
+            saveExtensions={this.props.saveExtensions} 
+            extensions={extensions}/>
      
 
         </Layout>
@@ -41,13 +40,13 @@ class KeyQuestionsContainer extends Component {
 const mapStateToProps = state => {
   return ({
    
-    questionSelect: state.questionSelect
+    extensionSelect: state.extensionSelect
   
 
   })
 }
 
-export default connect(mapStateToProps, {saveQuestions, deleteQuestions})(KeyQuestionsContainer)
+export default connect(mapStateToProps, {saveExtensions})(ExtensionsContainer)
 
 
 
