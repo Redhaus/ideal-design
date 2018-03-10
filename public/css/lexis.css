@@ -194,3 +194,55 @@ height: 184px !important;
 .ant-switch-checked {
   background-color: #2E3545 !important;
 }
+
+
+/* KeyQuestions */
+
+.hard-right{
+  float: right;
+}
+
+.key-questions{
+
+}
+
+.question-switch{
+  margin: 0px 10px 0px 0px !important;
+}
+
+.key-question-container .ant-card-grid{
+
+    padding: 11px 24px !important;
+  
+}
+
+.question-input > input{
+  width: 100%;
+  border: none !important;
+
+}
+
+.question-input-container{
+
+}
+
+.question-search .ant-form-item{
+  width: 100% !important;
+}
+
+.question-search .ant-form-inline .ant-form-item > div {
+
+  width: 100% !important;
+}
+
+.question-button{
+  border: none !important;
+  padding: 5px !important;
+}
+
+.ant-input:focus {
+  border-color: none !important;
+  outline: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}

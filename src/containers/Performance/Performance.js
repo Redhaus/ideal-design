@@ -60,7 +60,7 @@ class Performance extends React.Component {
     <div>
       {/* <Button onClick={this.testFunction}>Click Me</Button>
  <Switch onChange={this.handleSelect("selected")} /> */}
-    <Card title="Performance Objects">
+    <Card title="Performance Objectives">
     {this.handlePerformance(this.props.data)}
     
   </Card>

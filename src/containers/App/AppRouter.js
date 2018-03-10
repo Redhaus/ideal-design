@@ -32,9 +32,23 @@ class AppRouter extends React.Component {
 
         <Route
         exact
+        path={`${url}/keyquestions`}
+        component={asyncComponent(() => import('../KeyQuestions/index'))}
+        />
+
+        <Route
+        exact
         path={`${url}/performance`}
         component={asyncComponent(() => import('../Performance/index'))}
         />
+
+        <Route
+        exact
+        path={`${url}/extensions`}
+        component={asyncComponent(() => import('../Extensions/index'))}
+        />
+
+
       </Switch>
     );
   }

@@ -56,6 +56,14 @@ export const saveQuestions = (select) => {
     }
 }
 
+// Key Questions Action
+export const deleteQuestions = (item) => {
+    return {
+        type: 'DELETE_QUESTIONS',
+        payload: item
+    }
+}
+
 // Performance Action
 export const savePerformance = (select) => {
     return {

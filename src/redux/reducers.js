@@ -12,6 +12,8 @@ import poemSelect from './selects/poemSelectResult';
 import essaySelect from './selects/essaySelectResult';
 import movieSelect from './selects/movieSelectResult';
 import performanceSelect from './selects/performanceSelectResult';
+import questionSelect from './selects/questionSelectResult';
+
 
 
 
@@ -33,6 +35,8 @@ export default {
   essaySelect: essaySelect, //selected essay reading
   movieSelect: movieSelect, //selected movie reading
   performanceSelect: performanceSelect, //selected performance
+  questionSelect: questionSelect //selected questions
+  
   
   
   

@@ -153,6 +153,17 @@ class Sidebar extends Component {
             </Link>
           </Menu.Item>
 
+          <Menu.Item key="keyquestions">
+          <Link to={`${url}/keyquestions`}>
+            <span className="isoMenuHolder" style={submenuColor}>
+              <i className="ion-document" />
+              <span className="nav-text">
+                <IntlMessages id="sidebar.keyQuestions" />
+              </span>
+            </span>
+          </Link>
+        </Menu.Item>
+
           <Menu.Item key="performance">
           <Link to={`${url}/performance`}>
             <span className="isoMenuHolder" style={submenuColor}>
@@ -163,6 +174,17 @@ class Sidebar extends Component {
             </span>
           </Link>
         </Menu.Item>
+
+        <Menu.Item key="extensions">
+        <Link to={`${url}/extensions`}>
+          <span className="isoMenuHolder" style={submenuColor}>
+            <i className="ion-document" />
+            <span className="nav-text">
+              <IntlMessages id="sidebar.extensions" />
+            </span>
+          </span>
+        </Link>
+      </Menu.Item>
 
 
 
