@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Collapse } from 'antd';
-import { Card, Col, Row, Icon, Button } from 'antd';
+import { Card, Col, Row, Icon, Button , Switch} from 'antd';
 
 
 const Panel = Collapse.Panel;
@@ -32,12 +32,19 @@ class PrimaryReadings extends React.Component {
 
       // builds body of each book outline
       const template = (
-        <Row gutter={16} key={key}>
+        <Row gutter={16} key={key} className={`${selectedClass}`}>
         <Col span={8}>
-          <Card title={item.title} bordered={false} >
-
-            <h5>{item.author} | {item.date}</h5>
-            <Button className={` ${selectedClass} `} onClick={ (checked) => this.handleOnClick(item) }>Select Book</Button>
+          <Card title={item.title} bordered={false} 
+          extra={
+            <Switch size="small" checked={selectedClass ? true : false} onChange={() => this.handleOnClick(item)}></Switch>
+          }
+          
+          >
+            <p><strong>Author: </strong> {item.author} </p>
+            <p><strong>Dates: </strong> {item.date} </p>
+            
+           
+            {/* <Button className={` ${selectedClass} `} onClick={ (checked) => this.handleOnClick(item) }>Select Book</Button> */}
            
           </Card>
         </Col>
@@ -68,6 +75,9 @@ class PrimaryReadings extends React.Component {
   return (
 
     // Accordion Structure
+    <div >
+    <Card className="primary-header"><h3>Primary Readings</h3></Card>
+    <div className="primary-container">
     <Collapse accordion defaultActiveKey={['1']}>
         <Panel header="Beginner" key="1" defaultActiveKey>
         {this.handlePrimaryReadings(this.props.readings.category.beginner)}
@@ -79,7 +89,9 @@ class PrimaryReadings extends React.Component {
         {this.handlePrimaryReadings(this.props.readings.category.advanced)}
         </Panel>
     </Collapse>
-
+    </div>
+    
+    </div>
 
   )
 }

@@ -5,14 +5,14 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout } from 'antd';
 
-import {performanceData} from './performanceData';
-import Performance from './Performance';
-import { savePerformance } from '../../redux/actions';
+import {goalsData} from './goalsData';
+import ContinualGoals from './ContinualGoals';
+import { saveGoals } from '../../redux/actions';
 import { connect } from 'react-redux';
-import Scrollbar from '../../components/utility/customScrollBar.js';
+
 import { ContactsWrapper } from './contacts.style';
 
-class PerformanceContainer extends Component {
+class ContinualGoalsContainer extends Component {
   render() {
     return (
 
@@ -22,12 +22,12 @@ class PerformanceContainer extends Component {
       <Layout className="isoContactBoxWrapper">
      
 
-      {/* <Scrollbar className="contactBoxScrollbar"> */}
-        <Performance
-            performanceSelect={this.props.performanceSelect}
-            savePerformance={this.props.savePerformance} 
-            data={performanceData}/>
-      {/* </Scrollbar> */}
+     
+        <ContinualGoals
+            goalSelect={this.props.goalSelect}
+            saveGoals={this.props.saveGoals} 
+            goals={goalsData}/>
+     
 
         </Layout>
       </LayoutContentWrapper>
@@ -40,13 +40,13 @@ class PerformanceContainer extends Component {
 const mapStateToProps = state => {
   return ({
    
-    performanceSelect: state.performanceSelect
+    goalSelect: state.goalSelect
   
 
   })
 }
 
-export default connect(mapStateToProps, {savePerformance})(PerformanceContainer)
+export default connect(mapStateToProps, {saveGoals})(ContinualGoalsContainer)
 
 
 

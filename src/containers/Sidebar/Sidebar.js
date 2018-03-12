@@ -186,6 +186,17 @@ class Sidebar extends Component {
         </Link>
       </Menu.Item>
 
+      <Menu.Item key="continualgoals">
+      <Link to={`${url}/continualgoals`}>
+        <span className="isoMenuHolder" style={submenuColor}>
+          <i className="ion-document" />
+          <span className="nav-text">
+            <IntlMessages id="sidebar.continualGoals" />
+          </span>
+        </span>
+      </Link>
+    </Menu.Item>
+
 
 
             </Menu>

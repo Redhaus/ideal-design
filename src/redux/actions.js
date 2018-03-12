@@ -82,6 +82,7 @@ export const saveExtensions = (select) => {
 
 // Continual Goals Action
 export const saveGoals = (select) => {
+    console.log('select: ', select)
     return {
         type: 'GOALS',
         payload: select

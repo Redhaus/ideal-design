@@ -40,7 +40,7 @@ class Performance extends React.Component {
 
         <Card.Grid className={`${selectedClass}`}  key={key} style={gridStyle} >
        
-        <h4>{item.header}  <Switch checked={selectedClass} size="small" onChange={ () =>  this.handleSelect(item)} /> </h4>
+        <h4>{item.header}  <Switch className="hard-right" checked={selectedClass? true : false} size="small" onChange={ () =>  this.handleSelect(item)} /> </h4>
         <p>{item.description}</p>
         </Card.Grid>
       
@@ -60,10 +60,10 @@ class Performance extends React.Component {
     <div>
       {/* <Button onClick={this.testFunction}>Click Me</Button>
  <Switch onChange={this.handleSelect("selected")} /> */}
-    <Card title="Performance Objectives">
+    <Card className="performance-container"><h3>Performance Objectives</h3></Card>
+    <div className="performance-container">
     {this.handlePerformance(this.props.data)}
-    
-  </Card>
+    </div>
 
   </div>
 

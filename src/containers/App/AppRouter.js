@@ -48,6 +48,12 @@ class AppRouter extends React.Component {
         component={asyncComponent(() => import('../Extensions/index'))}
         />
 
+        <Route
+        exact
+        path={`${url}/continualgoals`}
+        component={asyncComponent(() => import('../ContinualGoals/index'))}
+        />
+
 
       </Switch>
     );

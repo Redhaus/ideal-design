@@ -24,12 +24,12 @@ class PrimaryContainer extends Component {
      
   
 
-      <Scrollbar className="contactBoxScrollbar">
+      {/* <Scrollbar className="contactBoxScrollbar"> */}
         <PrimaryReadings 
             primarySelect={this.props.primarySelect}
             savePrimary={this.props.savePrimary} 
             readings={readings.unitOne.primary}/>
-      </Scrollbar>
+      {/* </Scrollbar> */}
 
       
         </Layout>

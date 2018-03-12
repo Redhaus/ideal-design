@@ -141,18 +141,19 @@ class KeyQuestions extends React.Component {
 
     <div>
 
+
 <Affix  offsetTop={120} >
    
-<Card className="question-search">
+{/* <Card className="question-search"> */}
 
-
+<div className="question-search">
     <Form layout="inline" onSubmit={this.handleSubmit}>
         <FormItem  className="question-input-container">
 
         <Input 
          
            
-          placeholder="New Question" 
+          placeholder="Add Question" 
           value={this.state.questionInput}
           onChange={this.handleInputChange}
           className="question-input"
@@ -175,24 +176,26 @@ class KeyQuestions extends React.Component {
       
        
       </Form>
-
-    </Card>
+      </div>
+    {/* </Card> */}
 
   </Affix>
 
 
 
-  <Scrollbar className="contactBoxScrollbar">
-     
-    <Card 
-    
-    className="key-question-container"
-    >
+
+<Card className="key-question-container"><h3>Key Questions</h3></Card>
+
+
+
+  {/* <Scrollbar className="contactBoxScrollbar"> */}
+  
+    <div className="key-question-container">
     {this.handleQuestions(this.state.questions)}
     
-  </Card>
+  </div>
 
-  </Scrollbar>
+  {/* </Scrollbar> */}
 
   </div>
 

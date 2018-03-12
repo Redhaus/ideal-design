@@ -14,6 +14,8 @@ import movieSelect from './selects/movieSelectResult';
 import performanceSelect from './selects/performanceSelectResult';
 import questionSelect from './selects/questionSelectResult';
 import extensionSelect from './selects/extensionSelectResult';
+import goalSelect from './selects/goalSelectResult';
+
 
 
 
@@ -38,7 +40,9 @@ export default {
   movieSelect: movieSelect, //selected movie reading
   performanceSelect: performanceSelect, //selected performance
   questionSelect: questionSelect, //selected questions
-  extensionSelect: extensionSelect //selected questions
+  extensionSelect: extensionSelect, //selected questions
+  goalSelect: goalSelect //selected questions
+  
   
   
   
