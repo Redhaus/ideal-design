@@ -32,7 +32,7 @@ export default class extends Component {
            
         
       
-            <Scrollbar className="contactBoxScrollbar">
+            {/* <Scrollbar className="contactBoxScrollbar"> */}
              
             
 
@@ -106,7 +106,7 @@ export default class extends Component {
 
 
 
-            </Scrollbar>
+            {/* </Scrollbar> */}
       
             
               </Layout>

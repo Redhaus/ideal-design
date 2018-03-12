@@ -79,13 +79,13 @@ class PrimaryReadings extends React.Component {
     <Card className="primary-header"><h3>Primary Readings</h3></Card>
     <div className="primary-container">
     <Collapse accordion defaultActiveKey={['1']}>
-        <Panel header="Beginner" key="1" defaultActiveKey>
+        <Panel header={<h3>Beginner</h3>} key="1" defaultActiveKey>
         {this.handlePrimaryReadings(this.props.readings.category.beginner)}
         </Panel>
-        <Panel header="Intermediate" key="2">
+        <Panel header={<h3>intermediate</h3>} key="2">
         {this.handlePrimaryReadings(this.props.readings.category.intermediate)}
         </Panel>
-        <Panel header="Advanced" key="3">
+        <Panel header={<h3>Advanced</h3>} key="3">
         {this.handlePrimaryReadings(this.props.readings.category.advanced)}
         </Panel>
     </Collapse>

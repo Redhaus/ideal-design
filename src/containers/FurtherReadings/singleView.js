@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { ContactCardWrapper } from './singleViewCard.style';
-import {Tabs, Icon, Card, Col, Row, Button} from 'antd';
+import {Tabs, Icon, Card, Col, Row, Button, Switch} from 'antd';
 import { InputSearch } from '../../components/uielements/input';
 
 const TabPane = Tabs.TabPane;
+
+const gridStyle = {
+  width: '33.333%'
+  // textAlign: 'center',
+};
 
 // this filters via search accepts lexis array, search term, and filters 
 function filterContacts(readings, search) {
@@ -57,6 +62,8 @@ export default class extends Component {
 
   // render questions and applications
   displayPoems(readings){
+
+    
     
        return readings ? readings.map( (item, key) => {
           const { director, author, date, link, title, type } = item;
@@ -67,19 +74,18 @@ export default class extends Component {
         return (
           <Col   className="further-reading"  key={key} span={8}>
            
-          <Card title={title}
-          
+          <Card
+            className={`${selectedClass}`}
             bordered={true} 
-            extra={
-              
-            <a href={link}><Icon type="link" /></a> 
-          }>
-           
+          >
+          <h3>{title} <a href={link} className="hard-right"><Icon type="arrows-alt" /></a> </h3>
             {director ? <p className="reading-author">  <strong>Director: </strong> {director} </p> : '' }
             {author ? <p className="reading-author">  <strong>Author: </strong> {author} </p> : '' }
             {date ?  <em> <strong>Dates: </strong>{date}</em> : '' }
+            {/* <a href={link}><Icon type="link" /></a>  */}
+            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} onChange={() => this.props.savePoems(item)}></Switch>
             
-            <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.savePoems(item) } }>Select Reading</Button>
+            {/* <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.savePoems(item) } }>Select Reading</Button> */}
     
           </Card>
           
@@ -104,19 +110,20 @@ export default class extends Component {
         return (
           <Col   className="further-reading"  key={key} span={8}>
            
-          <Card title={title}
+          <Card 
+          className={`${selectedClass}`}
           
             bordered={true} 
-            extra={
-              
-            <a href={link}><Icon type="link" /></a> 
-          }>
-           
+          >
+          <h3>{title}  <a href={link} className="hard-right"><Icon type="arrows-alt" /></a></h3>
             {director ? <p className="reading-author">  <strong>Director: </strong> {director} </p> : '' }
             {author ? <p className="reading-author">  <strong>Author: </strong> {author} </p> : '' }
             {date ?  <em> <strong>Dates: </strong>{date}</em> : '' }
+            {/* <a href={link}><Icon type="link" /></a>  */}
+            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} onChange={() => this.props.saveEssays(item)}></Switch>
             
-            <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.saveEssays(item) } }>Select Reading</Button>
+            
+            {/* <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.saveEssays(item) } }>Select Reading</Button> */}
     
           </Card>
           
@@ -142,19 +149,20 @@ export default class extends Component {
         return (
           <Col   className="further-reading"  key={key} span={8}>
            
-          <Card title={title}
+          <Card 
+          className={`${selectedClass}`}
           
             bordered={true} 
-            extra={
-              
-            <a href={link}><Icon type="link" /></a> 
-          }>
-           
+          >
+            <h3>{title}  <a href={link} className="hard-right"><Icon type="arrows-alt" /></a>  </h3>
             {director ? <p className="reading-author">  <strong>Director: </strong> {director} </p> : '' }
             {author ? <p className="reading-author">  <strong>Author: </strong> {author} </p> : '' }
             {date ?  <em> <strong>Dates: </strong>{date}</em> : '' }
+           
+
+            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} onChange={() => this.props.saveMovies(item)}></Switch>
             
-            <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.saveMovies(item) } }>Select Reading</Button>
+            {/* <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.saveMovies(item) } }>Select Reading</Button> */}
     
           </Card>
           
@@ -184,25 +192,35 @@ export default class extends Component {
     
     
     return (
+
+      <div >
+      <Card className="search-box">
+      
+           <div className="reading-search">
+              <InputSearch
+              // placeholder={this.context.intl.formatMessage({
+              //   id: 'contactlist.searchContacts'
+              // })}
+              placeholder="Search..."
+              value={search}
+              onChange={this.onChange}
+              className="isoSearchBar"
+            />
+        
+            </div>
+            
+           </Card>
+
+
       <ContactCardWrapper className="isoContactCard">
 
 
-     
+   
 
         <div className="isoContactInfoWrapper">
 
         
-        <div className="reading-search">
-        <InputSearch
-        // placeholder={this.context.intl.formatMessage({
-        //   id: 'contactlist.searchContacts'
-        // })}
-        value={search}
-        onChange={this.onChange}
-        className="isoSearchBar"
-      />
-  
-      </div>
+       
       
      
 
@@ -244,6 +262,7 @@ export default class extends Component {
           
         </div>
       </ContactCardWrapper>
+      </div>
     );
   }
 }

@@ -52,13 +52,13 @@ class FurtherReading extends Component {
 
                
 
-                <Layout className="isoContactBoxWrapper">
+                <Layout className="further-container isoContactBoxWrapper">
        
                     <Content className="isoContactBox">
                         {/* this adds padding to top of definition */}
                        
 
-                        <Scrollbar className="contactBoxScrollbar">
+                        {/* <Scrollbar className="contactBoxScrollbar"> */}
                             <SingleContactView 
                                 poems={categories.poems}
                                 essays={categories.essays} 
@@ -73,7 +73,7 @@ class FurtherReading extends Component {
                                 movieSelect={this.props.movieSelect}
                                 
                             />     
-                        </Scrollbar>
+                        {/* </Scrollbar> */}
                     </Content>
                 
                 </Layout>

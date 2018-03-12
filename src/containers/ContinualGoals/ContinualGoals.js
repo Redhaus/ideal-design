@@ -161,7 +161,7 @@ class Extensions extends React.Component {
   render() {
     return (
       <div>
-        <Scrollbar className="contactBoxScrollbar">
+        {/* <Scrollbar className="contactBoxScrollbar"> */}
           <Card className="goals-container"><h3>Continual Goals</h3></Card>
             <Row gutter={16} >
             <Col className="goals-left" span={8}>{this.handleGoals(this.props.goals, 1)}</Col>
@@ -172,7 +172,7 @@ class Extensions extends React.Component {
             </Row>
           {/* </Card> */}
           
-        </Scrollbar>
+        {/* </Scrollbar> */}
       </div>
     );
   }

@@ -133,7 +133,7 @@
 }
 
 .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar {
-  width: 150px;
+  width: 250px;
  
 }
 
@@ -143,9 +143,58 @@
 }
 
 .further-reading .ant-card-bordered{
-height: 184px !important;
+height: 144px !important;
 }
 
+.ant-input {
+  border: none !important;
+  border-color: none !important;
+  outline: 0;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+
+.ant-tabs-content {
+  padding-left: 0px !important;
+  /* border-left: 1px solid #e8e8e8; */
+}
+
+
+.search-box .ant-card-body {
+  padding: 16px 32px !important;
+}
+
+.ant-tabs-vertical > .ant-tabs-bar .ant-tabs-tab {
+  float: none;
+  margin: 0px !important;
+  padding: 8px 24px;
+  display: block;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active {
+  color: black !important;
+  font-weight: 500;
+  background-color: #f1f3f6;
+}
+
+.ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar .ant-tabs-tab {
+  text-align: left !important;
+  padding-left: 40px;
+}
+
+
+.further-container .isoContactCard{
+  padding: 0px !important;
+}
+
+.further-reading .ant-switch-small {
+ 
+  bottom: 20px;
+  right: 20px;
+  position: absolute !important;
+  
+}
 
 
 /* Extensions */
@@ -296,6 +345,8 @@ mark {
 }
 
 
+
+
 /* Goals */
 
 .skill-switch{
@@ -359,7 +410,7 @@ mark {
 
 /* Primary Readings */
 
-.primary-container h3 {
+.primary-header h3 {
   margin-bottom: 0px !important;
 }
 
@@ -388,4 +439,16 @@ mark {
 .primary-container .ant-card {
   background: none !important;
   
+}
+
+.search-box{
+  border: none !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  
+
+}
+
+.primary-container h3{
+  /* padding: 0px; */
+  margin-bottom: 0px !important;
 }
