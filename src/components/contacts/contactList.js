@@ -148,6 +148,7 @@ export default class ContactList extends Component {
           // placeholder={this.context.intl.formatMessage({
           //   id: 'contactlist.searchContacts'
           // })}
+          placeholder="Search..."
           value={search}
           onChange={this.onChange}
           className="isoSearchBar"

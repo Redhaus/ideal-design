@@ -37,7 +37,7 @@ class Lexis extends Component {
 
         return (
 
-            <div>
+            <div className="lexis-container">
             <FilterGroup lexisFilter={this.props.lexisFilter}/>
 
             <ContactsWrapper

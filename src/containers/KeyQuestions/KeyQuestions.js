@@ -142,7 +142,7 @@ class KeyQuestions extends React.Component {
     <div>
 
 
-<Affix  offsetTop={120} >
+<Affix   >
    
 {/* <Card className="question-search"> */}
 

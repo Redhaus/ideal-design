@@ -3,6 +3,16 @@
 /* Lexis Styles */
         
         /* quote */
+
+
+
+
+        .filter-container .ant-btn {
+          height: 40px !important;
+      }
+
+ 
+
         blockquote {
           background: #f9f9f9;
           border-left: 10px solid #ccc;
@@ -100,6 +110,14 @@
 
 
 /* Further Readings */
+
+.further-container{
+  margin-top: 30px;
+}
+
+.further-container.isoContactBoxWrapper {
+  border: 1px solid #e9e9e9 !important;
+}
 
 
 .further-reading .ant-card-head {
@@ -291,6 +309,11 @@ mark {
 
 /* KeyQuestions */
 
+.question-container .isoLayoutContentWrapper{
+  padding-top:0px !important;
+}
+
+
 .key-question-container h3 {
   margin-bottom: 0px !important;
 }
@@ -348,6 +371,12 @@ mark {
 
 
 /* Goals */
+
+.ant-collapse {
+  
+  border-radius: 0px !important;
+ 
+}
 
 .skill-switch{
   margin-right:10px !important;

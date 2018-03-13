@@ -16,7 +16,7 @@ class KeyQuestionsContainer extends Component {
   render() {
     return (
 
-      <ContactsWrapper>
+      <ContactsWrapper className="question-container">
                   
       <LayoutContentWrapper style={{ width: '100%' }}>
       <Layout className="isoContactBoxWrapper">
