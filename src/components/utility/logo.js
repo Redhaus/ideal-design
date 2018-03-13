@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { siteConfig } from '../../config.js';
+import logo from '../../image/idealNameSvg.svg';
+
+import icon from '../../image/idealIconSvg.svg';
 
 export default ({ collapsed }) => {
   return (
@@ -9,13 +12,17 @@ export default ({ collapsed }) => {
         <div>
           <h3>
             <Link to="/dashboard">
-              <i className={siteConfig.siteIcon} />
+        <img className="icon-logo" src={icon} alt=""/>
             </Link>
           </h3>
         </div>
       ) : (
         <h3>
-          <Link to="/dashboard">{siteConfig.siteName}</Link>
+          <Link to="/dashboard">
+        <img className="sidebar-logo" src={logo} alt=""/>
+          
+          
+          </Link>
         </h3>
       )}
     </div>

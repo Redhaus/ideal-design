@@ -54,7 +54,7 @@ class PrimaryReadings extends React.Component {
             bordered={false}
             extra={
               <a href={item.link} target="blank">
-              <Icon type="book" className="icon-right"/> 
+              <Icon type="shopping-cart" className="icon-right"/> 
               </a>
             }>  
             {item.description}

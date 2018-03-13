@@ -5,10 +5,17 @@
         /* quote */
 
 
+        .ant-input-search{
+          border-bottom: 1px solid  #f1f3f6 !important;
+        }
 
 
         .filter-container .ant-btn {
           height: 40px !important;
+      }
+
+      .lexis-container .isoSingleContact{
+        padding-left:39px !important;
       }
 
  
@@ -448,6 +455,11 @@ mark {
 
 /* Primary Readings */
 
+.icon-right{
+  font-size: 17px;
+  color: #2E3545
+}
+
 .primary-header h3 {
   margin-bottom: 0px !important;
 }
@@ -536,4 +548,21 @@ mark {
 
 .numSpace{
   padding-bottom: 70px;
+}
+
+
+
+/* Signin */
+
+.signin-logo{
+  width: 140px;
+  padding-left: 20px;
+}
+
+.sidebar-logo{
+  width: 60px;
+}
+
+.icon-logo{
+  width: 30px;
 }

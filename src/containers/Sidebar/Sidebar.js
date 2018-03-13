@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import clone from 'clone';
 import { Link } from 'react-router-dom';
-import { Layout } from 'antd';
+import { Layout, Icon } from 'antd';
 import Scrollbars from '../../components/utility/customScrollBar.js';
 import Menu from '../../components/uielements/menu';
 import IntlMessages from '../../components/utility/intlMessages';
@@ -12,6 +12,7 @@ import appActions from '../../redux/app/actions';
 import Logo from '../../components/utility/logo';
 import { getCurrentTheme } from '../ThemeSwitcher/config';
 import { themeConfig } from '../../config';
+
 
 const { Sider } = Layout;
 const {
@@ -112,7 +113,7 @@ class Sidebar extends Component {
             <Menu.Item key="overview">
             <Link to={`${url}`}>
               <span className="isoMenuHolder" style={submenuColor}>
-                <i className="ion-document" />
+                <Icon type="appstore-o" />
                 <span className="nav-text">
                   <IntlMessages id="sidebar.overview" />
                 </span>
@@ -123,7 +124,7 @@ class Sidebar extends Component {
               <Menu.Item key="primaryreadings">
                 <Link to={`${url}/primaryreadings`}>
                   <span className="isoMenuHolder" style={submenuColor}>
-                    <i className="ion-document" />
+                  <Icon type="book" />
                     <span className="nav-text">
                       <IntlMessages id="sidebar.primaryReadings" />
                     </span>
@@ -134,7 +135,7 @@ class Sidebar extends Component {
               <Menu.Item key="lexis">
               <Link to={`${url}/lexis`}>
                 <span className="isoMenuHolder" style={submenuColor}>
-                  <i className="ion-document" />
+                <Icon type="profile" />
                   <span className="nav-text">
                     <IntlMessages id="sidebar.lexis" />
                   </span>
@@ -145,7 +146,7 @@ class Sidebar extends Component {
           <Menu.Item key="furtherreadings">
             <Link to={`${url}/furtherreadings`}>
               <span className="isoMenuHolder" style={submenuColor}>
-                <i className="ion-document" />
+              <Icon type="solution" />
                 <span className="nav-text">
                   <IntlMessages id="sidebar.furtherReadings" />
                 </span>
@@ -156,7 +157,7 @@ class Sidebar extends Component {
           <Menu.Item key="keyquestions">
           <Link to={`${url}/keyquestions`}>
             <span className="isoMenuHolder" style={submenuColor}>
-              <i className="ion-document" />
+            <Icon type="question-circle-o" />
               <span className="nav-text">
                 <IntlMessages id="sidebar.keyQuestions" />
               </span>
@@ -167,7 +168,7 @@ class Sidebar extends Component {
           <Menu.Item key="performance">
           <Link to={`${url}/performance`}>
             <span className="isoMenuHolder" style={submenuColor}>
-              <i className="ion-document" />
+            <Icon type="line-chart" />
               <span className="nav-text">
                 <IntlMessages id="sidebar.performance" />
               </span>
@@ -178,7 +179,7 @@ class Sidebar extends Component {
         <Menu.Item key="extensions">
         <Link to={`${url}/extensions`}>
           <span className="isoMenuHolder" style={submenuColor}>
-            <i className="ion-document" />
+          <Icon type="share-alt" />
             <span className="nav-text">
               <IntlMessages id="sidebar.extensions" />
             </span>
@@ -189,7 +190,7 @@ class Sidebar extends Component {
       <Menu.Item key="continualgoals">
       <Link to={`${url}/continualgoals`}>
         <span className="isoMenuHolder" style={submenuColor}>
-          <i className="ion-document" />
+        <Icon type="check-square-o" />
           <span className="nav-text">
             <IntlMessages id="sidebar.continualGoals" />
           </span>
@@ -200,7 +201,7 @@ class Sidebar extends Component {
     <Menu.Item key="annotation">
     <Link to={`${url}/annotation`}>
       <span className="isoMenuHolder" style={submenuColor}>
-        <i className="ion-document" />
+      <Icon type="copy" />
         <span className="nav-text">
           <IntlMessages id="sidebar.annotation" />
         </span>
