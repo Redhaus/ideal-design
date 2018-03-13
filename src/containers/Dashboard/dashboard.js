@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 import LayoutContent from '../../components/utility/layoutContent';
-import {Carousel, Row, Col, Card, Icon, Avatar,  Layout} from 'antd';
+import {Carousel, Row, Col, Card, Icon, Avatar,  Layout, notification} from 'antd';
 import { segueData, quoteData, baseData } from './quoteSegue';
 import { ContactsWrapper } from './contacts.style';
 import Scrollbar from '../../components/utility/customScrollBar.js';
@@ -17,6 +17,14 @@ const { knowledgeRollover, knowledge, unit, title, unitDescription, category, fi
 const { Meta } = Card;
 
 export default class extends Component {
+ 
+
+
+  componentDidMount() {
+    {notification.destroy()}
+  }
+  
+
   render() {
     return (
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
+import { Layout, notification } from 'antd';
 import FurtherList from './furtherReadingList';
 import { connect } from 'react-redux';
 import Scrollbar from '../../components/utility/customScrollBar.js';
@@ -35,6 +35,7 @@ class FurtherReading extends Component {
         // {console.log(categories.essays)}
         // {console.log(categories.movies)}
         this.renderDefinition = this.renderDefinition.bind(this)
+        {notification.destroy()}
     }
 
     renderDefinition(id){

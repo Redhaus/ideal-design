@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout } from 'antd';
+import { Layout, notification } from 'antd';
 import ContactList from '../../components/contacts/contactList';
 import { connect } from 'react-redux';
 import Scrollbar from '../../components/utility/customScrollBar.js';
@@ -20,6 +20,7 @@ class Lexis extends Component {
         super(props)
 
         this.renderDefinition = this.renderDefinition.bind(this)
+        {notification.destroy()}
     }
 
     renderDefinition(id){
@@ -38,7 +39,7 @@ class Lexis extends Component {
         return (
 
             <div className="lexis-container">
-            <FilterGroup lexisFilter={this.props.lexisFilter}/>
+            <FilterGroup filters={this.props.filters}/>
 
             <ContactsWrapper
                 className="isomorphicContacts"
@@ -54,6 +55,7 @@ class Lexis extends Component {
                     saveSelection={this.props.saveSelection}
                     lexisFilter={this.props.lexisFilter}
                     lexisSelect={this.props.lexisSelect}
+
                     />
                     
                 </div>  
@@ -88,6 +90,8 @@ class Lexis extends Component {
 
 function mapStateToProps(state) {
     // console.log(state)
+
+    console.log('map: ', state.lexisSelectedReducer)
    
     return {
       lexis: getVisibility(state.lexis, state.lexisFilterReducer, state.lexisSelectedReducer),

@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
-import { Layout } from 'antd';
+import { Layout, notification } from 'antd';
 
 import readings from './readingData';
 import PrimaryReadings from './primaryReadings';
@@ -13,6 +13,11 @@ import Scrollbar from '../../components/utility/customScrollBar.js';
 import { ContactsWrapper } from './contacts.style';
 
 class PrimaryContainer extends Component {
+
+  componentDidMount() {
+    {notification.destroy()}
+  }
+  
   render() {
     return (
 

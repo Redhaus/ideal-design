@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
-import { Layout } from 'antd';
+import { Layout, notification } from 'antd';
 
 import {keyQuestions} from './performanceData';
 import KeyQuestions from './KeyQuestions';
@@ -13,6 +13,11 @@ import { connect } from 'react-redux';
 import { ContactsWrapper } from './contacts.style';
 
 class KeyQuestionsContainer extends Component {
+
+  componentDidMount() {
+    {notification.destroy()}
+  }
+  
   render() {
     return (
 

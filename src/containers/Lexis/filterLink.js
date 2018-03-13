@@ -22,14 +22,20 @@ class FilterLink extends React.Component {
     }
     
     render() {
-        const selectedClass =  this.props.lexisFilter.includes(this.props.filter) ? 'selected' : '';
+        // console.log('filters: ', this.props.filters)
+        // console.log('filter: ', this.props.filter)
+        
+
+        const selectedClass =  this.props.filters.includes(this.props.filter) ? 'selected' : '';
        
         return (
     
-            <Button className={` ${selectedClass}  `} size="small" onClick={ this.handleOnClick  } >
+            <Button className={` ${selectedClass}  `}  size="small" onClick={ this.handleOnClick  } >    
                 <span className="nfo">{this.props.title}</span>
                 <Icon type={this.props.icon} />
             </Button>
+
+// 
 
         )
     }

@@ -39,7 +39,7 @@ const readings = {
                     author: 'W. H. Auden',
                     date: '1907-1973',
                     title: 'The Unknown Citizen',
-                    link: 'google.com',
+                    link: '/dashboard/annotation',
                     type: 'poem'
                     
                     // description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est'

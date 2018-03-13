@@ -121,18 +121,20 @@ class FilterGroup extends Component {
 
 
     render() {
+        console.log('group: ', this.props.filters)
+        
         return (
 
             <div className="filter-container">
               
-                <FilterLink  on={this.state.all} lexisFilter={this.props.lexisFilter} icon='bars' filter='SHOW_ALL' title='all' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.person} lexisFilter={this.props.lexisFilter}  icon='user' filter='SHOW_PERSON' title='person' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.common} lexisFilter={this.props.lexisFilter}  icon='global' filter='SHOW_COMMON' title='common' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.device} lexisFilter={this.props.lexisFilter}  icon='hourglass' filter='SHOW_DEVICE' title='device' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.essential} lexisFilter={this.props.lexisFilter}  icon='compass' filter='SHOW_ESSENTIAL' title='essential' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.concept} lexisFilter={this.props.lexisFilter}  icon='bulb' filter='SHOW_CONCEPT' title='concept' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.event} lexisFilter={this.props.lexisFilter}  icon='calendar' filter='SHOW_EVENT' title='event' onClick={this.handleSetFilter} />
-                <FilterLink on={this.state.reset} lexisFilter={this.props.lexisFilter}  icon='close' filter='SHOW_RESET' title='reset' onClick={this.handleReset} />
+                <FilterLink  on={this.state.all} filters={this.props.filters} icon='bars' filter='all' title='all' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.person} filters={this.props.filters}  icon='user' filter='person' title='person' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.common} filters={this.props.filters}  icon='global' filter='common' title='common' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.device} filters={this.props.filters}  icon='hourglass' filter='device' title='device' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.essential} filters={this.props.filters}  icon='compass' filter='essential' title='essential' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.concept} filters={this.props.filters}  icon='bulb' filter='concept' title='concept' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.event} filters={this.props.filters}  icon='calendar' filter='event' title='event' onClick={this.handleSetFilter} />
+                <FilterLink on={this.state.reset} filters={this.props.filters}  icon='close' filter='reset' title='reset' onClick={this.handleReset} />
     
             </div>
 
