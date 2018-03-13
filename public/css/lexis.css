@@ -217,6 +217,11 @@ height: 144px !important;
 
 /* Extensions */
 
+.extensionNote .callout{
+  font-size: 16px;
+}
+
+
 .extensions-container h3 {
   margin-bottom: 0px !important;
 }
@@ -232,6 +237,9 @@ mark {
   /* background-color:  #2E3545 !important; */
   background-color: #f1f3f6 !important;
   color: black !important;
+  cursor: pointer;
+  font-weight: 500;
+  padding: .3em .6em !important;
 }
 
 
@@ -480,4 +488,51 @@ mark {
 .primary-container h3{
   /* padding: 0px; */
   margin-bottom: 0px !important;
+}
+
+
+/* Annotation */
+
+.annotation .full-body{
+  background-color: white;
+  border: 1px solid #e8e8e8 !important;
+  padding: 30px;
+}
+
+.max-height{
+  max-height: 400px !important;
+  padding-right: 24px;
+}
+
+
+.notification-popup{
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.ant-notification-notice {
+  padding: 16px 0px 16px 24px !important;
+  
+}
+
+
+
+
+.annoNote .highlight{
+  font-size: 16px;
+}
+
+
+.numberFormat{
+  text-align: right;
+}
+
+
+.numSpaceTop {
+  padding-top: 126px;
+  padding-bottom: 49px;
+}
+
+.numSpace{
+  padding-bottom: 70px;
 }

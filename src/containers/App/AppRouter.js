@@ -54,6 +54,12 @@ class AppRouter extends React.Component {
         component={asyncComponent(() => import('../ContinualGoals/index'))}
         />
 
+        <Route
+        exact
+        path={`${url}/annotation`}
+        component={asyncComponent(() => import('../Annotate/index'))}
+        />
+
 
       </Switch>
     );

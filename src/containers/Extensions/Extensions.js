@@ -69,8 +69,8 @@ class Extensions extends React.Component {
               // sets up location of notification and various other config items
               notification.config({
                 placement: "topRight",
-                top: 206,
-                duration: 4
+                top: 156,
+                duration: 7
               });
 
               this.openNotification(item.callout, item.rollover);
@@ -95,9 +95,32 @@ class Extensions extends React.Component {
 
   // opens notification with info
   openNotification = (callout, rollover) => {
+    notification.destroy()
+
+
+    const content = (
+      
+            <div className="isoContactList notification-popup">
+             <Scrollbar className="contactListScrollbar max-height extensionNote">
+              
+            {/* <h3 className="select"> {currentSelection ? currentSelection : ''} </h3>
+            <label>Reference:</label>
+            <p className="anno">{currentAnnotation ? currentAnnotation : ''} </p>
+            <Divider></Divider> */}
+            <p className="callout"> {callout ? callout : ''} </p>
+           
+            <p className="description"> {rollover ? rollover : ''} </p>
+            
+           
+            </Scrollbar>
+           
+            </div>
+
+          )
+
     notification.open({
-      message: callout,
-      description: rollover
+      // message: callout,
+      description: content
     });
   };
 
