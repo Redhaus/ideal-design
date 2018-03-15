@@ -4,7 +4,7 @@ import IntlMessages from '../utility/intlMessages';
 import { InputSearch } from '../uielements/input';
 import { ContactListWrapper } from './contactList.style';
 import Scrollbar from '../utility/customScrollBar';
-import { Icon } from 'antd';
+import { Icon, Switch } from 'antd';
 
 
 
@@ -120,7 +120,10 @@ export default class ContactList extends Component {
 
         {/* displays word with icons*/}
         <div className="iso-word-container"> 
-          <h3 className="iso-word">{lex.word ? lex.word : 'No Word'}     </h3>
+          <h3 className="iso-word"> 
+            <Switch  size="small" checked={selectedClass ? true : false} ></Switch>  
+            {lex.word ? lex.word : 'No Word'}     
+          </h3>
           <span className="icon-container"> {this.icon(lex.icons)} </span>
         </div>
 

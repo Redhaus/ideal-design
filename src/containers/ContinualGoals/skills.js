@@ -28,13 +28,16 @@ class Skills extends React.Component {
             
 
             const  skillTitle = (
-                    <div key={key} className="skill-goals">
-                        <Card className={` ${selectedClass}`} bordered={false}>
+                    <div key={key} className="skill-goals" >
+                        <Card className={` ${selectedClass}`} 
+                        bordered={false}
+                        onClick={() => this.handleSelect(skill)}
+                        >
                     <Switch
                     checked={selectedClass ? true : false}
                     className="skill-switch"
                     size="small"
-                    onChange={() => this.handleSelect(skill)}
+                    
                   />
                     {skill}
                     </Card>

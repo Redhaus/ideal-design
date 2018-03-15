@@ -15,8 +15,19 @@
       }
 
       .lexis-container .isoSingleContact{
-        padding-left:39px !important;
+        padding-left:15px !important;
       }
+
+      .lexis-container .ant-switch{
+        margin-right:10px !important;
+      }
+
+
+      .lexis-container .ant-input {
+     
+        padding-left: 20px !important;
+        
+    }
 
  
 

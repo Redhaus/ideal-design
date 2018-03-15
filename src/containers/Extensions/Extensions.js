@@ -64,7 +64,7 @@ class Extensions extends React.Component {
             const el = elem[0]; // get sole item in array
 
             // for each item addeventlistener that calls notification function to open
-            el.addEventListener("click", () => {
+            el.addEventListener("click", (e) => {
 
               // sets up location of notification and various other config items
               notification.config({
@@ -73,7 +73,7 @@ class Extensions extends React.Component {
                 duration: 7
               });
 
-              this.openNotification(item.callout, item.rollover);
+              this.openNotification(e, item.callout, item.rollover);
             
             });
           }.bind(this) // bind is important to set scope of callback function to class
@@ -88,13 +88,16 @@ class Extensions extends React.Component {
 
   
   // adds selection to redux store
-  handleSelect = data => {
+  handleSelect = (e,data) => {
     this.props.saveExtensions(data);
   };
 
 
   // opens notification with info
-  openNotification = (callout, rollover) => {
+  openNotification = (e, callout, rollover) => {
+
+    if (e.stopPropagation) e.stopPropagation();
+    
     notification.destroy()
 
 
@@ -141,13 +144,14 @@ class Extensions extends React.Component {
           className={`${selectedClass}`}
           key={key + 1}
           style={gridStyle}
+          onClick={(e) => this.handleSelect(e,item)}
         >
           <p className="extensions">
             <Switch
               checked={selectedClass ? true : false}
               className="question-switch"
               size="small"
-              onChange={() => this.handleSelect(item)}
+             
             />
             {item.ext}
           </p>

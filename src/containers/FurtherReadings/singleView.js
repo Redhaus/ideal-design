@@ -77,13 +77,14 @@ export default class extends Component {
           <Card
             className={`${selectedClass}`}
             bordered={true} 
+            onClick={() => this.props.savePoems(item)}
           >
           <h3>{title} <a href={link} className="hard-right"><Icon type="arrows-alt" /></a> </h3>
             {director ? <p className="reading-author">  <strong>Director: </strong> {director} </p> : '' }
             {author ? <p className="reading-author">  <strong>Author: </strong> {author} </p> : '' }
             {date ?  <em> <strong>Dates: </strong>{date}</em> : '' }
             {/* <a href={link}><Icon type="link" /></a>  */}
-            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} onChange={() => this.props.savePoems(item)}></Switch>
+            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} ></Switch>
             
             {/* <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.savePoems(item) } }>Select Reading</Button> */}
     
@@ -112,7 +113,7 @@ export default class extends Component {
            
           <Card 
           className={`${selectedClass}`}
-          
+          onClick={() => this.props.saveEssays(item)}
             bordered={true} 
           >
           <h3>{title}  <a href={link} className="hard-right"><Icon type="arrows-alt" /></a></h3>
@@ -120,7 +121,7 @@ export default class extends Component {
             {author ? <p className="reading-author">  <strong>Author: </strong> {author} </p> : '' }
             {date ?  <em> <strong>Dates: </strong>{date}</em> : '' }
             {/* <a href={link}><Icon type="link" /></a>  */}
-            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} onChange={() => this.props.saveEssays(item)}></Switch>
+            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} ></Switch>
             
             
             {/* <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.saveEssays(item) } }>Select Reading</Button> */}
@@ -151,7 +152,7 @@ export default class extends Component {
            
           <Card 
           className={`${selectedClass}`}
-          
+          onClick={() => this.props.saveMovies(item)}
             bordered={true} 
           >
             <h3>{title}  <a href={link} className="hard-right"><Icon type="arrows-alt" /></a>  </h3>
@@ -160,7 +161,7 @@ export default class extends Component {
             {date ?  <em> <strong>Dates: </strong>{date}</em> : '' }
            
 
-            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} onChange={() => this.props.saveMovies(item)}></Switch>
+            <Switch className="hard-right" size="small" checked={selectedClass ? true : false} ></Switch>
             
             {/* <Button className={` ${selectedClass} further-reading-button `} onClick={ () => { this.props.saveMovies(item) } }>Select Reading</Button> */}
     

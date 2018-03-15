@@ -120,8 +120,8 @@ class KeyQuestions extends React.Component {
       : 
       // if not new item display as list
       template = (
-         <Card.Grid className={`${selectedClass}`} key={item} style={gridStyle} > 
-         <p className="key-question"><Switch  className="question-switch" checked={selectedClass ? true : false } size="small" onChange={ () =>  this.handleSelect(item)}/>
+         <Card.Grid className={`${selectedClass}`} key={item} style={gridStyle} onClick={ () =>  this.handleSelect(item)}  > 
+         <p className="key-question"><Switch  className="question-switch" checked={selectedClass ? true : false } size="small" />
            {item}</p>
          </Card.Grid>
       )

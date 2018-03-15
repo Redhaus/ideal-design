@@ -3,6 +3,7 @@ import React from 'react'
 import { Collapse } from 'antd';
 import { Card, Col, Row, Icon, Button, Switch } from 'antd';
 
+
 const gridStyle = {
   width: '33.3333%',
   height: '195px'
@@ -14,15 +15,20 @@ class Performance extends React.Component {
   constructor(props){
     super(props)
     this.handleSelect = this.handleSelect.bind(this)
+    // this.handleTest = this.handleTest.bind(this)
+    
   }
+
+
+
   
 
 
-  handleSelect = (data) => {
-    // console.log('change called')
-    // console.log(data)
-    // call save action sending in selection object
+  handleSelect = (e, data) => {
+    
+    if (e.stopPropagation) e.stopPropagation();
     this.props.savePerformance(data); 
+    
   }
 
   handlePerformance = (data) => {
@@ -36,11 +42,9 @@ class Performance extends React.Component {
       // builds body of each book outline
       const template = (
        
-
-
-        <Card.Grid className={`${selectedClass}`}  key={key} style={gridStyle} >
+        <Card.Grid className={`${selectedClass}`}  key={key} style={gridStyle} onClick={(e) =>  this.handleSelect(e,item)} >
        
-        <h4>{item.header}  <Switch className="hard-right" checked={selectedClass? true : false} size="small" onChange={ () =>  this.handleSelect(item)} /> </h4>
+        <h4 >{item.header}  <Switch className="hard-right" checked={selectedClass? true : false} size="small"  /> </h4>
         <p>{item.description}</p>
         </Card.Grid>
       

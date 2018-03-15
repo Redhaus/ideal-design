@@ -6090,6 +6090,10 @@ react-placeholder@^2.0.0:
   dependencies:
     prop-types "^15.6.0"
 
+react-prevent-clickthrough@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-prevent-clickthrough/-/react-prevent-clickthrough-0.0.3.tgz#42d5cd85d7dd76dbb5862062ee7c70f1056edb80"
+
 react-pure-render@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-pure-render/-/react-pure-render-1.0.2.tgz#9d8a928c7f2c37513c2d064e57b3e3c356e9fabb"
