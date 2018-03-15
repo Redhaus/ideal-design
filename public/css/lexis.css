@@ -9,6 +9,8 @@
           border-bottom: 1px solid  #f1f3f6 !important;
         }
 
+     
+
 
         .filter-container .ant-btn {
           height: 40px !important;
@@ -146,6 +148,10 @@
 
 .reading-author{
   /* padding-bottom: 2px; */
+}
+
+.further-container .ant-input-search {
+  border-bottom: none !important;
 }
 
 .further-reading-button{
