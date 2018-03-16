@@ -60,6 +60,12 @@ class AppRouter extends React.Component {
         component={asyncComponent(() => import('../Annotate/index'))}
         />
 
+        <Route
+        exact
+        path={`${url}/results`}
+        component={asyncComponent(() => import('../Results/index'))}
+        />
+
 
       </Switch>
     );

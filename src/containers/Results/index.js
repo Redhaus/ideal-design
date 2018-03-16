@@ -3,20 +3,25 @@
 import React, { Component } from 'react';
 import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
-import { Layout , notification} from 'antd';
+import { Layout, notification } from 'antd';
 
-import {extensions} from './extensionsData';
-import Extensions from './Extensions';
-import { saveExtensions, deleteQuestions } from '../../redux/actions';
+import {performanceData} from './performanceData';
+import Results from './Results';
+import { savePerformance } from '../../redux/actions';
 import { connect } from 'react-redux';
-
+import Scrollbar from '../../components/utility/customScrollBar.js';
 import { ContactsWrapper } from './contacts.style';
 
-class ExtensionsContainer extends Component {
+class ResultsContainer extends Component {
+
+  constructor(props){
+    super(props)
+  }
 
   componentDidMount(){
     notification.destroy()
   }
+
   render() {
     return (
 
@@ -24,14 +29,25 @@ class ExtensionsContainer extends Component {
                   
       <LayoutContentWrapper style={{ width: '100%' }}>
       <Layout className="isoContactBoxWrapper">
-     
 
      
-        <Extensions
-            extensionSelect={this.props.extensionSelect}
-            saveExtensions={this.props.saveExtensions} 
-            extensions={extensions}/>
-     
+
+      {/* <Scrollbar className="contactBoxScrollbar"> */}
+        <Results
+            performanceSelect={this.props.performanceSelect}
+            lexisSelect={this.props.lexisSelect} 
+            primarySelect={this.props.primarySelect} 
+            poemSelect={this.props.poemSelect} 
+            essaySelect={this.props.essaySelect} 
+            movieSelect={this.props.movieSelect} 
+            performanceSelect={this.props.performanceSelect} 
+            questionSelect={this.props.questionSelect} 
+            extensionSelect={this.props.extensionSelect} 
+            goalSelect={this.props.goalSelect} 
+            
+            
+        />
+      {/* </Scrollbar> */}
 
         </Layout>
       </LayoutContentWrapper>
@@ -43,14 +59,22 @@ class ExtensionsContainer extends Component {
 
 const mapStateToProps = state => {
   return ({
-   
-    extensionSelect: state.extensionSelect
+    lexisSelect: state.lexisSelect,
+    performanceSelect: state.performanceSelect,
+    primarySelect: state.primarySelect,
+    poemSelect: state.poemSelect,
+    essaySelect: state.essaySelect,
+    movieSelect: state.movieSelect,
+    performanceSelect: state.performanceSelect,
+    questionSelect: state.questionSelect,
+    extensionSelect: state.extensionSelect,
+    goalSelect: state.goalSelect
   
 
   })
 }
 
-export default connect(mapStateToProps, {saveExtensions})(ExtensionsContainer)
+export default connect(mapStateToProps)(ResultsContainer)
 
 
 

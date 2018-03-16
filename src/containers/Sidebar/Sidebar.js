@@ -209,6 +209,16 @@ class Sidebar extends Component {
     </Link>
   </Menu.Item>
 
+  <Menu.Item key="Results">
+  <Link to={`${url}/results`}>
+    <span className="isoMenuHolder" style={submenuColor}>
+    <Icon type="copy" />
+      <span className="nav-text">
+        <IntlMessages id="sidebar.results" />
+      </span>
+    </span>
+  </Link>
+</Menu.Item>
 
 
             </Menu>
