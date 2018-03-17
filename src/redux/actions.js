@@ -1,3 +1,18 @@
+
+
+
+
+
+// Language Action
+export const languageSelection = (select) => {
+    console.log('action: ', select)
+    return {
+        type: select,
+        payload: select
+      
+    }
+}
+
 // Lexis Action
 export const saveSelection = (select) => {
     return {

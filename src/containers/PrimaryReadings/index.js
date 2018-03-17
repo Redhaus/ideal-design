@@ -5,7 +5,9 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout, notification } from 'antd';
 
-import readings from './readingData';
+import readingsEN from './readingData';
+import readingsCH from '../Chinese/readingData';
+
 import PrimaryReadings from './primaryReadings';
 import { savePrimary } from '../../redux/actions';
 import { connect } from 'react-redux';
@@ -14,11 +16,21 @@ import { ContactsWrapper } from './contacts.style';
 
 class PrimaryContainer extends Component {
 
+
+  constructor(props){
+    super(props)
+    console.log('lang: ', this.props.languageSelect)
+  }
+
   componentDidMount() {
     {notification.destroy()}
   }
   
   render() {
+
+    const readings = this.props.languageSelect === 'EN' ? readingsEN : readingsCH
+
+    
     return (
 
       <ContactsWrapper>
@@ -49,7 +61,9 @@ class PrimaryContainer extends Component {
 
 const mapStateToProps = state => {
   return ({
-    primarySelect: state.primarySelect
+    primarySelect: state.primarySelect,
+    languageSelect: state.languageSelect
+    
     // lexis: getVisibility(state.lexis, state.lexisFilterReducer, state.lexisSelectedReducer),
     // lexisSelect: state.lexisSelect,
     // lexisFilter: state.lexisFilterReducer,

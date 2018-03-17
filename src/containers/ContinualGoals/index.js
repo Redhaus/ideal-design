@@ -5,7 +5,8 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout, notification } from 'antd';
 
-import {goalsData} from './goalsData';
+import {goalsData} from './goalsData'; //english
+import {continualData} from '../Chinese/continualData'; //chinese
 import ContinualGoals from './ContinualGoals';
 import { saveGoals } from '../../redux/actions';
 import { connect } from 'react-redux';
@@ -14,11 +15,20 @@ import { ContactsWrapper } from './contacts.style';
 
 class ContinualGoalsContainer extends Component {
 
+  constructor(props){
+    super(props)
+    console.log('lang: ', this.props.languageSelect)
+  }
+
   componentDidMount() {
     notification.destroy()
   }
   
   render() {
+
+    const goals = this.props.languageSelect === 'EN' ? goalsData : continualData;
+
+
     return (
 
       <ContactsWrapper>
@@ -31,7 +41,7 @@ class ContinualGoalsContainer extends Component {
         <ContinualGoals
             goalSelect={this.props.goalSelect}
             saveGoals={this.props.saveGoals} 
-            goals={goalsData}/>
+            goals={goals}/>
      
 
         </Layout>
@@ -45,7 +55,8 @@ class ContinualGoalsContainer extends Component {
 const mapStateToProps = state => {
   return ({
    
-    goalSelect: state.goalSelect
+    goalSelect: state.goalSelect,
+    languageSelect: state.languageSelect
   
 
   })
