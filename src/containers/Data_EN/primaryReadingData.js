@@ -1,4 +1,4 @@
-const primaryReading_EN = {
+export const primaryReading_EN = {
     unitOne: {
         primary: {
             category: {
@@ -36,4 +36,3 @@ const primaryReading_EN = {
     }
 }
 
-export default primaryReading_EN;

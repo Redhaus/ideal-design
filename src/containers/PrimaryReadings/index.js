@@ -5,8 +5,8 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout, notification } from 'antd';
 
-import readingsEN from '../Data_EN/primaryReadingData';
-import readingsCH from '../Data_CH/primaryReadingData.ch';
+import {primaryReading_EN} from '../Data_EN/primaryReadingData';
+import {primaryReading_CH} from '../Data_CH/primaryReadingData.ch';
 
 import PrimaryReadings from './primaryReadings';
 import { savePrimary } from '../../redux/actions';
@@ -27,7 +27,7 @@ class PrimaryContainer extends Component {
   
   render() {
 
-    const readings = this.props.languageSelect === 'EN' ? readingsEN : readingsCH
+    const readings = this.props.languageSelect === 'EN' ? primaryReading_EN : primaryReading_CH
 
     
     return (

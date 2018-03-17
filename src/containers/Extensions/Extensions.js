@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import {
   Card,
   Switch,
@@ -14,71 +15,126 @@ const gridStyle = {
   height: "56px"
 };
 
+let extensions = undefined
+
+
 class Extensions extends React.Component {
   constructor(props) {
     super(props);
     this.handleSelect = this.handleSelect.bind(this);
+
+    this.state = {
+      language: this.props.languageSelect
+    }
    
   }
 
+
   componentDidMount() {
-
-    const extensions = this.props.extensions;
-
-    // when document loaded set up mark.js highlights and click events
-    extensions.map((item, key) => {
-
-      // if it has a callout add highlight with that callout
-      if (item.callout) {
-
-        // set up options for markjs constructor
-        const options = {
-          separateWordSearch: false,  //set up no spaces on selection
-          filter: function(textNode, foundTerm, totalCounter, counter) {  //set up to only return first selection
-            if (totalCounter > 0) {
-              return false;
-            }
-            return true;
-          },
-          className: key + 1, //assign key + 1 to start at 1 instead of zero as class incase it is needed
-
-          //add a callback function after the highlight has been applied
-          //that adds a click function for the element and connections it to the item
-          each: function() {
-
-            // getElement by className and add click to it
-            const cc = (key + 1).toString();
-            const elem = document.getElementsByClassName(cc); //returns html collection array
-            const el = elem[0]; // get sole item in array
-
-            // for each item addeventlistener that calls notification function to open
-            el.addEventListener("click", (e) => {
-
-              // sets up location of notification and various other config items
-              notification.config({
-                placement: "topRight",
-                top: 156,
-                duration: 7
-              });
-
-              this.openNotification(e, item.callout, item.rollover);
-            
-            });
-          }.bind(this) // bind is important to set scope of callback function to class
-
-
-        };
-
-        const context = document.querySelectorAll(".extensions"); // requires an element with class "context" to exist
-        const instance = new Mark(context);
-        return instance.mark(item.callout, options); // will mark the callout term
-      }
-
-      return undefined;
-
-
-    }); //end of map
+    extensions = this.props.extensions;
+    this.highlightFunction();
   }
+
+
+  // need to listen for change event on language var
+  // and only then call the highlight function
+
+ componentDidUpdate(prevProps, prevState) {
+ 
+  // check to see if current language state, matches existing langage store 
+  // if so ignore event because language did not change. 
+  // If so then reload the extensions from props which are updated language
+  // rerun highlight function, then update local state to reset 
+  
+   if(prevState.language === this.props.languageSelect){
+     return ///if no change to language return
+   }else{
+      
+      extensions = this.props.extensions;
+      this.highlightFunction();
+
+      //  update language state
+      this.setState( () => {
+        return {
+          language: this.props.languageSelect
+        }
+      })
+   }
+ }
+ 
+
+
+
+
+  highlightFunction(){
+    
+    
+          // Unselect everything
+          const uncontext = document.querySelectorAll(".extensions"); // requires an element with class "context" to exist
+          const uninstance = new Mark(uncontext);
+          uninstance.unmark();
+    
+       
+        
+            // when document loaded set up mark.js highlights and click events
+            extensions.map((item, key) => {
+        
+              // if it has a callout add highlight with that callout
+              if (item.callout) {
+        
+                // set up options for markjs constructor
+                const options = {
+                  separateWordSearch: false,  //set up no spaces on selection
+                  filter: function(textNode, foundTerm, totalCounter, counter) {  //set up to only return first selection
+                    if (totalCounter > 0) {
+                      return false;
+                    }
+                    return true;
+                  },
+                  className: (item.id).toString(), //assign key + 1 to start at 1 instead of zero as class incase it is needed
+        
+                  //add a callback function after the highlight has been applied
+                  //that adds a click function for the element and connections it to the item
+                  each: function() {
+        
+                    // getElement by className and add click to it
+                    const cc =  item.id //(item.id).toString();
+                    const elem = document.getElementsByClassName(cc); //returns html collection array
+                    const el = elem[0]; // get sole item in array
+        
+                    // for each item addeventlistener that calls notification function to open
+                    el.addEventListener("click", (e) => {
+        
+                      // sets up location of notification and various other config items
+                      notification.config({
+                        placement: "topRight",
+                        top: 156,
+                        duration: 7
+                      });
+        
+                      this.openNotification(e, item.callout, item.rollover);
+                    
+                    });
+                  }.bind(this) // bind is important to set scope of callback function to class
+        
+        
+                };
+        
+                const context = document.querySelectorAll(".extensions"); // requires an element with class "context" to exist
+                const instance = new Mark(context);
+                instance.mark(item.callout, options); // will mark the callout term
+              }
+        
+              return undefined;
+        
+        
+            }); //end of map
+    
+    
+    
+        
+      }
+  
 
   
   // adds selection to redux store
@@ -125,6 +181,7 @@ class Extensions extends React.Component {
   handleExtensions = data => {
     return data.map((item, key) => {
 
+      // const _id = uuid();
       // checks if selection is in store to set active state of button
       const selectedClass = this.props.extensionSelect.includes(item)
         ? "selected"
@@ -136,7 +193,7 @@ class Extensions extends React.Component {
       const template = (
         <Card.Grid
           className={`${selectedClass}`}
-          key={key + 1}
+          key={item.id}
           style={gridStyle}
           onClick={(e) => this.handleSelect(e,item)}
         >

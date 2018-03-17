@@ -8,21 +8,27 @@ import themes from '../../config/themes';
 import { themeConfig } from '../../config';
 import {languageSelection} from '../../redux/actions';
 
+import { overviewData_EN } from '../Data_EN/overviewData';
+import { overviewData_CH } from '../Data_CH/overviewData.ch';
+
 const { Header } = Layout;
 const { toggleCollapsed } = appActions;
 const customizedTheme = themes[themeConfig.theme];
 const Option = Select.Option;
 
+
 class Topbar extends Component {
 
  
-
   handleLanguageChange = (lang) => {
     this.props.languageSelection(lang)
-    // console.log(lang)
   }
 
   render() {
+
+    const overviewData = this.props.languageSelect === 'EN' ? overviewData_EN : overviewData_CH;    
+    const { category } = overviewData;
+    
     const { toggleCollapsed } = this.props;
     const collapsed = this.props.collapsed && !this.props.openDrawer;
     const styling = {
@@ -49,7 +55,7 @@ class Topbar extends Component {
             />
           </div>
 
-          <h3>Survey of Western Literature I</h3>
+          <h3>{category}</h3>
 
           <ul className="isoRight">
           <li>
@@ -88,42 +94,3 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {toggleCollapsed, languageSelection})(Topbar);
-
-// export default connect(
-//   state => ({
-//     ...state.App.toJS()
-//   }),
-//   { toggleCollapsed }
-// )(Topbar);
-
-
-
-
-
-// const mapStateToProps = state => {
-//   return ({
-//     lexisSelect: state.lexisSelect,
-//     performanceSelect: state.performanceSelect,
-//     primarySelect: state.primarySelect,
-//     poemSelect: state.poemSelect,
-//     essaySelect: state.essaySelect,
-//     movieSelect: state.movieSelect,
-//     performanceSelect: state.performanceSelect,
-//     questionSelect: state.questionSelect,
-//     extensionSelect: state.extensionSelect,
-//     goalSelect: state.goalSelect
-  
-
-//   })
-// }
-
-
-
-
-
-// export default connect(
-//   state => ({
-//     ...state.App.toJS()
-//   }),
-//   { toggleCollapsed }
-// )(Topbar);

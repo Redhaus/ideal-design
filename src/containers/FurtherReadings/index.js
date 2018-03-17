@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 import SingleContactView from './singleView';
 import { ContactsWrapper } from './contacts.style';
 import _ from 'lodash';
-import readingsEN from '../Data_EN/furtherReadingData';
-import readingsCH from '../Data_CH/furtherReadingData.ch';
+import {furtherReading_EN} from '../Data_EN/furtherReadingData';
+import {furtherReading_CH} from '../Data_CH/furtherReadingData.ch';
 
 import { changeReadings, savePoems, saveEssays, saveMovies } from '../../redux/actions';
 
@@ -31,7 +31,7 @@ class FurtherReading extends Component {
 
     render() {
 
-const readings = this.props.languageSelect === 'EN' ? readingsEN : readingsCH
+const readings = this.props.languageSelect === 'EN' ? furtherReading_EN : furtherReading_CH
 
 const categories = {
     cats: ["Poems", "Essays", "Movies"],

@@ -1,4 +1,4 @@
-const furtherReading_CH = {
+export const furtherReading_CH = {
     unitOne: {
        
         further:{
@@ -412,4 +412,3 @@ const furtherReading_CH = {
 }
 
 
-export default furtherReading_CH;

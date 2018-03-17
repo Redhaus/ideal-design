@@ -123,14 +123,3 @@ class Extensions extends React.Component {
 
 export default Extensions;
 
-// <Collapse bordered={false} >
-// <Panel header="This is panel header 1" key="1">
-//   {text}
-// </Panel>
-// <Panel header="This is panel header 2" key="2">
-//   {text}
-// </Panel>
-// <Panel header="This is panel header 3" key="3">
-//   {text}
-// </Panel>
-// </Collapse>

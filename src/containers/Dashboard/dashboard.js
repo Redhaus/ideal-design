@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 import {Carousel, Row, Col, Card, Icon, Layout, notification} from 'antd';
-import { segueData, quoteData } from './quoteSegue';
 import { ContactsWrapper } from './contacts.style';
-import primaryData from './primaryData';
+
+import { connect } from 'react-redux';
+
+import { overviewData_EN, segueData_EN, quoteData_EN } from '../Data_EN/overviewData';
+import { overviewData_CH, segueData_CH, quoteData_CH } from '../Data_CH/overviewData.ch';
 
 import strauss1 from './images/strauss1.jpg';
 import strauss2 from './images/strauss2.jpg';
 import strauss3 from './images/strauss3.jpg';
 
 
-const { knowledgeRollover, knowledge, title, unitDescription, firstDay } = primaryData;
 
 
-export default class extends Component {
+
+
+class Dashboard extends Component {
  
 
 
@@ -23,26 +27,20 @@ export default class extends Component {
   
 
   render() {
+
+    const overviewData = this.props.languageSelect === 'EN' ? overviewData_EN : overviewData_CH;
+    const { knowledgeRollover, knowledge, title, unitDescription, firstDay } = overviewData;
+
+    const segueData = this.props.languageSelect === 'EN' ? segueData_EN : segueData_CH;
+    const quoteData = this.props.languageSelect === 'EN' ? quoteData_EN : quoteData_CH;
+    
+
     return (
 
-
-
-
-
-      <ContactsWrapper>
-      
-                        
+      <ContactsWrapper>                        
             <LayoutContentWrapper style={{ width: '100%' }}>
             <Layout className="isoContactBoxWrapper">
-           
         
-      
-            {/* <Scrollbar className="contactBoxScrollbar"> */}
-             
-            
-
-
-     {/* Begin */}
             <div>
             
             
@@ -132,90 +130,17 @@ export default class extends Component {
 
 
 
-
-
-
-
-// <ContactsWrapper>
-
-                  
-//       <LayoutContentWrapper style={{ width: '100%' }}>
-//       <Layout className="isoContactBoxWrapper">
-
-//       <Scrollbar className="contactBoxScrollbar">
-
-
-//       <div>
-
-      
-     
-
-      
-
-
-
-
-
-// {/* priori and segue  */}
-
-// <div> 
-
-//     <Col span={12}> 
-    
-//     <Card
-//       cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
-//       actions={[<Icon type="arrow-left" />, <Icon type="edit" />, <Icon type="ellipsis" />]}
-//     >
-
-//         <Meta
-//           avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-//           title="Previous Knowledge"
-//           description={baseData.rollover}
-//         />
-        
-//     </Card>
-
-//     </Col>
-
-
-//     <Col span={12}> 
-
-
-//     <Card
-//       cover={<img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png" />}
-//       actions={[<Icon type="ellipsis" />, <Icon type="edit" />, <Icon type="arrow-left" />]}
-//     >
-
-//         <Meta
-//           avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-//           title="Segue to Next Unit"
-//           description={segueData.segue}
-//         />
-        
-//     </Card>
-
+const mapStateToProps = state => {
+  return ({
    
-//     </Col>
-
-// </div>
-
-
-    
-      
-      
-//     </Row>  
-
- 
-
-
-
-
-//   </div>
-
-//   </Scrollbar>
+    languageSelect: state.languageSelect
   
-        
-//           </Layout>
-//         </LayoutContentWrapper>
-  
-//         </ContactsWrapper>
+
+  })
+}
+
+export default connect(mapStateToProps)(Dashboard)
+
+
+
+

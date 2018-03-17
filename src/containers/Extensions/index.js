@@ -2,10 +2,11 @@
 
 import React, { Component } from 'react';
 import LayoutContentWrapper from '../../components/utility/layoutWrapper';
-// import LayoutContent from '../../components/utility/layoutContent';
 import { Layout , notification} from 'antd';
 
-import {extensions} from './extensionsData';
+import {extensionsData_EN} from '../Data_EN/extensionsData';
+import {extensionsData_CH} from '../Data_CH/extensionsData.ch';
+
 import Extensions from './Extensions';
 import { saveExtensions } from '../../redux/actions';
 import { connect } from 'react-redux';
@@ -18,6 +19,11 @@ class ExtensionsContainer extends Component {
     notification.destroy()
   }
   render() {
+
+    const extensionsData = this.props.languageSelect === 'EN' ? extensionsData_EN : extensionsData_CH;
+
+    
+
     return (
 
       <ContactsWrapper>
@@ -30,7 +36,10 @@ class ExtensionsContainer extends Component {
         <Extensions
             extensionSelect={this.props.extensionSelect}
             saveExtensions={this.props.saveExtensions} 
-            extensions={extensions}/>
+            extensions={extensionsData}
+            languageSelect={this.props.languageSelect}
+            
+            />
      
 
         </Layout>
@@ -44,7 +53,9 @@ class ExtensionsContainer extends Component {
 const mapStateToProps = state => {
   return ({
    
-    extensionSelect: state.extensionSelect
+    extensionSelect: state.extensionSelect,
+    languageSelect: state.languageSelect
+    
   
 
   })
@@ -54,43 +65,3 @@ export default connect(mapStateToProps, {saveExtensions})(ExtensionsContainer)
 
 
 
-
-
-// // const mapDispatchToProps = (dispatch) => ({
-// //   savePrimary: bindActionCreators(actions.savePrimary, dispatch),
-  
-// //   // saveSelection: bindActionCreators(actions.saveSelection, dispatch),
-// //   // setFilter: bindActionCreators(actions.setFilter, dispatch)
-// // })
-
-// export default connect(mapStateToProps)(PrimaryReadings)
-
-
-
-
-
-
-
-
-//   import { Collapse } from 'antd';
-//   const Panel = Collapse.Panel;
-  
-//   const text = `
-//     A dog is a type of domesticated animal.
-//     Known for its loyalty and faithfulness,
-//     it can be found as a welcome guest in many households across the world.
-//   `;
-  
-//   ReactDOM.render(
-//     <Collapse accordion>
-//       <Panel header="This is panel header 1" key="1">
-//         <p>{text}</p>
-//       </Panel>
-//       <Panel header="This is panel header 2" key="2">
-//         <p>{text}</p>
-//       </Panel>
-//       <Panel header="This is panel header 3" key="3">
-//         <p>{text}</p>
-//       </Panel>
-//     </Collapse>
-//   , mountNode);

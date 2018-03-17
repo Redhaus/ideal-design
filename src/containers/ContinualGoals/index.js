@@ -5,8 +5,8 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout, notification } from 'antd';
 
-import {goalsData} from './goalsData'; //english
-import {continualData} from '../Chinese/continualData'; //chinese
+import {continualGoalsData_EN} from '../Data_EN/continualGoalsData'; //english
+import {continualGoalsData_CH} from '../Data_CH/continualGoalsData.ch'; //chinese
 import ContinualGoals from './ContinualGoals';
 import { saveGoals } from '../../redux/actions';
 import { connect } from 'react-redux';
@@ -26,7 +26,7 @@ class ContinualGoalsContainer extends Component {
   
   render() {
 
-    const goals = this.props.languageSelect === 'EN' ? goalsData : continualData;
+    const goals = this.props.languageSelect === 'EN' ? continualGoalsData_EN : continualGoalsData_CH;
 
 
     return (

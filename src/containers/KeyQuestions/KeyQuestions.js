@@ -3,7 +3,6 @@ import React from 'react'
 import { Affix, Form, Card,  Icon, Button, Switch, Input } from 'antd';
 import _ from 'lodash';
 
-
 const FormItem = Form.Item;
 
 const gridStyle = {
@@ -23,6 +22,9 @@ class KeyQuestions extends React.Component {
     
 
   }
+
+
+
 
   // tracks all questions, inputs and temp questions to know where to put delete icons
   state={
@@ -88,6 +90,7 @@ class KeyQuestions extends React.Component {
   handleQuestions = (data) => {
 
     return data.map((item, key) => {
+     
 
       // checks if selection is in store to set active state of button
       const selectedClass =  this.props.questionSelect.includes(item) ? 'selected' : '';
@@ -186,14 +189,12 @@ class KeyQuestions extends React.Component {
 
 
 
-  {/* <Scrollbar className="contactBoxScrollbar"> */}
   
     <div className="key-question-container">
     {this.handleQuestions(this.state.questions)}
     
   </div>
 
-  {/* </Scrollbar> */}
 
   </div>
 
@@ -210,66 +211,3 @@ export default KeyQuestions
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react';
-// import { Grid, Checkbox } from 'semantic-ui-react';
-// // import { handleOnClick } from '../../utils/utils';
-
-
-// const Performance = (props) => {
-
-//     const handleOnClick = (e, data) => {
-//         console.log(data)
-//         props.savePerformance(data)
-//     }
-
-//     const renderContent = (content) => {
-
-//         return content.map( (item, key) => {
-
-//             const title = (
-//                 <Grid.Column key={key}>
-                
-//                     <div className="performance">
-//                     <h4><Checkbox data={item} label={item.header} onClick={handleOnClick} /></h4>
-//                     <div>{item.description}</div>
-//                     </div>
-//                 </Grid.Column>   
-//             )
-                        
-
-//             return title ;
-
-//         })
-
-//     }
-    
-
-    
-
-//         return(
-//             <div className="top-padding">
-//                 <Grid>
-//                 <Grid.Row columns={3}>
-//                 {renderContent(props.content)}
-//                 </Grid.Row>
-//                 </Grid>
-
-//             </div>
-//         )
-
-// };
-
-// export default Performance;
