@@ -26,3 +26,27 @@
 
 // NEED TO MAKE THE SELCTED CHECK BOX SHOW ON OR OFF FOR REDUCER TO ADD OR REMOVE CONTENT
 // finding checked is no longer and option because it is not part of component
+
+
+
+
+
+
+// LATEST TODOS
+
+
+
+// TODO
+// Format results
+// Add print PDF option for results
+// Language Option for Chinese via global lang var 
+// have each component check it and load other content if needed
+// I have a few UI things to clean up here and there, 
+// I need to get the format the rendered results under a result page. 
+// I need to figure out chinese translation 
+// I need to remove sections and get student version online. 
+// Calendar integration.
+// Longer term make it mobile friendly 
+// Build create user system etc. 
+// Kids rating lexis 
+// Responsive 
