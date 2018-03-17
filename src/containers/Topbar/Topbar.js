@@ -15,11 +15,7 @@ const Option = Select.Option;
 
 class Topbar extends Component {
 
-  constructor(props){
-    super(props)
-
-
-  }
+ 
 
   handleLanguageChange = (lang) => {
     this.props.languageSelection(lang)

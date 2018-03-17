@@ -7,7 +7,7 @@ import { Layout , notification} from 'antd';
 
 import {extensions} from './extensionsData';
 import Extensions from './Extensions';
-import { saveExtensions, deleteQuestions } from '../../redux/actions';
+import { saveExtensions } from '../../redux/actions';
 import { connect } from 'react-redux';
 
 import { ContactsWrapper } from './contacts.style';

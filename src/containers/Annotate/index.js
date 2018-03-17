@@ -5,7 +5,6 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout } from 'antd';
 
-import {extensions} from './extensionsData';
 import Poem from './UnknownSoldier';
 // import { saveExtensions, deleteQuestions } from '../../redux/actions';
 import { connect } from 'react-redux';

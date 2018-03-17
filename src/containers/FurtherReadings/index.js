@@ -1,41 +1,26 @@
 import React, { Component } from 'react';
 import { Layout, notification } from 'antd';
-import FurtherList from './furtherReadingList';
 import { connect } from 'react-redux';
-import Scrollbar from '../../components/utility/customScrollBar.js';
 import SingleContactView from './singleView';
 import { ContactsWrapper } from './contacts.style';
-// import contactAction from '../../redux/lexis/actions';
-import { changeContact, saveSelection } from '../../redux/actions';
-import { getVisibility } from './selectors';
 import _ from 'lodash';
-import readings from '../PrimaryReadings/readingData';
+import readingsEN from '../Data_EN/furtherReadingData';
+import readingsCH from '../Data_CH/furtherReadingData.ch';
+
 import { changeReadings, savePoems, saveEssays, saveMovies } from '../../redux/actions';
 
 
-// Use Primary reading lay out to layout 
-// Poems Essay and movies list, 
-// Once clicked on, the items will display in cards in the display area
-// Load in cats make them display, when clicked we will use to pull in display sections
-
 
 const { Content } = Layout;
-const categories = {
-    cats: ["Poems", "Essays", "Movies"],
-    poems: readings.unitOne.further.category.poems,
-    essays: readings.unitOne.further.category.essays,
-    movies: readings.unitOne.further.category.movies
-}
+
 
 class FurtherReading extends Component {
 
     constructor(props){
         super(props)
-        // {console.log(categories.poems)}
-        // {console.log(categories.essays)}
-        // {console.log(categories.movies)}
+        
         this.renderDefinition = this.renderDefinition.bind(this)
-        {notification.destroy()}
+        notification.destroy()
     }
 
     renderDefinition(id){
@@ -45,6 +30,18 @@ class FurtherReading extends Component {
     }
 
     render() {
+
+const readings = this.props.languageSelect === 'EN' ? readingsEN : readingsCH
+
+const categories = {
+    cats: ["Poems", "Essays", "Movies"],
+    poems: readings.unitOne.further.category.poems,
+    essays: readings.unitOne.further.category.essays,
+    movies: readings.unitOne.further.category.movies
+}
+
+        
+
         return (
             <div>
             <ContactsWrapper
@@ -96,7 +93,9 @@ function mapStateToProps(state) {
     //   lexisFilter: state.lexisFilterReducer
       poemSelect: state.poemSelect,
       essaySelect: state.essaySelect,
-      movieSelect: state.movieSelect
+      movieSelect: state.movieSelect,
+      languageSelect: state.languageSelect
+      
       
     };
   }

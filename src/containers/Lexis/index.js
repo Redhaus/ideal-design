@@ -20,7 +20,7 @@ class Lexis extends Component {
         super(props)
 
         this.renderDefinition = this.renderDefinition.bind(this)
-        {notification.destroy()}
+        notification.destroy()
     }
 
     renderDefinition(id){

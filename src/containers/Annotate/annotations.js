@@ -17,7 +17,6 @@ export const anno = [
     id: uuid()
   
   },
-  ,
   {
     highlight: "scab",
     annotation: "A strikebreaker or one who did not join the trade union",
@@ -26,7 +25,6 @@ export const anno = [
     id: uuid()
   
   },
-  ,
   {
     highlight: "Installment Plan",
     annotation: "A system for purchasing merchandise in which the buyer takes possession of the merchandise on payment of a deposit and completes the purchase by paying a series of regular installments while the seller retains ownership until the final installment is paid",
@@ -35,7 +33,6 @@ export const anno = [
     id: uuid()
   
   },
-  ,
   {
     highlight: "Eugenist",
     annotation: "Eugenics: a set of beliefs and practices that aims at improving the genetic quality of a human population",
@@ -43,5 +40,5 @@ export const anno = [
     
     id: uuid()
   
-  },
+  }
 ]

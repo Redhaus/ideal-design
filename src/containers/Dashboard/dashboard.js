@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import LayoutContentWrapper from '../../components/utility/layoutWrapper';
-import LayoutContent from '../../components/utility/layoutContent';
-import {Carousel, Row, Col, Card, Icon, Avatar,  Layout, notification} from 'antd';
-import { segueData, quoteData, baseData } from './quoteSegue';
+import {Carousel, Row, Col, Card, Icon, Layout, notification} from 'antd';
+import { segueData, quoteData } from './quoteSegue';
 import { ContactsWrapper } from './contacts.style';
-import Scrollbar from '../../components/utility/customScrollBar.js';
 import primaryData from './primaryData';
 
 import strauss1 from './images/strauss1.jpg';
@@ -12,16 +10,15 @@ import strauss2 from './images/strauss2.jpg';
 import strauss3 from './images/strauss3.jpg';
 
 
-const { knowledgeRollover, knowledge, unit, title, unitDescription, category, firstDay } = primaryData;
+const { knowledgeRollover, knowledge, title, unitDescription, firstDay } = primaryData;
 
-const { Meta } = Card;
 
 export default class extends Component {
  
 
 
   componentDidMount() {
-    {notification.destroy()}
+    notification.destroy()
   }
   
 

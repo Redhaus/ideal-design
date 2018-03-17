@@ -2,16 +2,7 @@ import React from 'react';
 import {Switch, Card} from 'antd';
 
 
-const gridStyle = {
-    width: '100%',
-    height: '40px'
-  };
-
 class Skills extends React.Component {
-
-    constructor(props){
-        super(props)
-    }
 
 
     handleSelect = (skill) => {

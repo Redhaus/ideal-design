@@ -1,27 +1,25 @@
 
 import React, { Component } from 'react';
-import IntlMessages from '../../components/utility/intlMessages';
 import { InputSearch } from '../../components/uielements/input';
 import { ContactListWrapper } from './furtherReadingList.style';
 import Scrollbar from '../../components/utility/customScrollBar';
-import { Icon } from 'antd';
 
 
 
 // this filters via search accepts lexis array, search term, and filters 
-function filterContacts(lexis, search) {
+// function filterContacts(lexis, search) {
 
-  search = search.toUpperCase();
-  return search
-    ? lexis.filter(lexis => lexis.word.toUpperCase().includes(search))
-    : lexis;
-}
+//   search = search.toUpperCase();
+//   return search
+//     ? lexis.filter(lexis => lexis.word.toUpperCase().includes(search))
+//     : lexis;
+// }
 
 
 export default class FurtherList extends Component {
   constructor(props) {
     super(props);
-    {console.log(this.props.catList)};
+ 
 
     // bind functions to this
     this.singleContact = this.singleContact.bind(this);
@@ -121,7 +119,7 @@ export default class FurtherList extends Component {
     const { search } = this.state;
    
     // const contacts = filterContacts(this.props.contacts, search);
-    const lexis = filterContacts(this.props.lexis, search);
+    // const lexis = filterContacts(this.props.lexis, search);
     const cats = this.props.catList
  
     

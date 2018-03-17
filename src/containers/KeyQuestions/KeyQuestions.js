@@ -1,9 +1,7 @@
 import React from 'react'
 
-import { Collapse } from 'antd';
-import { Affix, Form, Card, Col, Row, Icon, Button, Switch, Input } from 'antd';
+import { Affix, Form, Card,  Icon, Button, Switch, Input } from 'antd';
 import _ from 'lodash';
-import Scrollbar from '../../components/utility/customScrollBar.js';
 
 
 const FormItem = Form.Item;

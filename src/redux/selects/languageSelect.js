@@ -7,11 +7,11 @@
     switch (action.type) {
       case 'EN':  
         return 'EN'
-          break
+        
 
       case 'CH':  
         return 'CH'
-          break
+     
       
         default:
         return state

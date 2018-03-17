@@ -1,23 +1,13 @@
 import React from "react";
 
-import { Collapse } from "antd";
 import {
-  Affix,
-  Form,
   Card,
-  Col,
-  Row,
-  Icon,
-  Button,
   Switch,
-  Input,
   notification
 } from "antd";
-import _ from "lodash";
 import Scrollbar from "../../components/utility/customScrollBar.js";
 import Mark from "mark.js";
 
-const FormItem = Form.Item;
 
 const gridStyle = {
   width: "100%",
@@ -32,10 +22,8 @@ class Extensions extends React.Component {
   }
 
   componentDidMount() {
-    // this.handleExtensions(this.props.extensions)
 
     const extensions = this.props.extensions;
-
 
     // when document loaded set up mark.js highlights and click events
     extensions.map((item, key) => {
@@ -77,12 +65,18 @@ class Extensions extends React.Component {
             
             });
           }.bind(this) // bind is important to set scope of callback function to class
+
+
         };
 
         const context = document.querySelectorAll(".extensions"); // requires an element with class "context" to exist
         const instance = new Mark(context);
-        instance.mark(item.callout, options); // will mark the callout term
+        return instance.mark(item.callout, options); // will mark the callout term
       }
+
+      return undefined;
+
+
     }); //end of map
   }
 

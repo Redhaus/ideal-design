@@ -5,13 +5,12 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout, notification } from 'antd';
 
-import readingsEN from './readingData';
-import readingsCH from '../Chinese/readingData';
+import readingsEN from '../Data_EN/primaryReadingData';
+import readingsCH from '../Data_CH/primaryReadingData.ch';
 
 import PrimaryReadings from './primaryReadings';
 import { savePrimary } from '../../redux/actions';
 import { connect } from 'react-redux';
-import Scrollbar from '../../components/utility/customScrollBar.js';
 import { ContactsWrapper } from './contacts.style';
 
 class PrimaryContainer extends Component {
@@ -23,7 +22,7 @@ class PrimaryContainer extends Component {
   }
 
   componentDidMount() {
-    {notification.destroy()}
+    notification.destroy()
   }
   
   render() {

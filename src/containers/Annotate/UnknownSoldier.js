@@ -1,55 +1,20 @@
 import React from "react";
 
-import { Collapse } from "antd";
 import {
-  Affix,
-  Form,
-  Card,
   Col,
   Row,
-  Icon,
-  Button,
-  Switch,
-  Input,
   notification
 } from "antd";
-import _ from "lodash";
 import Scrollbar from "../../components/utility/customScrollBar.js";
 import Mark from "mark.js";
 import {anno} from './annotations';
 
 
-// define follow vars needed sidebar content and container
-// Assign after all content loads in content did mount
-// let theThing;
 let container;
-// let thingContainer;
-// let mainBody;
-
-
 
 
 class Poem extends React.Component {
-  constructor(props) {
-    super(props);
 
-
-
-    this.state = {
-      visible: false,
-      currentAnnotation: "",
-      currentSelection: "",
-      currentHistory: ""
-    };
-
-    // this.toggleVisibilityClose = this.toggleVisibilityClose.bind(this);
-    // this.toggleVisibility = this.toggleVisibility.bind(this);
-    this.handleAnnotation = this.handleAnnotation.bind(this);
-    this.getClickPosition = this.getClickPosition.bind(this);
-
-
-   
-  }
 
   componentDidMount() {
 
@@ -100,7 +65,6 @@ class Poem extends React.Component {
                 duration: 7
               });
 
-              // this.handleAnnotation(item.highlight, item.annotation, item.history)
               this.openNotification(item.highlight, item.annotation, item.history);
 
               
@@ -122,40 +86,9 @@ class Poem extends React.Component {
   }
 
 
-  // close sidebar
-  // toggleVisibilityClose() {
-  //   if (this.state.visible) {
-  //     this.setState({ visible: !this.state.visible });
-  //   }
-  // }
 
-  // open sidebar if closed
-  // toggleVisibility() {
-  //   if (!this.state.visible) {
-  //     this.setState({ visible: !this.state.visible });
-  //   }
-  // }
 
-  // sets annotation state
-  handleAnnotation(select, anno, history) {
-    this.setState({ currentAnnotation: anno });
-    this.setState({ currentSelection: select });
-    this.setState({ currentHistory: history });
-  }
 
-  // get mount click position and move sidebar content to that position
-  getClickPosition(e) {
-    var xPosition = 0;
-    var yPosition = e.layerY - 40; // - (theThing.offsetHeight / 2) this is an offset
-    var translate3dValue =
-      "translate3d(" + xPosition + "px," + yPosition + "px, 0)";
-
-    //set container scroll to 0 so transform works property
-    // thingContainer.scrollTop = 0;
-
-    // theThing.scrollTop = 0;
-    // theThing.style.transform = translate3dValue;
-  }
 
 
 

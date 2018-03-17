@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Collapse } from 'antd';
-import { Card, Col, Row, Icon, Button, Switch } from 'antd';
+import { Card, Switch } from 'antd';
 
 
 const gridStyle = {

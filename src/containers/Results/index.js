@@ -5,18 +5,12 @@ import LayoutContentWrapper from '../../components/utility/layoutWrapper';
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout, notification } from 'antd';
 
-import {performanceData} from './performanceData';
 import Results from './Results';
-import { savePerformance } from '../../redux/actions';
 import { connect } from 'react-redux';
-import Scrollbar from '../../components/utility/customScrollBar.js';
 import { ContactsWrapper } from './contacts.style';
 
 class ResultsContainer extends Component {
 
-  constructor(props){
-    super(props)
-  }
 
   componentDidMount(){
     notification.destroy()
@@ -40,7 +34,6 @@ class ResultsContainer extends Component {
             poemSelect={this.props.poemSelect} 
             essaySelect={this.props.essaySelect} 
             movieSelect={this.props.movieSelect} 
-            performanceSelect={this.props.performanceSelect} 
             questionSelect={this.props.questionSelect} 
             extensionSelect={this.props.extensionSelect} 
             goalSelect={this.props.goalSelect} 
@@ -65,7 +58,6 @@ const mapStateToProps = state => {
     poemSelect: state.poemSelect,
     essaySelect: state.essaySelect,
     movieSelect: state.movieSelect,
-    performanceSelect: state.performanceSelect,
     questionSelect: state.questionSelect,
     extensionSelect: state.extensionSelect,
     goalSelect: state.goalSelect

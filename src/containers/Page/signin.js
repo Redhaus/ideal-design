@@ -9,7 +9,6 @@ import IntlMessages from '../../components/utility/intlMessages';
 import SignInStyleWrapper from './signin.style';
 // import Image1 from 'react-svg-loader!./image1.svg';
 import logo from '../../image/idealLogoSvg.svg';
-import icon from '../../image/idealIconSvg.svg';
 
 
 const { login } = authAction;

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Collapse } from 'antd';
-import { Card, Col, Row, Icon, Button , Switch} from 'antd';
+import { Card, Col, Row, Icon, Switch} from 'antd';
 
 
 const Panel = Collapse.Panel;

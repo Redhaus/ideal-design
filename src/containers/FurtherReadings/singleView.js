@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { ContactCardWrapper } from './singleViewCard.style';
-import {Tabs, Icon, Card, Col, Row, Button, Switch} from 'antd';
+import {Tabs, Icon, Card, Col, Row,  Switch} from 'antd';
 import { InputSearch } from '../../components/uielements/input';
 
 const TabPane = Tabs.TabPane;
 
-const gridStyle = {
-  width: '33.333%'
-  // textAlign: 'center',
-};
 
 // this filters via search accepts lexis array, search term, and filters 
 function filterContacts(readings, search) {
@@ -66,7 +62,7 @@ export default class extends Component {
     
     
        return readings ? readings.map( (item, key) => {
-          const { director, author, date, link, title, type } = item;
+          const { director, author, date, link, title} = item;
 
           // checks if selection is in store to set active state of button
           const selectedClass =  this.props.poemSelect.includes(item) ? 'selected' : '';
@@ -103,7 +99,7 @@ export default class extends Component {
   displayEssays(readings){
     
        return readings ? readings.map( (item, key) => {
-          const { director, author, date, link, title, type } = item;
+          const { director, author, date, link, title } = item;
 
           // checks if selection is in store to set active state of button
           const selectedClass =  this.props.essaySelect.includes(item) ? 'selected' : '';
@@ -142,7 +138,7 @@ export default class extends Component {
   displayMovies(readings){
     
        return readings ? readings.map( (item, key) => {
-          const { director, author, date, link, title, type } = item;
+          const { director, author, date, link, title } = item;
 
           // checks if selection is in store to set active state of button
           const selectedClass =  this.props.movieSelect.includes(item) ? 'selected' : '';

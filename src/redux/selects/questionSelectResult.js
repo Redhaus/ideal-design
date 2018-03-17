@@ -45,31 +45,6 @@ import _ from 'lodash';
         const item = action.payload
         return _.without(state, item);
         
-              // set up consts to data and if checked
-              // const checked = action.payload.checked;
-              // const data = action.payload;
-            
-        
-                //get appStore and current primary selects to check selection against 
-                // const appStore = store.getState();
-                // const currentPrimary = appStore.questionSelect;
-              
-        
-                // console.log(currentLabel)
-                // Check if selection is in primary array returns true or false
-                // const isNew = currentPrimary.includes(data);
-                // console.log('isNew: ', isNew)
-        
-                // add to primary reading list if selected and not already on list
-                // if box is checked and it isn't in the list
-                // if(!isNew ){
-                //   return [...state, data];
-                // }
-        
-                // removed if unchecked
-                // if not checked and it is in the list
-               
-                break
         
       default:
       return state

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { siteConfig } from '../../config.js';
 import logo from '../../image/idealNameSvg.svg';
 
 import icon from '../../image/idealIconSvg.svg';

@@ -15,7 +15,7 @@ import { ContactsWrapper } from './contacts.style';
 class KeyQuestionsContainer extends Component {
 
   componentDidMount() {
-    {notification.destroy()}
+    notification.destroy()
   }
   
   render() {

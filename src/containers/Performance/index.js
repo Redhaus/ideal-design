@@ -9,13 +9,12 @@ import {performanceData} from './performanceData';
 import Performance from './Performance';
 import { savePerformance } from '../../redux/actions';
 import { connect } from 'react-redux';
-import Scrollbar from '../../components/utility/customScrollBar.js';
 import { ContactsWrapper } from './contacts.style';
 
 class PerformanceContainer extends Component {
 
   componentDidMount() {
-    {notification.destroy()}
+    notification.destroy()
   }
   
   render() {

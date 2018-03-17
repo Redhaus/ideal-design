@@ -1,27 +1,10 @@
 import React from 'react'
 
-import { Collapse } from 'antd';
-import { Card, Col, Row, Icon, Button, Switch, Divider } from 'antd';
+import { Card, Col, Row, Divider } from 'antd';
 
-
-const gridStyle = {
-  width: '33.3333%',
-  height: '195px'
-};
 
 
 class Results extends React.Component {
-
-  constructor(props){
-    super(props)
-    // this.renderResults = this.renderResults.bind(this)
-    // this.handleTest = this.handleTest.bind(this)
-    
-  }
-
-
-
-  
 
 
   handleSelect = (e, data) => {
