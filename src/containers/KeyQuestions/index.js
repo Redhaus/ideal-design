@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import LayoutContentWrapper from "../../components/utility/layoutWrapper";
 import { Layout, notification } from "antd";
 
-import { keyQuestions_EN } from "../Data_EN/keyQuestionsData";
-import { keyQuestions_CH } from "../Data_CH/keyQuestionsData.ch";
+import { keyQuestions_EN, keyDescription_EN } from "../Data_EN/keyQuestionsData";
+import { keyQuestions_CH, keyDescription_CH } from "../Data_CH/keyQuestionsData.ch";
+
 
 import KeyQuestions from "./KeyQuestions";
 import { saveQuestions, deleteQuestions } from "../../redux/actions";
@@ -19,6 +20,9 @@ class KeyQuestionsContainer extends Component {
   render() {
     const keyQuestions =
       this.props.languageSelect === "EN" ? keyQuestions_EN : keyQuestions_CH;
+    
+    const keyDescription =
+      this.props.languageSelect === "EN" ? keyDescription_EN : keyDescription_CH;
 
     return (
       <ContactsWrapper className="question-container">
@@ -29,6 +33,7 @@ class KeyQuestionsContainer extends Component {
               saveQuestions={this.props.saveQuestions}
               deleteQuestions={this.props.deleteQuestions}
               questions={keyQuestions}
+              keyDescription={keyDescription}
             />
           </Layout>
         </LayoutContentWrapper>

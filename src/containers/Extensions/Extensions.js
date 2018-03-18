@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, Switch, notification } from "antd";
+import { Card, Switch, notification, Popover, Icon } from "antd";
 import Scrollbar from "../../components/utility/customScrollBar.js";
 import Mark from "mark.js";
 
@@ -163,7 +163,11 @@ class Extensions extends React.Component {
       <div>
         {/* <Scrollbar className="contactBoxScrollbar"> */}
         <Card className="extensions-container">
-          <h3>Extensions</h3>
+        <h3>Extensions
+        <Popover content={this.props.description} placement="left"  >
+        <Icon className="hard-right-icon" type="info-circle-o"/>
+        </Popover>
+        </h3>
         </Card>
         <div className="extensions-container">
           {this.handleExtensions(this.props.extensions)}

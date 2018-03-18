@@ -19,3 +19,6 @@ export const keyQuestions_EN = [
             'Explore the relationship between mythology and religion?' ,
     
     ]
+
+export const keyDescription_EN = 'The Key Questions are recommended questions for the unit. Key questions selected, or created, by the teacher should be shared with the students so that they can note them in their guide. While the supplied questions are only recommendations, they should nonetheless serve to push the unit in a particular direction to ensure shared goals and uniformity in teaching. The provided Key Questions could be used in many ways: content for lectures, class discussions or prompts on examinations.'
+      

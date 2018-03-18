@@ -45,3 +45,4 @@ export const primaryReading_CH = {
     }
 }
 
+export const primaryDescription_CH = 'Primary Readings represent proven texts for meeting the goals of the unit for Beginner, Intermediate, or Advanced learners. Every unit should revolve around an anchor text to ensure that learners are reading at least one major work per unit. If you see something that you like, click on the checkbox and you can add it to your library.'

@@ -365,6 +365,12 @@ mark {
   float: right;
 }
 
+.hard-right-icon{
+  float: right;
+  color: #ccc;
+}
+
+
 .key-questions{
 
 }
@@ -480,8 +486,29 @@ mark {
 
 
 
+
+
 /* Primary Readings */
 
+
+.buy-button{
+  background-color: #2E3545 !important;
+  color: white !important;
+}
+
+.buy-button > i{
+  color: white !important;
+}
+
+.primary-container .ant-row{
+  cursor: pointer;
+}
+
+.ant-popover{
+  width: 50% !important;
+  /* background-color: #2E3545;
+  color: white; */
+}
 .primary-image{
   width: 125px;
 }

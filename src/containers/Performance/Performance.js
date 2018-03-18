@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card, Switch } from "antd";
+import { Card, Switch, Popover, Icon } from "antd";
 
 const gridStyle = {
   width: "33.3333%",
@@ -53,7 +53,11 @@ class Performance extends React.Component {
     return (
       <div>
         <Card className="performance-container">
-          <h3>Performance</h3>
+        <h3>Performance 
+        <Popover content={this.props.description} placement="left"  >
+        <Icon className="hard-right-icon" type="info-circle-o"/>
+        </Popover>
+        </h3>
         </Card>
         <div className="performance-container">
           {this.handlePerformance(this.props.data)}

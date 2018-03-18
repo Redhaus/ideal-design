@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import LayoutContentWrapper from "../../components/utility/layoutWrapper";
 import { Layout, notification } from "antd";
 
-import { extensionsData_EN } from "../Data_EN/extensionsData";
-import { extensionsData_CH } from "../Data_CH/extensionsData.ch";
+import { extensionsData_EN, extensionsDescription_EN } from "../Data_EN/extensionsData";
+import { extensionsData_CH, extensionsDescription_CH } from "../Data_CH/extensionsData.ch";
 
 import Extensions from "./Extensions";
 import { saveExtensions } from "../../redux/actions";
@@ -21,6 +21,11 @@ class ExtensionsContainer extends Component {
         ? extensionsData_EN
         : extensionsData_CH;
 
+    const description =
+      this.props.languageSelect === "EN"
+        ? extensionsDescription_EN
+        : extensionsDescription_CH;
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -30,6 +35,7 @@ class ExtensionsContainer extends Component {
               saveExtensions={this.props.saveExtensions}
               extensions={extensionsData}
               languageSelect={this.props.languageSelect}
+              description={description}
             />
           </Layout>
         </LayoutContentWrapper>

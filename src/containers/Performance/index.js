@@ -3,8 +3,8 @@ import LayoutContentWrapper from "../../components/utility/layoutWrapper";
 // import LayoutContent from '../../components/utility/layoutContent';
 import { Layout, notification } from "antd";
 
-import { performanceData_EN } from "../Data_EN/performanceData";
-import { performanceData_CH } from "../Data_CH/performanceData.ch";
+import { performanceData_EN, performanceDescription_EN } from "../Data_EN/performanceData";
+import { performanceData_CH, performanceDescription_CH } from "../Data_CH/performanceData.ch";
 
 import Performance from "./Performance";
 import { savePerformance } from "../../redux/actions";
@@ -22,6 +22,11 @@ class PerformanceContainer extends Component {
         ? performanceData_EN
         : performanceData_CH;
 
+    const description =
+      this.props.languageSelect === "EN"
+        ? performanceDescription_EN
+        : performanceDescription_CH;
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -31,6 +36,7 @@ class PerformanceContainer extends Component {
               performanceSelect={this.props.performanceSelect}
               savePerformance={this.props.savePerformance}
               data={performanceData}
+              description={description}
             />
             {/* </Scrollbar> */}
           </Layout>

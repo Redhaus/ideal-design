@@ -4,7 +4,8 @@ import {
   Card,
   Col,
   Row,
-  // notification,
+  Popover, 
+  Icon,
   Collapse
 } from "antd";
 
@@ -87,7 +88,11 @@ class Extensions extends React.Component {
       <div>
         {/* <Scrollbar className="contactBoxScrollbar"> */}
         <Card className="goals-container">
-          <h3>Continual Goals</h3>
+        <h3>Continual Goals 
+        <Popover content={this.props.description} placement="left"  >
+        <Icon className="hard-right-icon" type="info-circle-o"/>
+        </Popover>
+        </h3>
         </Card>
         <Row gutter={16}>
           <Col className="goals-left" span={8}>

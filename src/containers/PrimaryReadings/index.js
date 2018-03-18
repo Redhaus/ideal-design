@@ -5,6 +5,11 @@ import { Layout, notification } from "antd";
 import { primaryReading_EN } from "../Data_EN/primaryReadingData";
 import { primaryReading_CH } from "../Data_CH/primaryReadingData.ch";
 
+import { primaryDescription_EN } from "../Data_EN/primaryReadingData";
+import { primaryDescription_CH } from "../Data_CH/primaryReadingData.ch";
+
+
+
 import PrimaryReadings from "./primaryReadings";
 import { savePrimary } from "../../redux/actions";
 import { connect } from "react-redux";
@@ -26,6 +31,11 @@ class PrimaryContainer extends Component {
         ? primaryReading_EN
         : primaryReading_CH;
 
+    const description =
+    this.props.languageSelect === "EN"
+      ? primaryDescription_EN
+      : primaryDescription_CH;
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -35,6 +45,7 @@ class PrimaryContainer extends Component {
               primarySelect={this.props.primarySelect}
               savePrimary={this.props.savePrimary}
               readings={readings.unitOne.primary}
+              description={description}
             />
             {/* </Scrollbar> */}
           </Layout>

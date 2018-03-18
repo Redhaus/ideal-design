@@ -139,9 +139,8 @@ export const extensionsData_EN = [{
 ]
 
 
-export const extensionsRollover_EN = {
-    rollover: 'Extensions are intended to push the unit beyond the base goals, whether to add a bit of fun or to rise toward the upper echelons of knowledge. While completing all of the tasks laid out in the extensions would be difficult, teachers are encouraged to engage with as many as possible.'
-}
+export const extensionsDescription_EN = 'Extensions are intended to push the unit beyond the base goals, whether to add a bit of fun or to rise toward the upper echelons of knowledge. While completing all of the tasks laid out in the extensions would be difficult, teachers are encouraged to engage with as many as possible.'
+
 
 
 

@@ -38,6 +38,4 @@ export const performanceData_CH = [{
 
 ]
 
-export const performanceRollover_CH = {
-rollover: 'The Performances serve to help teachers brainstorm assignments and activities as well as to indicate the required assigning of a writing task every month. If the Performance is an activity, learners should still produce a writing, such as a reflection on the activity.'
-}
+export const performanceDescription_CH = 'The Performances serve to help teachers brainstorm assignments and activities as well as to indicate the required assigning of a writing task every month. If the Performance is an activity, learners should still produce a writing, such as a reflection on the activity.'

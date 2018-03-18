@@ -64,9 +64,12 @@
 
 
 
-
-// PRIMARY READINGS
-// d. Primary Readings doesn’t have the rollover information about selecting a major work (same for all sections of overview—can the rollover be put on the dashboard?)
-
+// Lexis 
+// Add chinese lexis
 
 
+// Add Rollover for Myth and segue 
+
+// Results
+// Format results better
+// Add print pdf option

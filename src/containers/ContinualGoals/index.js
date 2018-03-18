@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import LayoutContentWrapper from "../../components/utility/layoutWrapper";
 import { Layout, notification } from "antd";
 
-import { continualGoalsData_EN } from "../Data_EN/continualGoalsData"; //english
-import { continualGoalsData_CH } from "../Data_CH/continualGoalsData.ch"; //chinese
+import { continualGoalsData_EN, continualDescription_EN } from "../Data_EN/continualGoalsData"; //english
+import { continualGoalsData_CH, continualDescription_CH } from "../Data_CH/continualGoalsData.ch"; //chinese
 import ContinualGoals from "./ContinualGoals";
 import { saveGoals } from "../../redux/actions";
 import { connect } from "react-redux";
@@ -26,6 +26,13 @@ class ContinualGoalsContainer extends Component {
         ? continualGoalsData_EN
         : continualGoalsData_CH;
 
+    const description =
+      this.props.languageSelect === "EN"
+        ? continualDescription_EN
+        : continualDescription_CH;
+
+        
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -34,6 +41,7 @@ class ContinualGoalsContainer extends Component {
               goalSelect={this.props.goalSelect}
               saveGoals={this.props.saveGoals}
               goals={goals}
+              description={description}
             />
           </Layout>
         </LayoutContentWrapper>

@@ -20,3 +20,6 @@ export const keyQuestions_CH = [
             '神话与宗教之间是什么关系?' ,
     
     ]
+
+    export const keyDescription_CH = 'The Key Questions are recommended questions for the unit. Key questions selected, or created, by the teacher should be shared with the students so that they can note them in their guide. While the supplied questions are only recommendations, they should nonetheless serve to push the unit in a particular direction to ensure shared goals and uniformity in teaching. The provided Key Questions could be used in many ways: content for lectures, class discussions or prompts on examinations.'
+    

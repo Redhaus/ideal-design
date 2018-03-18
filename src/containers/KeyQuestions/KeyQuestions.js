@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Affix, Form, Card, Icon, Button, Switch, Input } from "antd";
+import { Affix, Form, Card, Icon, Button, Switch, Input, Popover } from "antd";
 import _ from "lodash";
 
 const FormItem = Form.Item;
@@ -155,9 +155,17 @@ class KeyQuestions extends React.Component {
           </div>
         </Affix>
 
+       
+        
         <Card className="key-question-container">
-          <h3>Key Questions</h3>
+        <h3>Key Questions
+        <Popover content={this.props.keyDescription} placement="left"  >
+        <Icon className="hard-right-icon" type="info-circle-o"/>
+        </Popover>
+        </h3>
         </Card>
+
+       
 
         <div className="key-question-container">
           {this.handleQuestions(this.state.questions)}
