@@ -15,10 +15,26 @@ export const segueData_CH = {
     segue: '考虑古腾堡出版社的出现及其与英国文艺复兴和新古典主义的关系，15 - 17世纪的作家们一方面挑战古典理想，另一方面仍然遵照这些理想的要求。如可以在伊丽莎白时代的戏剧中看到的那样，亚里士多德式的悲剧标准同时得到满足和修正，这一点在威廉•莎士比亚的作品中尤其明显。'
 }
     
-export const quoteData_CH = {
-    quote: 'I therefore claim to show, not how men think in myths, but how myths operate in men’s minds without their being aware of the fact.',
-    author: 'Claude Levi-Strauss'
-}
+export const quoteData_CH = [
+    {
+    quote: 'What is a myth, today? I shall give at the outset a first, very simple answer, which is perfectly consistent with etymology: myth is a type of speech.',
+    author: 'Roland Barthes',
+    book: 'Mythologies',
+    img: './images/barth.jpg'
+    },
+    {
+    quote: 'Myth was always obscure and luminous at once. It has always been distinguished by its familiarity and its exemption from rhe work of concepts.',
+    author: 'Theodor Adorno',
+    book: 'Dialectic of Enlightenment',
+    img: './images/Adorno.jpg'
+    },
+    {
+    quote: 'How, indeed, could the myth of Cinderella not keep all its validity? Everything still encourages the young girl to expect fortune and happiness from some Prince Charming rather than to attempt by herself their difficult and uncertain conquest.',
+    author: 'Simone de Beauvoir',
+    book: 'Second Sex',
+    img: './images/Beauvoir.jpg'
+    }
+]
  
 export const baseData_CH = {
     rollover: 'These goals indicate the most basic goals that a teacher and student should accomplish for the unit. The requirement of producing an ‘argument’ every month is based on the philosophy that every performance is an argument. Despite this open understanding of what an argument is, advanced students are required to produce an academic writing every unit.'

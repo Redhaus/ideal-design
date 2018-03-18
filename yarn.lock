@@ -3290,7 +3290,7 @@ html-webpack-plugin@2.29.0:
     pretty-error "^2.0.2"
     toposort "^1.0.0"
 
-htmlparser2@^3.9.1:
+htmlparser2@^3.9.0, htmlparser2@^3.9.1:
   version "3.9.2"
   resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-3.9.2.tgz#1bdf87acca0f3f9e53fa4fcceb0f4b4cbb00b338"
   dependencies:
@@ -6058,6 +6058,12 @@ react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
 
+react-html-parser@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-html-parser/-/react-html-parser-2.0.2.tgz#6dbe1ddd2cebc1b34ca15215158021db5fc5685e"
+  dependencies:
+    htmlparser2 "^3.9.0"
+
 react-intl@^2.3.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-2.4.0.tgz#66c14dc9df9a73b2fbbfbd6021726e80a613eb15"
@@ -6089,10 +6095,6 @@ react-placeholder@^2.0.0:
   resolved "https://registry.yarnpkg.com/react-placeholder/-/react-placeholder-2.0.0.tgz#5117b4758927dc5ae5fcbf62552ab98209f6666c"
   dependencies:
     prop-types "^15.6.0"
-
-react-prevent-clickthrough@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-prevent-clickthrough/-/react-prevent-clickthrough-0.0.3.tgz#42d5cd85d7dd76dbb5862062ee7c70f1056edb80"
 
 react-pure-render@^1.0.2:
   version "1.0.2"

@@ -4,6 +4,10 @@
         
         /* quote */
 
+        .lex-number{
+          font-size: 12px !important;
+          color: #ccc;
+        }
 
         .ant-input-search{
           border-bottom: 1px solid  #f1f3f6 !important;
@@ -304,7 +308,7 @@ mark {
   
   width: 100%;
   height: 100%;
-  padding: 30px 40px 20px 40px;
+  padding: 15px 15px 15px 15px;
 }
 
 .quote-photo{
@@ -321,6 +325,7 @@ mark {
 
 .ant-carousel .slick-slide {
   /* background-color: #f1f3f6; */
+  height: 480px !important;
   
 }
 
@@ -477,6 +482,10 @@ mark {
 
 /* Primary Readings */
 
+.primary-image{
+  width: 125px;
+}
+
 .icon-right{
   font-size: 17px;
   color: #2E3545
@@ -551,6 +560,11 @@ mark {
 }
 
 
+.guiding-questions{
+  padding-right: 60px;
+  margin-left: -40px;
+  
+}
 
 
 .annoNote .highlight{

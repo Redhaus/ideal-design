@@ -37,16 +37,36 @@
 
 
 // TODO
-// Format results
+// Format results 
 // Add print PDF option for results
-// Language Option for Chinese via global lang var 
-// have each component check it and load other content if needed
-// I have a few UI things to clean up here and there, 
-// I need to get the format the rendered results under a result page. 
-// I need to figure out chinese translation 
+// DONE Language Option for Chinese via global lang var 
+// DONE have each component check it and load other content if needed
+// DONE I have a few UI things to clean up here and there, 
+// DONE I need to get the format the rendered results under a result page. 
+// DONE I need to figure out chinese translation 
 // I need to remove sections and get student version online. 
 // Calendar integration.
 // Longer term make it mobile friendly 
 // Build create user system etc. 
 // Kids rating lexis 
-// Responsive 
+
+
+
+
+
+
+
+// Mark Todo
+
+
+// SIGN IN
+// b. give ben an image for the sign in page that has high school students
+
+
+
+
+// PRIMARY READINGS
+// d. Primary Readings doesn’t have the rollover information about selecting a major work (same for all sections of overview—can the rollover be put on the dashboard?)
+
+
+

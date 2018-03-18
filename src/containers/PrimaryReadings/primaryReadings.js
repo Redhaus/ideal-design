@@ -39,13 +39,21 @@ class PrimaryReadings extends React.Component {
                 />
               }
             >
-              <p>
-                <strong>Author: </strong> {item.author}{" "}
-              </p>
-              <p>
-                <strong>Dates: </strong> {item.date}{" "}
-              </p>
 
+            <Row gutter={16}></Row>
+            <Col span={12}>
+              <img className="primary-image" src={item.img}/>
+              </Col>
+
+            <Col span={12}>
+              <p>
+                <strong>Author: </strong><br/> {item.author}{" "}
+              </p>
+              <p>
+                <strong>Dates: </strong><br/>  {item.date}{" "}
+              </p>
+              </Col>
+             
               {/* <Button className={` ${selectedClass} `} onClick={ (checked) => this.handleOnClick(item) }>Select Book</Button> */}
             </Card>
           </Col>
@@ -84,7 +92,7 @@ class PrimaryReadings extends React.Component {
                 this.props.readings.category.beginner
               )}
             </Panel>
-            <Panel header={<h3>intermediate</h3>} key="2">
+            <Panel header={<h3>Intermediate</h3>} key="2">
               {this.handlePrimaryReadings(
                 this.props.readings.category.intermediate
               )}

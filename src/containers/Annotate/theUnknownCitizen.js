@@ -157,6 +157,25 @@ class Poem extends React.Component {
                 Was he free? Was he happy? The question is absurd:<br />
                 Had anything been wrong, we should certainly have heard.
               </p>
+<div className="guiding-questions">
+              <h3>Guiding Questions</h3>
+              <ol>
+              
+             <li>The title of the poem may be an allusion to the tomb of the Unknown Soldier. How does this allusion change your understanding of the poem? </li>
+              
+             <li>What is the role and perspective of the speaker(s) in the poem? What is their relationship to the unknown citizen?</li>
+              
+             <li>Based on the references to “war,” (Line 6) a “scab,” (Line 9) and the “union” (Line 10) what do you think is the setting of the poem? How does it contribute to the mood in the poem? To its themes?</li>
+              
+             <li>In lines 15-19, the theme of the “Modern Man” is introduced. What impact does this have on the poem? With regard to the subject of the poem, is he being measured against the “Modern Man?” If so, what is the purpose of this with regard to other themes in the poem?</li>
+              
+             <li>In lines 20-25, the implication is made by the speaker that a “Modern Man” is both a supporter of peace and a soldier as well. How do you account for a person possessing both of these world views?</li>
+              
+             <li>Some words in the poem are capitalized. Is there any significance to this?</li>
+              
+             <li>In the conclusion to the poem in lines 26-29, what “answer” is given with regard to whether the subject of the poem was a good or bad man? How does this create, in your mind, the overall meaning of the poem?</li>
+             </ol>
+             </div>
             </div>
           </Col>
         </Row>

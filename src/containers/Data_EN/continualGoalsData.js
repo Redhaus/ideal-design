@@ -19,7 +19,7 @@ export const continualGoalsData_EN = [{
     skills: ['thinking','history','economics','psychology','anthropology','sociology','mythology','the arts','physics','biology','chemistry','mathematics','ethics']
     },
     {
-    goal: 'Relate unit to',
+    goal: 'Relate Event To',
     description: 'Relate Unit To various philosophical, cultural and metaphysical understandings of the world. This is intended to encourage students to be open to new ideas and various perspectives. In the pursuit of knowledge, it is more important that we posit questions rather than provide answers.',
     skills: ['multiple perspectives','questioning beliefs','understanding origins','understanding difference','understanding repetition','rethinking space','rethinking time','epistemology','ontology']
     },

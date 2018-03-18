@@ -53,7 +53,7 @@ class Performance extends React.Component {
     return (
       <div>
         <Card className="performance-container">
-          <h3>Performance Objectives</h3>
+          <h3>Performance</h3>
         </Card>
         <div className="performance-container">
           {this.handlePerformance(this.props.data)}

@@ -3,6 +3,9 @@ import LayoutContentWrapper from "../../components/utility/layoutWrapper";
 import { Carousel, Row, Col, Card, Icon, Layout, notification } from "antd";
 import { ContactsWrapper } from "./contacts.style";
 
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+
+
 import { connect } from "react-redux";
 
 import {
@@ -17,13 +20,45 @@ import {
   quoteData_CH
 } from "../Data_CH/overviewData.ch";
 
-import strauss1 from "./images/strauss1.jpg";
-import strauss2 from "./images/strauss2.jpg";
-import strauss3 from "./images/strauss3.jpg";
+import img1 from "./images/barth.jpg";
+import img2 from "./images/Adorno.jpg";
+import img3 from "./images/Beauvoir.jpg";
 
 class Dashboard extends Component {
+
+  constructor(props){
+    super(props)
+
+    this.state={
+      images: [img1,img2,img3]
+    }
+  }
   componentDidMount() {
     notification.destroy();
+  }
+
+
+
+  renderQuote(quotes){
+
+    return quotes.map( (item, key) => {
+
+     
+
+      
+      return (
+      <Card key={key}>
+        <img className="quote-photo" src={this.state.images[key]} alt="" />
+        <div className="quote-container">"{item.quote}"</div>
+        <div className="author-container">
+          – {item.author} | {item.book}
+        </div>
+      </Card>
+      )
+
+    })
+   
+    
   }
 
   render() {
@@ -43,6 +78,7 @@ class Dashboard extends Component {
     // language switcher
     const segueData =
       this.props.languageSelect === "EN" ? segueData_EN : segueData_CH;
+
     const quoteData =
       this.props.languageSelect === "EN" ? quoteData_EN : quoteData_CH;
 
@@ -54,7 +90,7 @@ class Dashboard extends Component {
               <Row gutter={16}>
                 {/* Unit Description */}
                 <Col span={12}>
-                  <Card title={title} bordered={true} extra={<h5>Unit 1</h5>}>
+                  <Card title={title} bordered={true} extra={<h5>Event 1</h5>}>
                     <p>{unitDescription}</p>
                   </Card>
 
@@ -68,18 +104,18 @@ class Dashboard extends Component {
                     bordered={true}
                     extra={<h5>{knowledge}</h5>}
                   >
-                    <p>{knowledgeRollover}</p>
+                    <p>{ ReactHtmlParser(knowledgeRollover) }</p>
                   </Card>
 
                   <Card
                     className="previous-knowledge"
                     title={
                       <h4>
-                        Segue to Next Unit <Icon type="arrow-right" />{" "}
+                        Segue to Next Event <Icon type="arrow-right" />{" "}
                       </h4>
                     }
                     bordered={true}
-                    extra={<h5>Preview Unit 2</h5>}
+                    extra={<h5>Preview Event 2</h5>}
                   >
                     <p>{segueData.segue}</p>
                   </Card>
@@ -88,29 +124,9 @@ class Dashboard extends Component {
                 {/* Unit Description */}
                 <Col span={12}>
                   <Carousel autoplay autoplaySpeed="5000">
-                    <Card>
-                      <img className="quote-photo" src={strauss1} alt="" />
-                      <div className="quote-container">"{quoteData.quote}"</div>
-                      <div className="author-container">
-                        – {quoteData.author}
-                      </div>
-                    </Card>
 
-                    <Card>
-                      <img className="quote-photo" src={strauss2} alt="" />
-                      <div className="quote-container">"{quoteData.quote}"</div>
-                      <div className="author-container">
-                        – {quoteData.author}
-                      </div>
-                    </Card>
-
-                    <Card>
-                      <img className="quote-photo" src={strauss3} alt="" />
-                      <div className="quote-container">"{quoteData.quote}"</div>
-                      <div className="author-container">
-                        – {quoteData.author}
-                      </div>
-                    </Card>
+                  {this.renderQuote(quoteData)}
+                   
                   </Carousel>
 
                   <Card

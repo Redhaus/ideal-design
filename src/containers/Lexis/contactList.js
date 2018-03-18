@@ -85,7 +85,7 @@ export default class ContactList extends Component {
   }
 
 // This renders each word entry, click and hover states to each entry
-  singleContact(lex, id) {
+  singleContact(lex, id, key) {
    
     // set up const vars deconstruct props
     const { changeContact, seectedId, saveSelection, lexisSelect} = this.props;
@@ -122,7 +122,7 @@ export default class ContactList extends Component {
         <div className="iso-word-container"> 
           <h3 className="iso-word"> 
             <Switch  size="small" checked={selectedClass ? true : false} ></Switch>  
-            {lex.word ? lex.word : 'No Word'}     
+            <span className="lex-number">{key+1}.</span> {lex.word ? lex.word : 'No Word'}     
           </h3>
           <span className="icon-container"> {this.icon(lex.icons)} </span>
         </div>
@@ -159,7 +159,7 @@ export default class ContactList extends Component {
         {lexis && lexis.length > 0 ? (
           <div className="isoContactList">
           <Scrollbar className="contactListScrollbar">
-            {lexis.map(item => this.singleContact(item, item.id))}
+            {lexis.map((item, key) => this.singleContact(item, item.id, key))}
           </Scrollbar>
           </div>
         ) : (

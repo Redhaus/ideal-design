@@ -264,9 +264,22 @@ export default class extends Component {
               <TabPane tab="Essays" key="2">
                 <Row gutter={16}>{this.displayEssays(essays)}</Row>
               </TabPane>
-              <TabPane tab="Movies" key="3">
+              <TabPane tab="Videos" key="3">
                 <Row gutter={16}>{this.displayMovies(movies)}</Row>
               </TabPane>
+              <TabPane tab="Music" key="4">
+              <Row gutter={16}>{this.displayMovies(movies)}</Row>
+            </TabPane>
+            <TabPane tab="Art" key="5">
+            <Row gutter={16}>{this.displayMovies(movies)}</Row>
+          </TabPane>
+          <TabPane tab="Links" key="6">
+          <Row gutter={16}>{this.displayMovies(movies)}</Row>
+        </TabPane>
+
+        <TabPane tab="Resources" key="7">
+        <Row gutter={16}>{this.displayMovies(movies)}</Row>
+      </TabPane>
             </Tabs>
           </div>
         </ContactCardWrapper>

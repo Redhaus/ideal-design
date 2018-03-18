@@ -358,49 +358,49 @@ export const furtherReading_EN = {
                 }],
 
                 movies: [{
-                    director: 'Movie Title Marco Roth',
+                    director: 'Director Title 1',
                     date: '18 April 2012',
-                    title: 'Myths We Don’t Outgrow',
+                    title: 'Video Title 1',
                     source: 'The New Yorker',
                     // description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
                     link: 'http://google.com',
                     type: 'essay'
                 },{
-                    director: 'Movie Title ',
+                    director: 'Director Title 2 ',
                     date: '',
-                    title: 'Hegel’s Dialectics',
+                    title: 'Video Title 2',
                     source: 'The Stanford Encyclopedia',
                     // description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
                     link: 'http://google.com',
                     type: 'essay'
                 },{
-                    director: 'Movie Title Roland Barthes',
+                    director: 'Director Title 3',
                     date: '',
-                    title: 'Myth Today',
+                    title: 'Video Title 3',
                     source: 'from Mythologies',
                     // description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
                     link: 'http://google.com',
                     type: 'essay'
                 },{
-                    director: 'Movie Title Mark C. Taylor',
+                    director: 'Director Title 4',
                     date: '28 June 1992',
-                    title: 'Ye Shall Be as Goddesses',
+                    title: 'Video Title 4',
                     source: 'NY Times',
                     // description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
                     link: 'http://google.com',
                     type: 'essay'
                 },{
-                    director: 'Movie Title Robert J. Zimmer',
+                    director: 'Director title 5',
                     date: '1 March 2013',
-                    title: 'The Myth of the Successful College Dropout',
+                    title: 'Video Title 5',
                     source: 'The Atlantic',
                     // description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
                     link: 'http://google.com',
                     type: 'essay'
                 },{
-                    director: 'Movie Title Frank Furedi',
+                    director: 'Director title 6',
                     date: '6 Nov 2015',
-                    title: 'Books Are Dangerous',
+                    title: 'Video Title 6',
                     source: 'Aeon',
                     // description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis, nostrum mollitia. Eligendi, distinctio. Fugiat accusantium, sint ipsa excepturi cupiditate ullam quam earum officiis voluptate corporis voluptatum aut explicabo reiciendis est',
                     link: 'http://google.com',

@@ -19,12 +19,12 @@ export const continualGoalsData_CH = [{
     skills: ['历史','经济学','心理学','人类学','社会学','神话学','艺术','物理','生物','化学',' 数学','伦理']
     },
     {
-    goal: 'relate unit to',
+    goal: 'Relate Event To',
     description: 'Relate Unit To various philosophical, cultural and metaphysical understandings of the world. This is intended to encourage students to be open to new ideas and various perspectives. In the pursuit of knowledge, it is more important that we posit questions rather than provide answers.',
     skills: ['multiple perspectives','questioning beliefs','understanding origins','understanding difference','understanding repetition','rethinking space','rethinking time','epistemology','ontology']
     },
     {
-    goal: 'citizenship',
+    goal: 'Citizenship',
     description: 'Citizenship is key to a proper education in the humanities where students are to be taught compassion and integrity. Relating their studies to the real world and interacting with the real world helps to bridge the divide between the artificiality of the classroom and the reality outside of it. Students need to have the skills necessary to not only be successful academically, but socially and personally.',
     skills: ['real world interaction','real world understanding','group work','leadership','dramatic reading','dramatic performance','speech making','negotiation skills','interview skills','presentation skills','debate skills']
     }
