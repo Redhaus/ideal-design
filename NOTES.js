@@ -63,9 +63,7 @@
 // b. give ben an image for the sign in page that has high school students
 
 
-
 // Lexis 
-// Add chinese lexis
 
 
 // Add Rollover for Myth and segue 

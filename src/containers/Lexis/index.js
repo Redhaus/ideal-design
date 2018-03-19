@@ -3,7 +3,7 @@ import { Layout, notification } from "antd";
 import ContactList from "./contactList";
 import { connect } from "react-redux";
 import Scrollbar from "../../components/utility/customScrollBar.js";
-import SingleContactView from "../../components/contacts/singleView";
+import SingleContactView from "./singleView";
 import { ContactsWrapper } from "./contacts.style";
 // import contactAction from '../../redux/lexis/actions';
 import { changeContact, saveSelection } from "../../redux/actions";
@@ -29,8 +29,14 @@ class Lexis extends Component {
     return lex;
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log('lexis reupdate')
+  }
+  
+
   render() {
     return (
+
       <div className="lexis-container">
         <FilterGroup filters={this.props.filters} />
 
@@ -82,7 +88,8 @@ function mapStateToProps(state) {
     seectedId: state.seectedId,
     filters: state.lexisSelectedReducer,
     lexisSelect: state.lexisSelect,
-    lexisFilter: state.lexisFilterReducer
+    lexisFilter: state.lexisFilterReducer,
+    languageSelect: state.languageSelect
   };
 }
 export default connect(mapStateToProps, {

@@ -5,6 +5,8 @@ import { InputSearch } from '../../components/uielements/input';
 import { ContactListWrapper } from './contactList.style';
 import Scrollbar from '../../components/utility/customScrollBar';
 import { Icon, Switch } from 'antd';
+// import {changeContact} from '../../redux/actions';
+
 
 
 
@@ -32,10 +34,16 @@ export default class ContactList extends Component {
     // set up state
     this.state = {
       search: ''
+      // lexis: this.props.lexis
     };
     
   }
 
+
+  // componentDidMount() {
+  // }
+  
+  
 
 
 // check if filters includes item if it does highlight the icon 
@@ -87,6 +95,7 @@ export default class ContactList extends Component {
 // This renders each word entry, click and hover states to each entry
   singleContact(lex, id, key) {
    
+    console.log('singleUpdated')
     // set up const vars deconstruct props
     const { changeContact, seectedId, saveSelection, lexisSelect} = this.props;
    
@@ -132,11 +141,23 @@ export default class ContactList extends Component {
   }
 
 
+ 
+
+
+
   onChange(event) {
     this.setState({ search: event.target.value });
     
   }
   render() {
+
+
+    // this.setState( () => {
+    //   return {
+    //     lexis: this.props.lexis
+    //   }
+    // })
+
     const { search } = this.state;
    
     // const contacts = filterContacts(this.props.contacts, search);

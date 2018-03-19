@@ -129,6 +129,8 @@ export const setFilter = (addFilter, addTitle) => {
 
 // responsible for selectedID Reducer
 export const changeContact = (id) => {
+    console.log('changed called')
+    console.log(id)
     return{
     type: 'CHANGE_LEXIS',
     id: id
