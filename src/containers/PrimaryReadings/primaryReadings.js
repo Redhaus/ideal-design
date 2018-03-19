@@ -40,12 +40,12 @@ class PrimaryReadings extends React.Component {
               }
             >
 
-            <Row gutter={16}></Row>
-            <Col span={12}>
+           
+            <Col span={12} >
               <img className="primary-image" src={item.img}/>
             </Col>
 
-            <Col span={12}>
+            <Col span={12} className="book-padding">
               <p>
                 <strong>Author: </strong><br/> {item.author}{" "}
               </p>
@@ -57,6 +57,7 @@ class PrimaryReadings extends React.Component {
               </a>
 
               </Col>
+             
              
               
             </Card>

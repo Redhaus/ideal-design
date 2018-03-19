@@ -66,8 +66,35 @@
 // Lexis 
 
 
-// Add Rollover for Myth and segue 
 
 // Results
 // Format results better
 // Add print pdf option
+
+
+
+Students SHOULD NOT see Key Questions, Performances, Extensions, or Continual Goals (this is not necessary for the presentation)
+
+I'll add in the missing Continual Goals to the translation...not sure how I missed them. I'll send that soon.
+
+// DONE It would be nice if the pop-ups were there (perhaps on rollover in dashboard) to explain to the teacher the sections. (I have plans to create a tutorial video that goes over the guide, I've already recorded a teacher reading the text)
+
+On Results page...possible to add in areas for teachers to input text?
+a. (at top) Input Class name/Teacher name
+b. (at top) Input Dates for the week's goals
+c. (at top) Input Week Summary, i.e. "This week we will..."
+d. (at bottom) Input Notes for any additional comments/goals beyond the guide
+
+
+// DONE 
+// Minor: 
+
+// a. can we change "Performance" to "Performances
+// b. On results page change:
+// Texts --> Primary Readings
+// Supporting Resources --> Further Readings
+// ContinualGoals --> Continual Goals
+
+
+
+I think that you were asking about the translation for the Extensions. The translation is fine. Google Translate is not going to help much for most of the terms because the words don't exist in Chinese. In Chinese you have to do a "descriptive" translation rather than a  "transliteration". Descriptive means that the meaning of the word is contained in the translation, i.e. He's arrogant. Descriptive Translation: He's thinks a lot of himself. 

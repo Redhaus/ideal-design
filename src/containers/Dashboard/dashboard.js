@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import LayoutContentWrapper from "../../components/utility/layoutWrapper";
-import { Carousel, Row, Col, Card, Icon, Layout, notification } from "antd";
+import { Carousel, Row, Col, Card, Icon, Layout, notification, Popover } from "antd";
 import { ContactsWrapper } from "./contacts.style";
+
 
 import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
@@ -11,13 +12,15 @@ import { connect } from "react-redux";
 import {
   overviewData_EN,
   segueData_EN,
-  quoteData_EN
+  quoteData_EN,
+  eventDescription_EN
 } from "../Data_EN/overviewData";
 
 import {
   overviewData_CH,
   segueData_CH,
-  quoteData_CH
+  quoteData_CH,
+  eventDescription_CH
 } from "../Data_CH/overviewData.ch";
 
 import img1 from "./images/barth.jpg";
@@ -82,6 +85,7 @@ class Dashboard extends Component {
     const quoteData =
       this.props.languageSelect === "EN" ? quoteData_EN : quoteData_CH;
 
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -90,20 +94,35 @@ class Dashboard extends Component {
               <Row gutter={16}>
                 {/* Unit Description */}
                 <Col span={12}>
-                  <Card title={title} bordered={true} extra={<h5>Event 1</h5>}>
+                  <Card title={`Event 1: ${title}` } bordered={true} 
+                  
+                  extra={
+                    <Popover content={overviewData_EN.eventDescription} placement="bottom"  >
+                    <Icon className="hard-right-icon" type="info-circle-o"/>
+                    </Popover>
+                  }>
                     <p>{unitDescription}</p>
                   </Card>
+
+                 
 
                   <Card
                     className="previous-knowledge"
                     title={
                       <h4>
-                        <Icon type="arrow-left" /> Previous Knowledge
+                        {`Previous Knowledge: ${knowledge}`}
                       </h4>
                     }
                     bordered={true}
-                    extra={<h5>{knowledge}</h5>}
-                  >
+                   
+                      
+                      extra={
+                        <Popover content={overviewData_EN.previousDescription} placement="bottom"  >
+                        <Icon className="hard-right-icon" type="info-circle-o"/>
+                        </Popover>
+                      }>
+
+                
                     <p>{ ReactHtmlParser(knowledgeRollover) }</p>
                   </Card>
 
@@ -111,11 +130,16 @@ class Dashboard extends Component {
                     className="previous-knowledge"
                     title={
                       <h4>
-                        Segue to Next Event <Icon type="arrow-right" />{" "}
+                        Segue to Next Event: Event 2
                       </h4>
                     }
                     bordered={true}
-                    extra={<h5>Preview Event 2</h5>}
+                    extra={
+                      <Popover content={overviewData_EN.segueDescription} placement="bottom"  >
+                      <Icon className="hard-right-icon" type="info-circle-o"/>
+                      </Popover>
+                    }>
+
                   >
                     <p>{segueData.segue}</p>
                   </Card>

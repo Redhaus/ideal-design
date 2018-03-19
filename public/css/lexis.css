@@ -490,6 +490,13 @@ mark {
 
 /* Primary Readings */
 
+.book-padding > p{
+  padding-left: 16px;
+}
+
+.book-padding > a{
+  padding-left: 16px;
+}
 
 .buy-button{
   background-color: #2E3545 !important;
@@ -588,11 +595,27 @@ mark {
 
 
 .guiding-questions{
+  padding-top: 30px;
   padding-right: 60px;
   margin-left: -40px;
   
 }
 
+.guiding-questions h3{
+
+  margin-left: 40px;
+  
+}
+
+.guiding-questions li{
+  
+    padding-bottom: 15px;
+    
+  }
+
+  .poem h1{
+    padding-top: 15px;
+  }
 
 .annoNote .highlight{
   font-size: 16px;

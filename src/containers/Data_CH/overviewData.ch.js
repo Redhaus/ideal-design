@@ -39,3 +39,6 @@ export const quoteData_CH = [
 export const baseData_CH = {
     rollover: 'These goals indicate the most basic goals that a teacher and student should accomplish for the unit. The requirement of producing an ‘argument’ every month is based on the philosophy that every performance is an argument. Despite this open understanding of what an argument is, advanced students are required to produce an academic writing every unit.'
 }
+
+export const eventDescription_CH = "The Unit Title and Unit Descriptor sets the required focus and must be followed to maintain uniformity and a scope and sequence across the guides. Examine the Unit Title and Descriptor for keywords that suggest the core of the unit. These keywords function like a thesis statement for the unit and should be returned to throughout the lessons."
+

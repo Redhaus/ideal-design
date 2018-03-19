@@ -53,7 +53,7 @@ class Performance extends React.Component {
     return (
       <div>
         <Card className="performance-container">
-        <h3>Performance 
+        <h3>Performances
         <Popover content={this.props.description} placement="left"  >
         <Icon className="hard-right-icon" type="info-circle-o"/>
         </Popover>

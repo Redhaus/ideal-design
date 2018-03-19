@@ -145,7 +145,7 @@ class Results extends React.Component {
                 {/* Primary Reading */}
                 {primarySelect.length > 0 ? (
                   <div>
-                    <Divider orientation="right">Texts</Divider>
+                    <Divider orientation="right">Primary Readings</Divider>
                     {this.renderPrimary(primarySelect)}
                   </div>
                 ) : (
@@ -167,7 +167,7 @@ class Results extends React.Component {
                 essaySelect.length > 0 ||
                 movieSelect.length > 0 ? (
                   <div>
-                    <Divider orientation="right">Supporting Resources</Divider>
+                    <Divider orientation="right">Further Readings</Divider>
 
                     {/* conditionalPoems */}
                     {poemSelect.length > 0 ? (
@@ -218,7 +218,7 @@ class Results extends React.Component {
                 {/* Performance */}
                 {performanceSelect.length > 0 ? (
                   <div>
-                    <Divider orientation="right">Performance</Divider>
+                    <Divider orientation="right">Performances</Divider>
                     {this.renderPerformance(performanceSelect)}
                   </div>
                 ) : (
@@ -238,7 +238,7 @@ class Results extends React.Component {
                 {/* Continual goals */}
                 {goalSelect.length > 0 ? (
                   <div>
-                    <Divider orientation="right">ContinualGoals</Divider>
+                    <Divider orientation="right">Continual Goals</Divider>
                     {this.renderGoals(goalSelect)}
                   </div>
                 ) : (
