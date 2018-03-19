@@ -140,7 +140,7 @@ class Dashboard extends Component {
                       </Popover>
                     }>
 
-                  >
+                  
                     <p>{segueData.segue}</p>
                   </Card>
                 </Col>

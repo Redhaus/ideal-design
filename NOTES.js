@@ -63,9 +63,6 @@
 // b. give ben an image for the sign in page that has high school students
 
 
-// Lexis 
-
-
 
 // Results
 // Format results better
