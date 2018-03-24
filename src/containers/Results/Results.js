@@ -118,6 +118,42 @@ class Results extends React.Component {
     }); // end map()
   }; // end handle()
 
+  renderOutline = (outlines) => {
+
+console.log('name: ' , outlines.tName)
+
+    return (
+    <div>
+    <p>{outlines.cName}</p>
+    <p>{outlines.tName}</p>
+    <p>{outlines.summary}</p>
+    <p>{outlines.notes}</p>
+    
+    {outlines.goals 
+    ? 
+    outlines.goals.map( (goal, key) => {
+      return (
+            <div key={key}>
+            <p>{goal.goal}</p>
+            <p>{goal.date}</p>
+            </div>
+          )
+      })
+    
+    : ''}
+   
+    
+     
+    
+    
+   
+        </div>
+   
+  )
+  }; // end handle()
+
+
+
   render() {
     const {
       primarySelect,
@@ -128,7 +164,8 @@ class Results extends React.Component {
       extensionSelect,
       questionSelect,
       performanceSelect,
-      goalSelect
+      goalSelect,
+      weekOutlineSelect
     } = this.props;
 
     return (
@@ -244,6 +281,21 @@ class Results extends React.Component {
                 ) : (
                   ""
                 )}
+
+                <div>
+                  {console.log('log week: ' , weekOutlineSelect)}
+                    <Divider orientation="right">Weekly Outline</Divider>
+                    {this.renderOutline(weekOutlineSelect)}
+                  </div>
+
+                 {/* Outline Weekly
+                 {weekOutlineSelect ? (
+                
+                ) : (
+                  ""
+                )} */}
+
+
               </Col>
             </Row>
           </Card>

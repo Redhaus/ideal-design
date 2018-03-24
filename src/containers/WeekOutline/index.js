@@ -26,6 +26,7 @@ class WeekOutineContainer extends Component {
           <Layout className="isoContactBoxWrapper">
             <WeekOutline
               saveWeekOutline={this.props.saveWeekOutline}
+              weekOutlineSelect={this.props.weekOutlineSelect}
             />
           </Layout>
         </LayoutContentWrapper>
@@ -38,6 +39,8 @@ const mapStateToProps = state => {
   return {
     // questionSelect: state.questionSelect,
     // languageSelect: state.languageSelect
+    weekOutlineSelect: state.weekOutlineSelect
+    
   };
 };
 

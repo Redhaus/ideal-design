@@ -19,16 +19,16 @@ export const continualGoalsData_CH = [{
     skills: ['历史','经济学','心理学','人类学','社会学','神话学','艺术','物理','生物','化学',' 数学','伦理']
     },
     {
-    goal: 'Relate Event To',
+    goal: '相关联',
     description: 'Relate Unit To various philosophical, cultural and metaphysical understandings of the world. This is intended to encourage students to be open to new ideas and various perspectives. In the pursuit of knowledge, it is more important that we posit questions rather than provide answers.',
-    skills: ['multiple perspectives','questioning beliefs','understanding origins','understanding difference','understanding repetition','rethinking space','rethinking time','epistemology','ontology']
+    skills: [' 多种角度','质疑信仰','理解起源','理解差异','理解重复','重新思考空间','重新思考时间',' 认识论','本体论']
     },
     {
-    goal: 'Citizenship',
+    goal: '社会交往',
     description: 'Citizenship is key to a proper education in the humanities where students are to be taught compassion and integrity. Relating their studies to the real world and interacting with the real world helps to bridge the divide between the artificiality of the classroom and the reality outside of it. Students need to have the skills necessary to not only be successful academically, but socially and personally.',
-    skills: ['real world interaction','real world understanding','group work','leadership','dramatic reading','dramatic performance','speech making','negotiation skills','interview skills','presentation skills','debate skills']
+    skills: ['真实世界的互动','真实时间的理解','团队合作','领导力','对戏剧的阅读','对戏剧的表现','演讲',' 谈判技巧','面试技巧','展示技巧',' 辩论技巧']
     }
-
+    
 ]
 
 

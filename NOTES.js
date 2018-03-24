@@ -37,7 +37,7 @@
 
 
 // TODO
-// Format results 
+// DONE Format results 
 // Add print PDF option for results
 // DONE Language Option for Chinese via global lang var 
 // DONE have each component check it and load other content if needed
@@ -45,7 +45,7 @@
 // DONE I need to get the format the rendered results under a result page. 
 // DONE I need to figure out chinese translation 
 // I need to remove sections and get student version online. 
-// Calendar integration.
+// DONE Calendar integration.
 // Longer term make it mobile friendly 
 // Build create user system etc. 
 // Kids rating lexis 
@@ -61,6 +61,15 @@
 // SIGN IN
 // b. give ben an image for the sign in page that has high school students
 
+
+// STUDENTS
+// Students SHOULD NOT see Key Questions, Performances, Extensions, or Continual Goals (this is not necessary for the presentation)
+
+
+// Results reformat make flowing Results
+// Add print button update styles
+
+// DONE
 // RESULTS
 // Format results better
 // Add print pdf option
@@ -70,17 +79,14 @@
 // c. (at top) Input Week Summary, i.e. "This week we will..."
 // d. (at bottom) Input Notes for any additional comments/goals beyond the guide
 
-// STUDENTS
-// Students SHOULD NOT see Key Questions, Performances, Extensions, or Continual Goals (this is not necessary for the presentation)
-
+// DONE
 // CONTINUAL GOALS
 // I'll add in the missing Continual Goals to the translation...not sure how I missed them. I'll send that soon.
 
+// DONE
 // EXTENSIONS CLARIFICATION
 // Thanks for the distinction on translation vs trasliteration, good to know. However what I am referring to are the blue highlights that are clickable on the extensions section. 
-
 // if you look at "explain Apollonian and Dionysian archetypes."  Apollonian and Dionysian is highlighted and clickable. To enable this functionality I needed to separate Apollonian and Dionysian into its own variable, then search for it in the page to highlight it and make it clickable. Then title is this also used as the title of the popup that appears to the right when it is clicked. while this is easy for me to manage in english, I can't be sure the characters I chose in chinese are correct.
-
 // I selected what characters I thought were the highlighted portions of the chinese text. However I can't be sure that those blue highlighted portions in chinese are correct ones and I need you to double check to make sure I selected the reference to Apollonian and Dionysian in chinese and all of the other extensions with callouts as well. Make sense?
 
 

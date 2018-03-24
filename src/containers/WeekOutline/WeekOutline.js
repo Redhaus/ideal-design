@@ -19,6 +19,7 @@ const InputGroup = Input.Group;
 const FormItem = Form.Item;
 const { TextArea } = Input;
 const dateFormat = "YYYY/MM/DD";
+let goals = [];
 
 class WeekOutline extends React.Component {
 
@@ -30,13 +31,23 @@ class WeekOutline extends React.Component {
   }
 
   // tracks all questions, inputs and temp questions to know where to put delete icons
+  // state = {
+  //   formItems: [uuid()],
+  //   cName: "",
+  //   tName: "",
+  //   goals: [],
+  //   summary: "",
+  //   notes: ""
+  //   // saved: false
+  // };
+
   state = {
-    formItems: [uuid()],
-    cName: "",
-    tName: "",
-    goals: [],
-    summary: "",
-    notes: ""
+    formItems: (this.props.weekOutlineSelect.formItems) ? (this.props.weekOutlineSelect.formItems) : [uuid()],
+    cName: this.props.weekOutlineSelect.cName,
+    tName: this.props.weekOutlineSelect.tName,
+    goals: this.props.weekOutlineSelect.goals,
+    summary: this.props.weekOutlineSelect.summary,
+    notes: this.props.weekOutlineSelect.notes
     // saved: false
   };
 
@@ -113,7 +124,7 @@ class WeekOutline extends React.Component {
   };
 
   // On input chage to forms update respect state
-  handleInputChange = (e, type) => {
+  handleInputChange = (e, type, key) => {
     switch (type) {
       case "cName":
         this.setState({ cName: e });
@@ -122,6 +133,73 @@ class WeekOutline extends React.Component {
       case "tName":
         this.setState({ tName: e.target.value });
         break;
+
+
+
+
+    //   case "goal":
+
+    //   // console.log(e.target.value, type, key)
+
+    //   let goal = '';
+    //   let date = '';
+      
+
+    //   if(e.target){
+    //     goal = e.target.value;
+    //     this.setState({ goals: e.target.value });
+    //   }
+
+    //   if(!e.target){
+    //     date = e.format('MMMM Do YYYY')
+    //   }
+
+    //   const goalGroup = {
+    //         id: this.state.formItems[key],
+    //         goal: goal,
+    //         date: date
+    //       };
+    //   // console.log(key)
+    //   // goals.splice( key, 0, goalGroup );
+    //   // goals.add(key, goalGroup);
+    //   // console.log(goals)
+
+    //   goals.push(goalGroup)
+    //   console.log(goals)
+      
+    // // // grabs goal and date elements
+    // // var goal = document.getElementsByName("week-goal");
+    // // var date = document.getElementsByClassName("week-date");
+
+    // // // depending on how many goals have been added set var and goals array
+    // // const num = goal.length;
+    // // const goals = [];
+
+    // // // loop through items and create object of id, goals, and dates for each goal and add each goalGroup to goals array
+    // // for (var i = 0; i < num; i++) {
+    // //   const goalGroup = {
+    // //     id: this.state.formItems[i],
+    // //     goal: goal[i].value,
+    // //     date: date[i].firstChild.firstChild.value
+    // //   };
+    // //   goals.push(goalGroup);
+    // // }
+
+    // // this.setState(
+    // //   state => {
+    // //     return {
+    // //       goals: goals,
+         
+    // //     };
+    // //   }
+    // // );
+
+
+
+
+
+    //   // this.setState({ goals: e.target.value});
+    //   break;
 
       case "summary":
         this.setState({ summary: e.target.value });
@@ -139,28 +217,33 @@ class WeekOutline extends React.Component {
   render() {
 
     // set formItems as a series of goal elements to be added dynamically
+    // Render input datepicker and delete button, 
+    // Maps through form items assigns itemid in array as delete id
+    
     const formItems = this.state.formItems.map((item, key) => {
 
-
       return (
-        <div key={item}>
+        <div key={item} className="outline-goal">
           <Input
             style={{ width: "65%" }}
             placeholder="Specific Goal"
-            onChange={e => this.handleInputChange(e, "goal")}
+            onChange={e => this.handleInputChange(e, "goal", key)}
             name="week-goal"
             className="week-goal outline-input"
+           
           />
+
+          {/* how to add value properties to be traked by state for updating */}
 
           <DatePicker
             format={dateFormat}
             name="week-date"
             id="week-date"
             className="week-date outline-input"
-
-          
-
+            onChange={e => this.handleInputChange(e, "goal", key)}
           />
+
+          <Button className="hard-right">
 
           <Icon
               className="dynamic-delete-button"
@@ -170,18 +253,8 @@ class WeekOutline extends React.Component {
               this.deleteGoal(e, item);
             }}
             />
-         
+            </Button>
 
-          {/* <Button
-            onClick={e => {
-              this.deleteGoal(e, item);
-            }}
-            className="question-button"
-            type="submit"
-            htmlType="submit"
-          >
-            delete
-          </Button> */}
         </div>
       );
     });
@@ -190,12 +263,13 @@ class WeekOutline extends React.Component {
 
     const id = uuid();
     
+
+    // standard jsx layout for title form items
     return (
-      // Card Grid
 
       <div>
 
-        <Card className="key-question-container">
+        <Card className="week-Outline-container">
           <h3>
             Weekly Outline
             <Popover content="fill out goals for the week" placement="left">
@@ -208,7 +282,7 @@ class WeekOutline extends React.Component {
 
         <div className="week-outline-container">
           <Form layout="inline" onSubmit={e => this.handleAdd(e)}>
-            <FormItem  >
+            {/* <FormItem  > */}
 
           
       
@@ -222,6 +296,7 @@ class WeekOutline extends React.Component {
 
              
               <Select
+                value={cName}
                 placeholder="Select Class"
                 className="class-name outline-input"
                 onChange={e => this.handleInputChange(e, "cName")}
@@ -286,7 +361,7 @@ class WeekOutline extends React.Component {
               </Button>
 
 
-            </FormItem>
+            {/* </FormItem> */}
           </Form>
         </div>
       </Card>

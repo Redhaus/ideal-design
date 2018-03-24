@@ -693,3 +693,19 @@ mark {
   /* opacity: .40 !important; */
   
 }
+
+.outline-goal .ant-btn {
+  padding: 0px 10px !important;
+  margin: 4px 0px !important;
+}
+
+/* .week-date:focus{
+  border: blue 1px solid !important;
+  color: blue !important;
+  
+}
+
+.ant-calendar-picker:focus{
+  border: blue 1px solid !important;
+  color: blue !important;
+} */

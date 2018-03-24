@@ -124,7 +124,7 @@ class Sidebar extends Component {
           <Menu.Item key="weeklyoutline">
           <Link to={`${url}/outline`}>
             <span className="isoMenuHolder" style={submenuColor}>
-              <Icon type="appstore-o" />
+              <Icon type="file-text" />
               <span className="nav-text">
                 <IntlMessages id="sidebar.weeklyoutline" />
               </span>
@@ -213,7 +213,7 @@ class Sidebar extends Component {
     <Menu.Item key="annotation">
     <Link to={`${url}/annotation`}>
       <span className="isoMenuHolder" style={submenuColor}>
-      <Icon type="copy" />
+      <Icon type="ellipsis" />
         <span className="nav-text">
           <IntlMessages id="sidebar.annotation" />
         </span>

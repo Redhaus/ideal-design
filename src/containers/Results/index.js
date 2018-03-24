@@ -27,6 +27,8 @@ class ResultsContainer extends Component {
               questionSelect={this.props.questionSelect}
               extensionSelect={this.props.extensionSelect}
               goalSelect={this.props.goalSelect}
+              weekOutlineSelect={this.props.weekOutlineSelect}
+              
             />
             {/* </Scrollbar> */}
           </Layout>
@@ -46,7 +48,9 @@ const mapStateToProps = state => {
     movieSelect: state.movieSelect,
     questionSelect: state.questionSelect,
     extensionSelect: state.extensionSelect,
-    goalSelect: state.goalSelect
+    goalSelect: state.goalSelect,
+    weekOutlineSelect: state.weekOutlineSelect
+    
   };
 };
 
