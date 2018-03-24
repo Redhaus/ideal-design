@@ -12,6 +12,13 @@ class AppRouter extends React.Component {
           path={`${url}/`}
           component={asyncComponent(() => import('../Dashboard/dashboard'))}
         />
+
+        <Route
+        exact
+        path={`${url}/outline`}
+        component={asyncComponent(() => import('../WeekOutline/index'))}
+        />
+
         <Route
           exact
           path={`${url}/primaryreadings`}

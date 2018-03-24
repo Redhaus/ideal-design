@@ -58,40 +58,29 @@
 
 // Mark Todo
 
-
 // SIGN IN
 // b. give ben an image for the sign in page that has high school students
 
-
-
-// Results
+// RESULTS
 // Format results better
 // Add print pdf option
+// ...possible to add in areas for teachers to input text?
+// a. (at top) Input Class name/Teacher name
+// b. (at top) Input Dates for the week's goals
+// c. (at top) Input Week Summary, i.e. "This week we will..."
+// d. (at bottom) Input Notes for any additional comments/goals beyond the guide
+
+// STUDENTS
+// Students SHOULD NOT see Key Questions, Performances, Extensions, or Continual Goals (this is not necessary for the presentation)
+
+// CONTINUAL GOALS
+// I'll add in the missing Continual Goals to the translation...not sure how I missed them. I'll send that soon.
+
+// EXTENSIONS CLARIFICATION
+// Thanks for the distinction on translation vs trasliteration, good to know. However what I am referring to are the blue highlights that are clickable on the extensions section. 
+
+// if you look at "explain Apollonian and Dionysian archetypes."  Apollonian and Dionysian is highlighted and clickable. To enable this functionality I needed to separate Apollonian and Dionysian into its own variable, then search for it in the page to highlight it and make it clickable. Then title is this also used as the title of the popup that appears to the right when it is clicked. while this is easy for me to manage in english, I can't be sure the characters I chose in chinese are correct.
+
+// I selected what characters I thought were the highlighted portions of the chinese text. However I can't be sure that those blue highlighted portions in chinese are correct ones and I need you to double check to make sure I selected the reference to Apollonian and Dionysian in chinese and all of the other extensions with callouts as well. Make sense?
 
 
-
-Students SHOULD NOT see Key Questions, Performances, Extensions, or Continual Goals (this is not necessary for the presentation)
-
-I'll add in the missing Continual Goals to the translation...not sure how I missed them. I'll send that soon.
-
-// DONE It would be nice if the pop-ups were there (perhaps on rollover in dashboard) to explain to the teacher the sections. (I have plans to create a tutorial video that goes over the guide, I've already recorded a teacher reading the text)
-
-On Results page...possible to add in areas for teachers to input text?
-a. (at top) Input Class name/Teacher name
-b. (at top) Input Dates for the week's goals
-c. (at top) Input Week Summary, i.e. "This week we will..."
-d. (at bottom) Input Notes for any additional comments/goals beyond the guide
-
-
-// DONE 
-// Minor: 
-
-// a. can we change "Performance" to "Performances
-// b. On results page change:
-// Texts --> Primary Readings
-// Supporting Resources --> Further Readings
-// ContinualGoals --> Continual Goals
-
-
-
-I think that you were asking about the translation for the Extensions. The translation is fine. Google Translate is not going to help much for most of the terms because the words don't exist in Chinese. In Chinese you have to do a "descriptive" translation rather than a  "transliteration". Descriptive means that the meaning of the word is contained in the translation, i.e. He's arrogant. Descriptive Translation: He's thinks a lot of himself. 

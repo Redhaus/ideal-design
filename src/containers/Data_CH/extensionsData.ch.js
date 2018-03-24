@@ -1,10 +1,11 @@
 import uuid from 'uuid';
 
 
+
 export const extensionsData_CH = [{
     id: uuid(),
     
-    callout: '波罗式和狄俄',
+    callout: '波罗式和狄俄尼索斯式',
     ext: '解释阿波罗式和狄俄尼索斯式原型。',
     rollover: 'Apollo represents such ideas as knowledge, order, patterns, technology, man, destruction. Dionysus represents emotion, chaos, change, nature, woman, creation.'
 },
@@ -16,7 +17,7 @@ export const extensionsData_CH = [{
     rollover: 'Masculine archetypes align with the concept of Apollonian archetypes but are suggested not by the idea behind them, but the shape that they present. Masculine archetypes are also called “phallic” symbols. Feminine archetypes align with Dionysian concepts and are suggested by their shape. Feminine archetypes are also called “yonic” symbols. Students should be presented with the idea of identifying symbols as masculine or feminine based upon their shape. Phallic symbols suggest a dagger. Yonic symbols suggest a chalice. One easy way to tell the difference is that phallic symbols can be put inside of something while yonic symbols can have something put inside of them. Try giving the students random objects and having them place them into one of the two categories: house, shoe, pencil, skyscrapers.'
 },
 {
-    callout: '向和纵向的理',
+    callout: '横向和纵向',
     id: uuid(),
     
     ext: '探索横向和纵向的理解模式。',
@@ -46,7 +47,7 @@ export const extensionsData_CH = [{
 
 },
 {
-    callout: '给神话',
+    callout: '神话',
     id: uuid(),
     
     ext: ' 给神话下定义。',
@@ -96,7 +97,7 @@ export const extensionsData_CH = [{
     rollover: ''
 },
 {
-    callout: '二元对',
+    callout: '二元对立',
     id: uuid(),
     
     ext: ' 解释二元对立的概念。',

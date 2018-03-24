@@ -652,3 +652,44 @@ mark {
 .icon-logo{
   width: 30px;
 }
+
+
+/* Weekly Outline */
+
+.outline-input{
+  border-bottom: 1px solid #f1f3f6 !important;
+  margin-bottom: 10px !important;
+}
+
+.class-name{
+  border: none !important;
+  border-bottom: 1px solid #f1f3f6 !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+  
+}
+
+
+.outline-input .ant-select-selection {
+  border: none;
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.outline-input .ant-select-selection--single {
+  height: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.week-goal{
+  padding-bottom: 5px !important;
+}
+
+.outline-button{
+  width: 100%;
+}
+
+.ant-select-selection-selected-value {
+  
+  /* opacity: .40 !important; */
+  
+}

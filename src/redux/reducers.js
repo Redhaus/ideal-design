@@ -16,6 +16,8 @@ import questionSelect from './selects/questionSelectResult';
 import extensionSelect from './selects/extensionSelectResult';
 import goalSelect from './selects/goalSelectResult';
 import languageSelect from './selects/languageSelect';
+import weekOutlineSelect from './selects/weekOutlineSelect';
+
 
 
 
@@ -44,7 +46,9 @@ export default {
   questionSelect: questionSelect, //selected questions
   extensionSelect: extensionSelect, //selected questions
   goalSelect: goalSelect, //selected questions
-  languageSelect: languageSelect //selected questions
+  languageSelect: languageSelect, //selected questions
+  weekOutlineSelect: weekOutlineSelect //selected questions
+  
   
   
   

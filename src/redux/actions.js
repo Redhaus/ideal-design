@@ -79,6 +79,17 @@ export const deleteQuestions = (item) => {
     }
 }
 
+
+// Key Questions Action
+export const saveWeekOutline = (data) => {
+    return {
+        type: 'WEEK_OUTLINE',
+        payload: data
+    }
+}
+
+
+
 // Performance Action
 export const savePerformance = (select) => {
     return {
