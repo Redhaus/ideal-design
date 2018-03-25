@@ -47,6 +47,16 @@ class WeekOutline extends React.Component {
   // };
 
   state = {
+    // formItems: (this.props.weekOutlineSelect.formItems) ? (this.props.weekOutlineSelect.formItems) : [uuid()],
+    // cName: this.props.weekOutlineSelect.cName,
+    // tName: this.props.weekOutlineSelect.tName,
+    // goals: (this.props.weekOutlineSelect.goals) ? this.props.weekOutlineSelect.goals : [],
+    // summary: this.props.weekOutlineSelect.summary,
+    // notes: this.props.weekOutlineSelect.notes,
+    // tempDate: this.props.weekOutlineSelect.tempDate,
+    // tempGoal: this.props.weekOutlineSelect.tempGoal,
+    // saved: false
+
     formItems: (this.props.weekOutlineSelect.formItems) ? (this.props.weekOutlineSelect.formItems) : [uuid()],
     cName: this.props.weekOutlineSelect.cName,
     tName: this.props.weekOutlineSelect.tName,
@@ -54,9 +64,8 @@ class WeekOutline extends React.Component {
     summary: this.props.weekOutlineSelect.summary,
     notes: this.props.weekOutlineSelect.notes,
     tempDate: this.props.weekOutlineSelect.tempDate,
-    tempGoal: this.props.weekOutlineSelect.tempGoal
-    
-    // saved: false
+    tempGoal: this.props.weekOutlineSelect.tempGoal,
+    saved: false
   };
 
   // adds goal item to formItems as ID
@@ -73,6 +82,8 @@ class WeekOutline extends React.Component {
 
   // deletes goals
   deleteGoal = (e, id) => {
+
+    // console.log('id: ', id)
 
     // returns newForms array without select ID
     const newForms = this.state.formItems.filter(function(e) {
@@ -92,6 +103,8 @@ class WeekOutline extends React.Component {
         formItems: newForms,
         goals: newGoals
       };
+    }, function(){
+      this.props.saveWeekOutline(this.state);
     });
   };
 
@@ -118,17 +131,13 @@ class WeekOutline extends React.Component {
     // }
 
     // update state goals and save full state to weekOutline to redux store after state updates
-    // this.setState(
-    //   state => {
-    //     return {
-    //       goals: goals,
-    //       saved: true
-    //     };
-    //   },
-    //   function() {
-    //     this.props.saveWeekOutline(this.state);
-    //   }
-    // );
+    this.setState(
+      state => {
+        return {
+          saved: true
+        };
+      }
+    );
         this.props.saveWeekOutline(this.state);
     
   };
@@ -177,7 +186,7 @@ class WeekOutline extends React.Component {
           }
           
         }, function(){
-          console.log('seegoals Goal:' , this.state)
+          // console.log('seegoals Goal:' , this.state)
         })
 
 
@@ -206,7 +215,7 @@ class WeekOutline extends React.Component {
           }
           
         }, function(){
-          console.log('seegoals Date:' , this.state)
+          // console.log('seegoals Date:' , this.state)
         })
         
       }
@@ -292,7 +301,7 @@ class WeekOutline extends React.Component {
     //   ? this.state.goals[key].goal  : '';
 
     
-    console.log('goals array: ', this.state.goals)
+    // console.log('goals array: ', this.state.goals)
 
     // this.state.goals.includes(item)
 
@@ -302,7 +311,7 @@ class WeekOutline extends React.Component {
   // ];
   
   let obj = this.state.goals.find(o => o.id === item);
-  console.log('obj: ', obj)
+  // console.log('obj: ', obj)
   const myGoal = obj ? obj.goal : '';
   const myDate = obj ? obj.date : undefined;
   
@@ -334,15 +343,14 @@ class WeekOutline extends React.Component {
             value={myDate}
           />
 
-          <Button className="hard-right">
+          <Button className="hard-right" onClick={e => {
+            this.deleteGoal(e, item);
+          }}>
 
           <Icon
               className="dynamic-delete-button"
-              type="delete"
-             
-              onClick={e => {
-              this.deleteGoal(e, item);
-            }}
+              type="delete"      
+              
             />
             </Button>
 
@@ -433,7 +441,7 @@ class WeekOutline extends React.Component {
             onClick={e => {
               this.addGoal(e, id);
             }}
-            className="outline-button add-goal"
+            className="outline-button add-goal-button"
             type="submit"
             htmlType="submit"
           >
@@ -441,12 +449,12 @@ class WeekOutline extends React.Component {
           </Button>
 
           <Button
-                className="question-button"
+                className="save-outline-button"
                 type="submit"
                 htmlType="submit"
-                className="outline-button"
               >
-                Save
+                {this.state.saved ? "Update" : "Save" }
+
 
                
               </Button>

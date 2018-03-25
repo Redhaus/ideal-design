@@ -282,11 +282,18 @@ console.log('name: ' , outlines.tName)
                   ""
                 )}
 
-                <div>
+                {weekOutlineSelect.tName ? 
+                
+                  <div>
                   {console.log('log week: ' , weekOutlineSelect)}
                     <Divider orientation="right">Weekly Outline</Divider>
                     {this.renderOutline(weekOutlineSelect)}
                   </div>
+
+                 : '' }
+
+                 {/* {console.log(weekOutlineSelect.tName)} */}
+               
 
                  {/* Outline Weekly
                  {weekOutlineSelect ? (

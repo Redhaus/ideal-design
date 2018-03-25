@@ -1,5 +1,12 @@
 
 
+/* colors: */
+/* #202530 darker blue */
+/* #2E3545 dark blue */
+/* #f1f3f6 light blue */
+/* #46abfc highligh blue */
+
+
 /* Lexis Styles */
         
         /* quote */
@@ -709,3 +716,15 @@ mark {
   border: blue 1px solid !important;
   color: blue !important;
 } */
+
+.add-goal-button{
+  width: 48% !important;
+  float: left;
+}
+
+.save-outline-button{
+  width: 48% !important;
+  float: right;
+  background-color: #2E3545 !important;
+  color: white !important;
+}
