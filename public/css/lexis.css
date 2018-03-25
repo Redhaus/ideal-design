@@ -789,6 +789,10 @@ mark {
   margin-bottom: 0px;
 }
 
+.results-title{
+  font-weight: 550;
+}
+
 
 @media print {
   .myDivToPrint {
