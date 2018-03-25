@@ -21,8 +21,7 @@ const { TextArea } = Input;
 const dateFormat = "YYYY/MM/DD";
 let goals = [];
 let goal = '';
-let date = undefined;
-const goalValue = '';
+let date = '';
 
 class WeekOutline extends React.Component {
 
@@ -31,8 +30,6 @@ class WeekOutline extends React.Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.addGoal = this.addGoal.bind(this);
     this.deleteGoal = this.deleteGoal.bind(this);
-
-    
   }
 
   // tracks all questions, inputs and temp questions to know where to put delete icons
@@ -52,10 +49,7 @@ class WeekOutline extends React.Component {
     tName: this.props.weekOutlineSelect.tName,
     goals: (this.props.weekOutlineSelect.goals) ? this.props.weekOutlineSelect.goals : [],
     summary: this.props.weekOutlineSelect.summary,
-    notes: this.props.weekOutlineSelect.notes,
-    tempDate: this.props.weekOutlineSelect.tempDate,
-    tempGoal: this.props.weekOutlineSelect.tempGoal
-    
+    notes: this.props.weekOutlineSelect.notes
     // saved: false
   };
 
@@ -100,37 +94,35 @@ class WeekOutline extends React.Component {
     e.preventDefault();
 
     // grabs goal and date elements
-    // var goal = document.getElementsByName("week-goal");
-    // var date = document.getElementsByClassName("week-date");
+    var goal = document.getElementsByName("week-goal");
+    var date = document.getElementsByClassName("week-date");
 
     // depending on how many goals have been added set var and goals array
-    // const num = goal.length;
-    // const goals = [];
+    const num = goal.length;
+    const goals = [];
 
     // loop through items and create object of id, goals, and dates for each goal and add each goalGroup to goals array
-    // for (var i = 0; i < num; i++) {
-    //   const goalGroup = {
-    //     id: this.state.formItems[i],
-    //     goal: goal[i].value,
-    //     date: date[i].firstChild.firstChild.value
-    //   };
-    //   goals.push(goalGroup);
-    // }
+    for (var i = 0; i < num; i++) {
+      const goalGroup = {
+        id: this.state.formItems[i],
+        goal: goal[i].value,
+        date: date[i].firstChild.firstChild.value
+      };
+      goals.push(goalGroup);
+    }
 
     // update state goals and save full state to weekOutline to redux store after state updates
-    // this.setState(
-    //   state => {
-    //     return {
-    //       goals: goals,
-    //       saved: true
-    //     };
-    //   },
-    //   function() {
-    //     this.props.saveWeekOutline(this.state);
-    //   }
-    // );
+    this.setState(
+      state => {
+        return {
+          goals: goals,
+          saved: true
+        };
+      },
+      function() {
         this.props.saveWeekOutline(this.state);
-    
+      }
+    );
   };
 
   // On input chage to forms update respect state
@@ -151,8 +143,7 @@ class WeekOutline extends React.Component {
 
       // console.log(this.state.goals)
       const id = this.state.formItems[key];
-      date = this.state.tempDate;
-      goal = this.state.tempGoal;
+      
 
 
 
@@ -161,34 +152,13 @@ class WeekOutline extends React.Component {
 
       if(e.target){
         goal = e.target.value;
-
-        const goalGroup = {
-          id: id,
-          goal: goal,
-          date: date
-        };
-
-        goals.splice(key, 1, goalGroup)
-        
-        this.setState( (prevState) => {
-          return {
-            goals: goals,
-            tempGoal: goal
-          }
-          
-        }, function(){
-          console.log('seegoals Goal:' , this.state)
-        })
-
-
-
       
       }
 
 
 
       if(!e.target){
-        date = e
+        date = e.format('MMMM Do YYYY')
 
 
         const goalGroup = {
@@ -201,12 +171,11 @@ class WeekOutline extends React.Component {
 
         this.setState( (prevState) => {
           return {
-            goals: goals,
-            tempDate: date
+            goals: goals
           }
           
         }, function(){
-          console.log('seegoals Date:' , this.state)
+          console.log('seegoals:' , this.state.goals)
         })
         
       }
@@ -282,34 +251,6 @@ class WeekOutline extends React.Component {
     
     const formItems = this.state.formItems.map((item, key) => {
 
-    // const { temp } = this.state;
-
-    // console.log(goals.length)
-    // console.log(this.state.goals.length > 0)
-    // const goalValue = 
-    //   this.state.goals.length > 0 && 
-    //   this.state.goals[key].goal
-    //   ? this.state.goals[key].goal  : '';
-
-    
-    console.log('goals array: ', this.state.goals)
-
-    // this.state.goals.includes(item)
-
-  //   let arr = [
-  //     { name:"string 1", value:"this", other: "that" },
-  //     { name:"string 2", value:"this", other: "that" }
-  // ];
-  
-  let obj = this.state.goals.find(o => o.id === item);
-  console.log('obj: ', obj)
-  const myGoal = obj ? obj.goal : '';
-  const myDate = obj ? obj.date : undefined;
-  
-
-    
-    // const goal = goals.length === 0 ? '' : goal[key].goal ;
-    
       return (
         <div key={item} className="outline-goal">
           <Input
@@ -318,8 +259,7 @@ class WeekOutline extends React.Component {
             onChange={e => this.handleInputChange(e, "goal", key)}
             name="week-goal"
             className="week-goal outline-input"
-            value={myGoal}
-            // value={(this.state.goal) ? this.state.goal[key].goal : '' }
+            value={this.state.goals[key].goal}
            
           />
 
@@ -331,7 +271,6 @@ class WeekOutline extends React.Component {
             id="week-date"
             className="week-date outline-input"
             onChange={e => this.handleInputChange(e, "goal", key)}
-            value={myDate}
           />
 
           <Button className="hard-right">

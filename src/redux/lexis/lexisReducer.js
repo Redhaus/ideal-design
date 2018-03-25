@@ -28,7 +28,7 @@ export default (state = lexisData, action) => {
       : lexisData_CH;
 
 
-    console.log('appstore: ', lexisData)
+    // console.log('appstore: ', lexisData)
     
     }
 

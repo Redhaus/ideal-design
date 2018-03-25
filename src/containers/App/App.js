@@ -21,7 +21,7 @@ const { toggleAll } = appActions;
 export class App extends Component {
   
   render() {
-    console.log("App.js", this.props)
+    // console.log("App.js", this.props)
     const { url } = this.props.match; //pulled from url history 
     return (
       <ThemeProvider theme={themes[themeConfig.theme]}>

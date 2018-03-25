@@ -135,7 +135,7 @@ console.log('name: ' , outlines.tName)
       return (
             <div key={key}>
             <p>{goal.goal}</p>
-            <p>{goal.date}</p>
+            <p>{goal.date.format('l')}</p>
             </div>
           )
       })
