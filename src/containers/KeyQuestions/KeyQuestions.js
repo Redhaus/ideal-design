@@ -157,7 +157,7 @@ class KeyQuestions extends React.Component {
 
        
         
-        <Card className="key-question-container">
+        <Card className="allhead key-question-container">
         <h3>Key Questions
         <Popover content={this.props.keyDescription} placement="left"  >
         <Icon className="hard-right-icon" type="info-circle-o"/>

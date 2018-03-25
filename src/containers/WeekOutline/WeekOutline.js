@@ -368,7 +368,7 @@ class WeekOutline extends React.Component {
 
       <div>
 
-        <Card className="week-Outline-container">
+        <Card className="allhead week-Outline-container">
           <h3>
             Weekly Outline
             <Popover content="fill out goals for the week" placement="left">
@@ -437,7 +437,7 @@ class WeekOutline extends React.Component {
 
 
               {formItems}
-              <Button
+          <Button
             onClick={e => {
               this.addGoal(e, id);
             }}
@@ -445,7 +445,7 @@ class WeekOutline extends React.Component {
             type="submit"
             htmlType="submit"
           >
-          Add Weekly Goal
+         Add Weekly Goal
           </Button>
 
           <Button

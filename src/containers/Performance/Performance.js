@@ -52,7 +52,7 @@ class Performance extends React.Component {
   render() {
     return (
       <div>
-        <Card className="performance-container">
+        <Card className="allhead performance-container">
         <h3>Performances
         <Popover content={this.props.description} placement="left"  >
         <Icon className="hard-right-icon" type="info-circle-o"/>

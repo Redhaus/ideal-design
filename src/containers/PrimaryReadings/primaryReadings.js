@@ -84,7 +84,7 @@ class PrimaryReadings extends React.Component {
       // Accordion Structure
       <div>
       
-        <Card className="primary-header" >
+        <Card className="allhead primary-header" >
       
           <h3>Primary Readings 
           <Popover content={this.props.description} placement="left"  >

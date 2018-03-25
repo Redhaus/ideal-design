@@ -162,7 +162,7 @@ class Extensions extends React.Component {
     return (
       <div>
         {/* <Scrollbar className="contactBoxScrollbar"> */}
-        <Card className="extensions-container">
+        <Card className="allhead extensions-container">
         <h3>Extensions
         <Popover content={this.props.description} placement="left"  >
         <Icon className="hard-right-icon" type="info-circle-o"/>

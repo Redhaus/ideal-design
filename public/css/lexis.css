@@ -5,9 +5,23 @@
 /* #2E3545 dark blue */
 /* #f1f3f6 light blue */
 /* #46abfc highligh blue */
-
+/* #e9e9e9 border color */
 
 /* Lexis Styles */
+
+.num-container.isoContactControl{
+  display: block !important;
+}
+
+.num-selected{
+  text-align: right;
+  opacity: .5;
+  font-size: 13px;
+}
+
+.num-container{
+  height: 82px;
+}
         
         /* quote */
 
@@ -91,6 +105,7 @@
         .ant-btn{
           padding: 0px 10px;
           margin: 2px 2px;
+          border-radius: 0px !important;
         }
 
         .filter-container{
@@ -147,6 +162,11 @@
 
 
 /* Further Readings */
+
+.further-list{
+  padding-bottom: 15px;
+
+}
 
 .further-container{
   margin-top: 30px;
@@ -359,6 +379,12 @@ mark {
 
 /* KeyQuestions */
 
+.question-input .ant-input-suffix {
+  right: 12px;
+  border: 1px solid #e9e9e9;
+}
+
+
 .question-container .isoLayoutContentWrapper{
   padding-top:0px !important;
 }
@@ -428,9 +454,14 @@ mark {
 
 /* Goals */
 
+
+
+
 .ant-collapse {
   
   border-radius: 0px !important;
+  background-color: #fff !important;
+  border: 1px solid #e8e8e8 !important;
  
 }
 
@@ -485,12 +516,28 @@ mark {
 
 /* all */
 
+.allhead h3{
+  margin-bottom: 0px !important;
+  
+}
+
+
+hr { 
+  border: none;
+  border-bottom: 1px solid #e9e9e9;
+}
+
 .isoContactBoxWrapper {
 
   border: none !important;
  
 }
 
+
+.allhead.ant-card-bordered {
+  
+  border-bottom: none;
+}
 
 
 
@@ -662,6 +709,11 @@ mark {
 
 
 /* Weekly Outline */
+
+.outline-container .isoLayoutContentWrapper{
+  padding-top:50px !important;
+}
+
 
 .outline-input{
   border-bottom: 1px solid #f1f3f6 !important;

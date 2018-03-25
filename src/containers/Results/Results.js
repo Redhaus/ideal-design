@@ -323,8 +323,10 @@ state = {
 
                     {/* conditionalPoems */}
                     {poemSelect.length > 0 ? (
-                      <div>
-                        <h3>Poems</h3>
+                      <div className="further-list">
+                        <h4>Poems</h4>
+                        <hr/>
+                        
                         {this.renderReadings(poemSelect, null, null)}
                       </div>
                     ) : (
@@ -333,8 +335,9 @@ state = {
 
                     {/* conditionalEssay */}
                     {essaySelect.length > 0 ? (
-                      <div>
-                        <h3>Essay</h3>
+                      <div className="further-list">
+                        <h4>Essay</h4>
+                        <hr/>
                         {this.renderReadings(null, essaySelect, null)}
                       </div>
                     ) : (
@@ -343,8 +346,10 @@ state = {
 
                     {/* conditionalMovie */}
                     {movieSelect.length > 0 ? (
-                      <div>
-                        <h3>Movies</h3>
+                      <div className="further-list">
+                        <h4>Movies</h4>
+                        <hr/>
+                        
                         {this.renderReadings(null, null, movieSelect)}
                       </div>
                     ) : (

@@ -45,11 +45,14 @@ export default class extends Component {
     // Add render for Application and questions
     
 
+    // const numSelected = this.props.lexisSelect
     
     return (
       <ContactCardWrapper className="isoContactCard">
+
     
         <div className="isoContactInfoWrapper">
+    
    
         <h3>{word}</h3>
         <p>{pos}</p>

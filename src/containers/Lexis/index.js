@@ -35,6 +35,9 @@ class Lexis extends Component {
   
 
   render() {
+
+    const numSelected = this.props.lexisSelect.length;
+
     return (
 
       <div className="lexis-container">
@@ -59,11 +62,16 @@ class Lexis extends Component {
           <Layout className="isoContactBoxWrapper">
             <Content className="isoContactBox">
               {/* this adds padding to top of definition */}
-              <div className="isoContactControl" />
+              <div className="num-container isoContactControl ">
+                  <div className="hard-right num-selected">
+                  {numSelected > 0 ? <span>Selected: {numSelected} </span> : '' }
+                  </div>
+              </div>
 
               <Scrollbar className="contactBoxScrollbar">
                 <SingleContactView
                   lex={this.renderDefinition(this.props.seectedId)}
+                  lexisSelect={this.props.lexisSelect.length}
                 />
               </Scrollbar>
             </Content>

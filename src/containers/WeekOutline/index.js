@@ -21,7 +21,7 @@ class WeekOutineContainer extends Component {
    
 
     return (
-      <ContactsWrapper className="question-container">
+      <ContactsWrapper className="outline-container">
         <LayoutContentWrapper style={{ width: "100%" }}>
           <Layout className="isoContactBoxWrapper">
             <WeekOutline
