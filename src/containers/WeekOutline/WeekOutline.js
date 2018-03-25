@@ -8,7 +8,8 @@ import {
   Switch,
   Input,
   Popover,
-  DatePicker
+  DatePicker,
+  message
 } from "antd";
 import _ from "lodash";
 import uuid from "uuid";
@@ -23,6 +24,17 @@ let goals = [];
 let goal = '';
 let date = undefined;
 const goalValue = '';
+
+const success = () => {
+
+
+  const hide = message.loading('Outline Saved...', 0);
+  // Dismiss manually and asynchronously
+  setTimeout(hide, 1500);
+};
+
+
+
 
 class WeekOutline extends React.Component {
 
@@ -112,6 +124,8 @@ class WeekOutline extends React.Component {
   handleAdd = e => {
     e.preventDefault();
 
+
+    success();
     // grabs goal and date elements
     // var goal = document.getElementsByName("week-goal");
     // var date = document.getElementsByClassName("week-date");
@@ -442,8 +456,7 @@ class WeekOutline extends React.Component {
               this.addGoal(e, id);
             }}
             className="outline-button add-goal-button"
-            type="submit"
-            htmlType="submit"
+          
           >
          Add Weekly Goal
           </Button>
@@ -453,7 +466,7 @@ class WeekOutline extends React.Component {
                 type="submit"
                 htmlType="submit"
               >
-                {this.state.saved ? "Update" : "Save" }
+              Save
 
 
                
