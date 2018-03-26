@@ -160,7 +160,7 @@ class WeekOutline extends React.Component {
   handleInputChange = (e, type, key) => {
     switch (type) {
       case "cName":
-        this.setState({ cName: e });
+        this.setState({ cName: e.target.value });
         break;
 
       case "tName":
@@ -407,8 +407,16 @@ class WeekOutline extends React.Component {
                 className="teacher-name outline-input"
               />
 
+
+              <Input
+              id="outline-input"
+              placeholder="Select Class"
+              value={cName}
+              onChange={e => this.handleInputChange(e, "cName")}
+              className="class-name outline-input"
+              />
              
-              <Select
+              {/* <Select
                 value={cName}
                 placeholder="Select Class"
                 className="class-name outline-input"
@@ -418,7 +426,7 @@ class WeekOutline extends React.Component {
                 <Option value="9th Grade Level 2">9th Grade Level 2</Option>
                 <Option value="9th Grade Level 3">9th Grade Level 3</Option>
                 <Option value="9th Grade Level 4">9th Grade Level 4</Option>
-              </Select>
+              </Select> */}
 
               {/* addForms */}
 

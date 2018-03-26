@@ -94,11 +94,11 @@ class Dashboard extends Component {
               <Row gutter={16}>
                 {/* Unit Description */}
                 <Col span={12}>
-                  <Card title={`Event 1: ${title}` } bordered={true} 
+                  <Card title={title} bordered={true} 
                   
                   extra={
                     <Popover content={overviewData_EN.eventDescription} placement="bottom"  >
-                    <Icon className="hard-right-icon" type="info-circle-o"/>
+                    <Icon className="hard-right-icon" type="question-circle-o"/>
                     </Popover>
                   }>
                     <p>{unitDescription}</p>
@@ -110,7 +110,7 @@ class Dashboard extends Component {
                     className="previous-knowledge"
                     title={
                       <h4>
-                        {`Previous Knowledge: ${knowledge}`}
+                        {`Prerequisite: ${knowledge}`}
                       </h4>
                     }
                     bordered={true}
@@ -118,7 +118,7 @@ class Dashboard extends Component {
                       
                       extra={
                         <Popover content={overviewData_EN.previousDescription} placement="bottom"  >
-                        <Icon className="hard-right-icon" type="info-circle-o"/>
+                        <Icon className="hard-right-icon" type="question-circle-o"/>
                         </Popover>
                       }>
 
@@ -130,13 +130,13 @@ class Dashboard extends Component {
                     className="previous-knowledge"
                     title={
                       <h4>
-                        Segue to Next Event: Event 2
+                        Segue to Next Event: Event Two
                       </h4>
                     }
                     bordered={true}
                     extra={
                       <Popover content={overviewData_EN.segueDescription} placement="bottom"  >
-                      <Icon className="hard-right-icon" type="info-circle-o"/>
+                      <Icon className="hard-right-icon" type="question-circle-o"/>
                       </Popover>
                     }>
 
@@ -155,7 +155,7 @@ class Dashboard extends Component {
 
                   <Card
                     className="previous-knowledge"
-                    title="First Day"
+                    title="First Week"
                     bordered={true}
                   >
                     <p>{firstDay}</p>

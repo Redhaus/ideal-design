@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout, notification } from "antd";
+import { Layout, notification, Popover, Icon } from "antd";
 import ContactList from "./contactList";
 import { connect } from "react-redux";
 import Scrollbar from "../../components/utility/customScrollBar.js";
@@ -41,6 +41,9 @@ class Lexis extends Component {
     return (
 
       <div className="lexis-container">
+
+               
+
         <FilterGroup filters={this.props.filters} />
 
         <ContactsWrapper
@@ -64,7 +67,14 @@ class Lexis extends Component {
               {/* this adds padding to top of definition */}
               <div className="num-container isoContactControl ">
                   <div className="hard-right num-selected">
-                  {numSelected > 0 ? <span>Selected: {numSelected} </span> : '' }
+                  {/* {numSelected > 0 ? <span className="num-selected-item">Selected: {numSelected} </span> : '' } */}
+
+                 <Popover content="This is the description for the Further Reading" placement="left"  >
+                  <Icon className="hard-right-icon" type="question-circle-o"/>
+                  </Popover>
+
+
+
                   </div>
               </div>
 

@@ -4,6 +4,9 @@ import { Layout, notification } from "antd";
 
 import { continualGoalsData_EN, continualDescription_EN } from "../Data_EN/continualGoalsData"; //english
 import { continualGoalsData_CH, continualDescription_CH } from "../Data_CH/continualGoalsData.ch"; //chinese
+import { overviewData_EN } from "../Data_EN/overviewData";
+import { overviewData_CH } from "../Data_CH/overviewData.ch";
+
 import ContinualGoals from "./ContinualGoals";
 import { saveGoals } from "../../redux/actions";
 import { connect } from "react-redux";
@@ -31,6 +34,11 @@ class ContinualGoalsContainer extends Component {
         ? continualDescription_EN
         : continualDescription_CH;
 
+    const title =
+      this.props.languageSelect === "EN"
+        ? overviewData_EN
+        : overviewData_CH;
+
         
 
     return (
@@ -42,6 +50,7 @@ class ContinualGoalsContainer extends Component {
               saveGoals={this.props.saveGoals}
               goals={goals}
               description={description}
+              title={title.title}
             />
           </Layout>
         </LayoutContentWrapper>

@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import { ContactCardWrapper } from "./singleViewCard.style";
-import { Tabs, Icon, Card, Col, Row, Switch } from "antd";
+import { Tabs, Icon, Card, Col, Row, Switch, Popover } from "antd";
 import { InputSearch } from "../../components/uielements/input";
+
+const gridStyle = {
+  width: "33.3333%",
+  height: "100px"
+};
+
 
 const TabPane = Tabs.TabPane;
 
@@ -56,18 +62,21 @@ export default class extends Component {
             : "";
 
           return (
-            <Col className="further-reading" key={key} span={8}>
-              <Card
-                className={`${selectedClass}`}
-                bordered={true}
+            <Card.Grid
+                className={`${selectedClass} further-reading`}
+                key={key}
+                style={gridStyle}
+                
                 onClick={() => this.props.savePoems(item)}
               >
+
                 <h3>
                   {title}{" "}
                   <a href={link} className="hard-right">
                     <Icon type="arrows-alt" />
                   </a>{" "}
                 </h3>
+
                 {director ? (
                   <p className="reading-author">
                     {" "}
@@ -76,6 +85,8 @@ export default class extends Component {
                 ) : (
                   ""
                 )}
+
+
                 {author ? (
                   <p className="reading-author">
                     {" "}
@@ -84,6 +95,8 @@ export default class extends Component {
                 ) : (
                   ""
                 )}
+
+
                 {date ? (
                   <em>
                     {" "}
@@ -93,13 +106,14 @@ export default class extends Component {
                 ) : (
                   ""
                 )}
+
+
                 <Switch
                   className="hard-right"
                   size="small"
                   checked={selectedClass ? true : false}
                 />
-              </Card>
-            </Col>
+                </Card.Grid>
           );
         })
       : "";
@@ -117,11 +131,14 @@ export default class extends Component {
             : "";
 
           return (
-            <Col className="further-reading" key={key} span={8}>
-              <Card
-                className={`${selectedClass}`}
+    
+           
+              <Card.Grid
+                className={`${selectedClass} further-reading`}
                 onClick={() => this.props.saveEssays(item)}
-                bordered={true}
+                
+                key={key}
+                style={gridStyle}
               >
                 <h3>
                   {title}{" "}
@@ -159,8 +176,7 @@ export default class extends Component {
                   size="small"
                   checked={selectedClass ? true : false}
                 />
-              </Card>
-            </Col>
+              </Card.Grid>
           );
         })
       : "";
@@ -178,11 +194,12 @@ export default class extends Component {
             : "";
 
           return (
-            <Col className="further-reading" key={key} span={8}>
-              <Card
-                className={`${selectedClass}`}
+              <Card.Grid
+                className={`${selectedClass} further-reading`}
                 onClick={() => this.props.saveMovies(item)}
-                bordered={true}
+                
+                key={key}
+                style={gridStyle}
               >
                 <h3>
                   {title}{" "}
@@ -221,8 +238,7 @@ export default class extends Component {
                   size="small"
                   checked={selectedClass ? true : false}
                 />
-              </Card>
-            </Col>
+              </Card.Grid>
           );
         })
       : "";
@@ -240,6 +256,11 @@ export default class extends Component {
 
     return (
       <div>
+           {/* <Popover content="This is the description for the lexis" placement="left"  >
+                  <Icon className="hard-right-icon" type="question-circle-o"/>
+                  </Popover> */}
+
+
         <Card className="search-box">
           <div className="reading-search">
             <InputSearch
@@ -251,10 +272,17 @@ export default class extends Component {
               onChange={this.onChange}
               className="isoSearchBar"
             />
+
+         
+
+
           </div>
+
+          
+
         </Card>
 
-        <ContactCardWrapper className="isoContactCard">
+        <ContactCardWrapper className="isoContactCard further-reading">
           <div className="isoContactInfoWrapper">
             <Tabs defaultActiveKey="1" tabPosition="left">
               <TabPane tab="Poems" key="1">

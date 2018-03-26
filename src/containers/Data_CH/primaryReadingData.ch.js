@@ -5,7 +5,7 @@ export const primaryReading_CH = {
                 beginner: [{
                     author: 'Homer',
                     date: '850BCE-800BCE',
-                    title: 'The Odyssey (Johnston)',
+                    title: 'The Odyssey (abridged)',
                     description: "创作于公元前八世纪的荷马史诗《奥德赛》，是西方文化传统中最具影响力、最受欢迎的史诗作品。上千年来，奥德修斯在特洛伊战争后冒险返家的故事激发着读者的想象力，并已成为西方文明最伟大的艺术成就的一部分。从古至今，它一直吸引着作家、画家、诗人、电影制作者以及其他艺术创作者。伊恩·约翰斯顿基于他对整部作品的广受赞誉的全新翻译，创作了这部宏伟史诗的缩略版，长度大约是原文的三分之一。缩略版中的每一行都来自荷马原诗，并且包含了一些简短的概要性评论，以保持叙事的连贯性。这个缩略版同时附带解释性的脚注，人名和地名的词汇表，奥德修斯宫殿的平面图，以及他归程路线的地图。因此对于没有时间阅读完整诗歌的人来说，这本缩略版是进入荷马史诗的理想起点。点击复选框以添加到库中。",
                     link:'http://amzn.to/2npRhXB',
                     img: 'https://images-na.ssl-images-amazon.com/images/I/41EBV2HnNTL._SX356_BO1,204,203,200_.jpg'

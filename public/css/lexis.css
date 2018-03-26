@@ -19,6 +19,16 @@
   font-size: 13px;
 }
 
+.num-selected > i{
+  padding-top: 5px 0px 0px 20px;
+  
+}
+
+.num-selected-item{
+
+  padding: -5px 20px 0px 0px;
+}
+
 .num-container{
   height: 82px;
 }
@@ -199,8 +209,8 @@
 }
 
 .further-reading {
-  padding: 10px 10px !important;
-  min-height: 184px;
+  padding: 15px 15px !important;
+  min-height: 110px;
 }
 
 
@@ -267,13 +277,13 @@ height: 144px !important;
   padding: 0px !important;
 }
 
-.further-reading .ant-switch-small {
+/* .further-reading .ant-switch-small {
  
   bottom: 20px;
   right: 20px;
   position: absolute !important;
   
-}
+} */
 
 
 /* Extensions */
@@ -296,11 +306,12 @@ height: 144px !important;
 
 mark {
   /* background-color:  #2E3545 !important; */
-  background-color: #f1f3f6 !important;
+  /* background-color: #f1f3f6 !important; */
+  background-color: white !important;
   color: black !important;
   cursor: pointer;
-  font-weight: 500;
-  padding: .3em .6em !important;
+  font-weight: 600;
+  /* padding: .3em .6em !important; */
 }
 
 
@@ -516,6 +527,12 @@ mark {
 
 /* all */
 
+.section-title{
+  font-size: 14px !important;
+  font-weight: normal !important;
+
+}
+
 .allhead h3{
   margin-bottom: 0px !important;
   
@@ -667,9 +684,9 @@ hr {
     
   }
 
-  .poem h1{
-    padding-top: 15px;
-  }
+.poem h1{
+  padding-top: 15px;
+}
 
 .annoNote .highlight{
   font-size: 16px;
@@ -682,7 +699,7 @@ hr {
 
 
 .numSpaceTop {
-  padding-top: 126px;
+  padding-top: 141px;
   padding-bottom: 49px;
 }
 

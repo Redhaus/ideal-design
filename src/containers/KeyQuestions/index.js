@@ -4,6 +4,8 @@ import { Layout, notification } from "antd";
 
 import { keyQuestions_EN, keyDescription_EN } from "../Data_EN/keyQuestionsData";
 import { keyQuestions_CH, keyDescription_CH } from "../Data_CH/keyQuestionsData.ch";
+import { overviewData_EN } from "../Data_EN/overviewData";
+import { overviewData_CH } from "../Data_CH/overviewData.ch";
 
 
 import KeyQuestions from "./KeyQuestions";
@@ -24,6 +26,12 @@ class KeyQuestionsContainer extends Component {
     const keyDescription =
       this.props.languageSelect === "EN" ? keyDescription_EN : keyDescription_CH;
 
+    const title =
+      this.props.languageSelect === "EN"
+        ? overviewData_EN
+        : overviewData_CH;
+
+
     return (
       <ContactsWrapper className="question-container">
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -34,6 +42,7 @@ class KeyQuestionsContainer extends Component {
               deleteQuestions={this.props.deleteQuestions}
               questions={keyQuestions}
               keyDescription={keyDescription}
+              title={title.title}
             />
           </Layout>
         </LayoutContentWrapper>

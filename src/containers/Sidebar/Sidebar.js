@@ -121,16 +121,7 @@ class Sidebar extends Component {
             </Link>
           </Menu.Item>
 
-          <Menu.Item key="weeklyoutline">
-          <Link to={`${url}/outline`}>
-            <span className="isoMenuHolder" style={submenuColor}>
-              <Icon type="file-text" />
-              <span className="nav-text">
-                <IntlMessages id="sidebar.weeklyoutline" />
-              </span>
-            </span>
-          </Link>
-        </Menu.Item>
+        
 
 
               <Menu.Item key="primaryreadings">
@@ -220,6 +211,19 @@ class Sidebar extends Component {
       </span>
     </Link>
   </Menu.Item>
+
+
+  <Menu.Item key="weeklyoutline">
+  <Link to={`${url}/outline`}>
+    <span className="isoMenuHolder" style={submenuColor}>
+      <Icon type="file-text" />
+      <span className="nav-text">
+        <IntlMessages id="sidebar.weeklyoutline" />
+      </span>
+    </span>
+  </Link>
+</Menu.Item>
+
 
   <Menu.Item key="Results">
   <Link to={`${url}/results`}>

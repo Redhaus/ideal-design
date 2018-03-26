@@ -5,6 +5,8 @@ import { Layout, notification } from "antd";
 
 import { performanceData_EN, performanceDescription_EN } from "../Data_EN/performanceData";
 import { performanceData_CH, performanceDescription_CH } from "../Data_CH/performanceData.ch";
+import { overviewData_EN } from "../Data_EN/overviewData";
+import { overviewData_CH } from "../Data_CH/overviewData.ch";
 
 import Performance from "./Performance";
 import { savePerformance } from "../../redux/actions";
@@ -27,6 +29,12 @@ class PerformanceContainer extends Component {
         ? performanceDescription_EN
         : performanceDescription_CH;
 
+    const title =
+      this.props.languageSelect === "EN"
+        ? overviewData_EN
+        : overviewData_CH;
+  
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -37,6 +45,7 @@ class PerformanceContainer extends Component {
               savePerformance={this.props.savePerformance}
               data={performanceData}
               description={description}
+              title={title.title}
             />
             {/* </Scrollbar> */}
           </Layout>

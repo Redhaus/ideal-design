@@ -5,7 +5,7 @@ export const primaryReading_EN = {
                 beginner: [{
                     author: 'Homer',
                     date: '850BCE-800BCE',
-                    title: 'The Odyssey (Johnston)',
+                    title: 'The Odyssey (abridged)',
                     description: "Homer's Odyssey, composed in the eighth century BC, is the most influential and most popular epic poem in our cultural traditions. The story of Odysseus' adventures on his return home from the Trojan War has inspired the imaginations of readers for centuries and has become an integral part of our civilization's greatest artistic achievements, exerting its appeal on writers, painters, poets, film makers, and others, right up to the present time. Ian Johnston's abridged version of this magnificent poem, approximately one third the length of the original, is based upon his acclaimed new translation of the entire work. Every line in the abridged text comes from Homer's poem, and a few short summary comments are included to keep the narrative thrust of the action coherent. This abridgment also has explanatory footnotes, a glossary of names and places, a floor plan of Odysseus' palace, and a map of his route home. It thus serves as an ideal entry into Homer's poem for those who do not have the time yet to tackle the full poem.",
                     link:'http://amzn.to/2npRhXB',
                     img: 'https://images-na.ssl-images-amazon.com/images/I/41EBV2HnNTL._SX356_BO1,204,203,200_.jpg'

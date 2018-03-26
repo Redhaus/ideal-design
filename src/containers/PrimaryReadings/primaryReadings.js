@@ -53,7 +53,7 @@ class PrimaryReadings extends React.Component {
                 <strong>Dates: </strong><br/>  {item.date}{" "}
               </p>
               <a href={item.link} target="blank">
-              <Button className="buy-button" >Buy Book  <Icon type="shopping-cart" className="icon-right" /></Button>
+              <Button className="buy-button" >Add to Library  <Icon type="shopping-cart" className="icon-right" /></Button>
               </a>
 
               </Col>
@@ -86,9 +86,9 @@ class PrimaryReadings extends React.Component {
       
         <Card className="allhead primary-header" >
       
-          <h3>Primary Readings 
+          <h3>Primary Readings  /  <span className="section-title">{this.props.title}</span> 
           <Popover content={this.props.description} placement="left"  >
-          <Icon className="hard-right-icon" type="info-circle-o"/>
+          <Icon className="hard-right-icon" type="question-circle-o"/>
           </Popover>
           </h3>
        

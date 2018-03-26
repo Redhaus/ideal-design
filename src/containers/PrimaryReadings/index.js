@@ -8,6 +8,9 @@ import { primaryReading_CH } from "../Data_CH/primaryReadingData.ch";
 import { primaryDescription_EN } from "../Data_EN/primaryReadingData";
 import { primaryDescription_CH } from "../Data_CH/primaryReadingData.ch";
 
+import { overviewData_EN } from "../Data_EN/overviewData";
+import { overviewData_CH } from "../Data_CH/overviewData.ch";
+
 
 
 import PrimaryReadings from "./primaryReadings";
@@ -36,6 +39,11 @@ class PrimaryContainer extends Component {
       ? primaryDescription_EN
       : primaryDescription_CH;
 
+  const title =
+    this.props.languageSelect === "EN"
+      ? overviewData_EN
+      : overviewData_CH;
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -46,6 +54,7 @@ class PrimaryContainer extends Component {
               savePrimary={this.props.savePrimary}
               readings={readings.unitOne.primary}
               description={description}
+              title={title.title}
             />
             {/* </Scrollbar> */}
           </Layout>

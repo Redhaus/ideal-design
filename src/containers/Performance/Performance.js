@@ -53,9 +53,9 @@ class Performance extends React.Component {
     return (
       <div>
         <Card className="allhead performance-container">
-        <h3>Performances
+        <h3>Performances  /  <span className="section-title">{this.props.title}</span>
         <Popover content={this.props.description} placement="left"  >
-        <Icon className="hard-right-icon" type="info-circle-o"/>
+        <Icon className="hard-right-icon" type="question-circle-o"/>
         </Popover>
         </h3>
         </Card>

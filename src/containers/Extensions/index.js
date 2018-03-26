@@ -4,6 +4,8 @@ import { Layout, notification } from "antd";
 
 import { extensionsData_EN, extensionsDescription_EN } from "../Data_EN/extensionsData";
 import { extensionsData_CH, extensionsDescription_CH } from "../Data_CH/extensionsData.ch";
+import { overviewData_EN } from "../Data_EN/overviewData";
+import { overviewData_CH } from "../Data_CH/overviewData.ch";
 
 import Extensions from "./Extensions";
 import { saveExtensions } from "../../redux/actions";
@@ -26,6 +28,11 @@ class ExtensionsContainer extends Component {
         ? extensionsDescription_EN
         : extensionsDescription_CH;
 
+    const title =
+      this.props.languageSelect === "EN"
+        ? overviewData_EN
+        : overviewData_CH;
+
     return (
       <ContactsWrapper>
         <LayoutContentWrapper style={{ width: "100%" }}>
@@ -36,6 +43,7 @@ class ExtensionsContainer extends Component {
               extensions={extensionsData}
               languageSelect={this.props.languageSelect}
               description={description}
+              title={title.title}
             />
           </Layout>
         </LayoutContentWrapper>
