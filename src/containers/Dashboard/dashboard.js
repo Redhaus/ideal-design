@@ -130,7 +130,7 @@ class Dashboard extends Component {
                     className="previous-knowledge"
                     title={
                       <h4>
-                        Segue to Next Event: Event Two
+                        Segue to Next Event: Event Two TEST
                       </h4>
                     }
                     bordered={true}
