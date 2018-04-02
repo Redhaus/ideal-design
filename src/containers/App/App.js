@@ -14,6 +14,8 @@ import themes from '../../config/themes';
 import { themeConfig } from '../../config';
 import AppHolder from './commonStyle';
 import './global.css';
+import theme from '../../config/themes';
+
 
 const { Content, Footer } = Layout;
 const { logout } = authAction;
@@ -21,6 +23,10 @@ const { toggleAll } = appActions;
 export class App extends Component {
   
   render() {
+
+    const bgColor = theme.themedefault.palette.secondary[11]
+    console.log('color:', bgColor)
+    // console.log(theme.themedefault.palette.secondary[11])
     // console.log("App.js", this.props)
     const { url } = this.props.match; //pulled from url history 
     return (
@@ -50,7 +56,7 @@ export class App extends Component {
                   style={{
                     padding: '70px 0 0',
                     flexShrink: '0',
-                    background: '#f1f3f6'
+                    background: bgColor
                   }}
                 >
                   <AppRouter url={url} />

@@ -26,7 +26,7 @@ const SidebarWrapper = styled.div`
 
     .isoLogoWrapper {
       height: 70px;
-      background: rgba(0, 0, 0, 0.3);
+      background: ${palette('secondary', 12)};
       margin: 0;
       padding: 0 10px;
       text-align: center;
@@ -83,6 +83,7 @@ const SidebarWrapper = styled.div`
       .isoMenuHolder {
         display: flex;
         align-items: center;
+        color: ${palette('secondary', 13)} !important;
       }
 
       .anticon {
@@ -109,7 +110,7 @@ const SidebarWrapper = styled.div`
       }
 
       .ant-menu-item-selected {
-        background-color: rgba(0, 0, 0, 0.4) !important;
+        background-color: ${palette('secondary', 12)} !important; 
         .anticon {
           color: #fff;
         }

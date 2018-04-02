@@ -16,10 +16,21 @@ theme.palette = {
     '#2b69e6', // 11:
     '#236cfe', // 12: darken 10%
     '#4d88ff', // 13: Lighten 5%
+
   ],
   secondary: [
-    '#2d3446', // 0: DarkBlue
-    '#f1f3f6', // 1: LightBluish
+    
+//     d83a3d Red
+// feea4e yellow
+// a926fb purple
+// 39c4e7 blue
+// 25e47a green
+// f5f5f5 gray
+// F7F3EC tan
+
+
+    '#d83a3d', // 0: DarkBlue Side Menu
+    '#d83a3d', // 1: LightBluish topbar
     '#788195', // 2: LightBlue
     '#E4E6E9', // 3: LightBluish Darken 5%
     '#364d79', // 4:
@@ -29,6 +40,24 @@ theme.palette = {
     '#F6F8FB', // 8: LighterBluish Lighten 2%
     '#E9EBEE', // 9: LighterBluish Darken 3%
     '#1a1a1a', // 10: Sidebar submenu select
+    '#F7F3EC',  // 11: App background light gray
+    'rgba(0, 0, 0, 0.05)', // 12: sidebar highlight
+    '#ffffff', // 13: sidebar text color
+    '#ffffff', // 14: topbar text color
+    '#CB393E' // 15: topbar dark red
+    
+
+    // '#2d3446', // 0: DarkBlue
+    // '#f1f3f6', // 1: LightBluish
+    // '#788195', // 2: LightBlue
+    // '#E4E6E9', // 3: LightBluish Darken 5%
+    // '#364d79', // 4:
+    // '#202739', // 5: DarkBlue Darken 5%
+    // '#f5f6f8', // 6: LighterBluish
+    // '#e9ebf1', // 7: DarkBluish
+    // '#F6F8FB', // 8: LighterBluish Lighten 2%
+    // '#E9EBEE', // 9: LighterBluish Darken 3%
+    // '#1a1a1a', // 10: Sidebar submenu select
   ],
   color: [
     '#FEAC01', // 0: Orange
@@ -70,6 +99,7 @@ theme.palette = {
     '#fbfbfb', // 9:
     '#f5f5f5', // 10:
     '#f7f8f9', // 11: today-highlight-bg
+    
   ],
   text: [
     '#323332', // 0: Heading

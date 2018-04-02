@@ -25,6 +25,7 @@ const topbarTheme = {
       themeName: 'themedefault',
       buttonColor: '#ffffff',
       textColor: '#323332'
+      // backgroundColor: "#cccccc"
     },
     {
       themeName: 'theme1',

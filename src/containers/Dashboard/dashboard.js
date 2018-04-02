@@ -87,7 +87,7 @@ class Dashboard extends Component {
 
 
     return (
-      <ContactsWrapper>
+      <ContactsWrapper className="dashboard-container">
         <LayoutContentWrapper style={{ width: "100%" }}>
           <Layout className="isoContactBoxWrapper">
             <div>
@@ -130,7 +130,7 @@ class Dashboard extends Component {
                     className="previous-knowledge"
                     title={
                       <h4>
-                        Segue to Next Event: Event Two TEST
+                        Segue to Next Event: Event Two
                       </h4>
                     }
                     bordered={true}

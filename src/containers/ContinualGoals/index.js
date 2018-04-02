@@ -42,7 +42,7 @@ class ContinualGoalsContainer extends Component {
         
 
     return (
-      <ContactsWrapper>
+      <ContactsWrapper className="continual-goals-container">
         <LayoutContentWrapper style={{ width: "100%" }}>
           <Layout className="isoContactBoxWrapper">
             <ContinualGoals

@@ -74,7 +74,7 @@
  
 
         blockquote {
-          background: #f9f9f9;
+          /* background: #f9f9f9; */
           border-left: 10px solid #ccc;
           margin: 1.5em 10px;
           padding: 1.5em 30px;
@@ -103,7 +103,12 @@
         /* filter styles */
 
         .ant-btn.selected{
-          background-color: #2E3545 !important;
+          
+          /* background-color: #39c4e7 !important; */
+          background-color: #CB393E !important;
+          
+          
+          /* background-color: #2E3545 !important; */
           color: white
         }
 
@@ -131,7 +136,10 @@
         /* word and icons */
 
         .selected{
-          background-color: #f1f3f6 !important;
+          /* background-color: #f1f3f6 !important; */
+          background-color: #F7F3EC !important;
+          
+          
         }
 
         .iso-word-container{
@@ -154,7 +162,9 @@
 
         .active-icon{
           padding: 0px 5px 0px 5px;
-          color: #2E3545;
+          /* color: #2E3545; */
+          /* color: #39c4e7; */
+          color: #CB393E;
         }
 
 
@@ -264,7 +274,11 @@ height: 144px !important;
 .ant-tabs-nav .ant-tabs-tab-active {
   color: black !important;
   font-weight: 500;
-  background-color: #f1f3f6;
+  /* background-color: #f1f3f6; */
+
+  background-color: #F7F3EC;
+
+  
 }
 
 .ant-tabs-vertical.ant-tabs-left > .ant-tabs-bar .ant-tabs-tab {
@@ -307,24 +321,35 @@ height: 144px !important;
 mark {
   /* background-color:  #2E3545 !important; */
   /* background-color: #f1f3f6 !important; */
-  background-color: white !important;
-  color: black !important;
+  background-color: transparent !important;
+  /* color: #39c4e7 !important; */
+  color: #CB393E !important;
+  
   cursor: pointer;
   font-weight: 600;
   /* padding: .3em .6em !important; */
 }
 
+mark:hover {
+
+  color: #39c4e7 !important;
+  
+}
+
 
 .ant-notification-notice {
  
-  background: #f1f3f6 !important;
+  /* background: #f1f3f6 !important; */
+  background: #ffffff !important;
+  
  
 }
 
 
+
 .question-input > input {
   /* width: 100%; */
-  background: none;
+  background: none !important;
   /* border: none !important; */
   margin: 10px 0px;
   padding: 10px 30px;
@@ -333,9 +358,9 @@ mark {
 
 .ant-input-suffix {
   right: 0px !important;
-  width: 35px;
+  /* width: 35px; */
   text-align: center;
-  background: white;
+  /* background: white; */
 }
 
 
@@ -380,7 +405,9 @@ mark {
 
 
 .ant-switch-checked {
-  background-color: #2E3545 !important;
+  /* background-color: #2E3545 !important; */
+  background-color: #fed650 !important;
+  
 }
 
 .performance-container h3 {
@@ -391,8 +418,8 @@ mark {
 /* KeyQuestions */
 
 .question-input .ant-input-suffix {
-  right: 12px;
-  border: 1px solid #e9e9e9;
+  /* right: 12px; */
+  /* border: 1px solid #e9e9e9; */
 }
 
 
@@ -569,8 +596,17 @@ hr {
   padding-left: 16px;
 }
 
+.buy-button:hover{
+  /* background-color: #2E3545 !important; */
+  background-color: #39c4e7 !important;
+  
+  color: white !important;
+}
+
 .buy-button{
-  background-color: #2E3545 !important;
+  /* background-color: #2E3545 !important; */
+  background-color: #d83a3d !important;
+  
   color: white !important;
 }
 
@@ -794,9 +830,17 @@ hr {
 .save-outline-button{
   width: 48% !important;
   float: right;
-  background-color: #2E3545 !important;
+  /* background-color: #2E3545 !important; */
+  background-color: #d83a3d !important;
   color: white !important;
 }
+
+.save-outline-button:hover{
+
+  background-color: #39c4e7 !important;
+ 
+}
+
 
 
 
@@ -882,4 +926,171 @@ hr {
   .isomorphicSideBar{
     display: none;
   }
+}
+
+
+
+/* TOPBAR */
+
+.isomorphicTopbar .ant-select-selection {
+
+  color: #fff;
+  background-color: transparent !important;
+  border-radius: 0px;
+  border: 1px solid #fff;
+
+}
+
+.isomorphicTopbar .ant-select-arrow {
+  color: #fff;
+}
+
+
+.dashboard-container .ant-layout {
+  background: transparent !important;
+}
+
+.question-container .ant-layout {
+  background: transparent !important;
+}
+
+.ant-layout {
+  background: #ffffff !important;
+}
+
+
+.active h3{
+  /* color: #ffffff; */
+}
+
+.active {
+}
+
+a {
+  color: #CB393E !important;
+ 
+}
+
+.ant-btn:hover {
+  color: #fff !important;
+  background-color: #39c4e7 !important;
+  border-color: #39c4e7 !important;
+
+    /* background-color: #CB393E !important;
+  border-color: #CB393E !important; */
+}
+
+.ant-btn:focus {
+  color: #fff !important;
+ 
+
+  background-color: #CB393E !important;
+  border-color: #CB393E !important;
+}
+
+/* continual reading */
+
+.continual-goals-container .ant-layout {
+  background: transparent !important;
+}
+
+
+.ant-collapse > .ant-collapse-item:last-child, .ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+  border-radius: 0 0 0px 0px !important;
+}
+
+
+
+
+/* calendar */
+
+
+.ant-calendar-selected-day .ant-calendar-date {
+  background: #39c4e7 !important;
+  color: #fff !important;
+  border: 1px solid transparent;
+}
+
+.ant-calendar-today .ant-calendar-date{
+  border-color: #39c4e7 !important;
+  font-weight: bold;
+  color: #39c4e7;
+}
+
+.ant-calendar-date:hover {
+  background: #e6f7ff;
+  cursor: pointer;
+}
+
+.ant-calendar-date {
+  
+  color: #39c4e7;
+}
+
+/* further reading tabs */
+
+.ant-tabs-nav .ant-tabs-tab:hover {
+  color: #39c4e7 !important;
+}
+
+.ant-tabs-ink-bar {
+ 
+  background-color: #CB393E !important;
+ 
+
+}
+
+
+/* language dropdown selector */
+
+.ant-select-selection:hover {
+  border-color: #39c4e7 !important;
+  background-color: #39c4e7 !important;
+  color: #fff !important;
+  
+}
+
+
+
+
+.ant-select-dropdown-menu-item-selected, .ant-select-dropdown-menu-item-selected:hover {
+  background-color: transparent !important;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.ant-select-selection:focus, .ant-select-selection:active {
+  border-color: #39c4e7 !important;
+}
+
+.ant-select-dropdown-menu-item:hover {
+  background-color: #39c4e7 !important;
+  color: #fff !important;
+}
+
+i:hover {
+  color: #39c4e7;
+}
+
+
+
+.highlight{
+  /* color: #39c4e7; */
+  color: #CB393E;
+  font-weight: 600;
+}
+
+
+.callout{
+  /* color: #39c4e7; */
+  color: #CB393E;
+  
+  font-weight: 600;
+}
+
+.question-button{
+  border: 1px solid #e9e9e9 !important;
+  width: 35px;
+  background: white;
+  
 }

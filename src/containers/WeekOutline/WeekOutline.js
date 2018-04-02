@@ -179,6 +179,10 @@ class WeekOutline extends React.Component {
 
 
 
+      if(e === null){
+        return
+      }
+
     
       
 
@@ -213,6 +217,9 @@ class WeekOutline extends React.Component {
       if(!e.target){
         date = e
 
+       
+
+        console.log(e)
 
         const goalGroup = {
               id: id,
@@ -355,6 +362,7 @@ class WeekOutline extends React.Component {
             className="week-date outline-input"
             onChange={e => this.handleInputChange(e, "goal", key)}
             value={myDate}
+            allowClear={false}
           />
 
           <Button className="hard-right" onClick={e => {

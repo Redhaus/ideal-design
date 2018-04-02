@@ -100,7 +100,7 @@ const WDContactListWrapper = styled.div`
       cursor: pointer;
 
       &.active {
-        background-color: ${palette('secondary', 1)};
+        background-color: ${palette('secondary', 11)};
       }
 
       &:last-child {

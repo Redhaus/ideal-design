@@ -5,9 +5,10 @@ import WithDirection from '../../config/withDirection';
 
 const TopbarWrapper = styled.div`
   .isomorphicTopbar {
+    color: ${palette('secondary', 14)};
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
+    background-color: ${palette('secondary', 15)};
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: ${props =>
       props['data-rtl'] === 'rtl' ? '0 265px 0 31px' : '0 31px 0 265px'};
@@ -30,6 +31,11 @@ const TopbarWrapper = styled.div`
             ? '0px 15px !important'
             : '0px 15px !important'};
       }
+    }
+
+    h3 {
+      color: ${palette('secondary', 14)};
+     
     }
 
     .isoLeft {

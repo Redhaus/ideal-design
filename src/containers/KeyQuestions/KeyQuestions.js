@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Affix, Form, Card, Icon, Button, Switch, Input, Popover } from "antd";
+import { Affix, Form, Card, Icon, Button, Switch, Input, Popover, message } from "antd";
 import _ from "lodash";
 
 const FormItem = Form.Item;
@@ -25,10 +25,18 @@ class KeyQuestions extends React.Component {
     tempQuestions: []
   };
 
+  callNotification = () => {
+    message.warning('Write a question before you add it!');
+  }
+
   // adds question from input box to state
   handleAdd = (e, item) => {
     e.preventDefault();
 
+    if(item.length < 1){
+      this.callNotification()
+      return
+    }
     this.setState(state => {
       return {
         questions: [item, ...state.questions],
